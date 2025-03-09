@@ -14,7 +14,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="w-full h-[72px] flex flex-row justify-between items-center p-8">
+        <header className="fixed top-0 w-full h-[72px] flex flex-row justify-between items-center p-8">
             <Link
                 href="/"
                 className="uppercase font-medium"
