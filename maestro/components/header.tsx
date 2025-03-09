@@ -21,7 +21,7 @@ const Header = () => {
             >
                 Maestro
             </Link>
-            <div className="flex flex-row space-x-4">
+            <nav className="flex flex-row space-x-4">
                 {links.map((link, index) => (
                     <Link
                         key={index}
@@ -31,7 +31,7 @@ const Header = () => {
                         {link.name}
                     </Link>
                 ))}
-            </div>
+            </nav>
         </header>
     );
 }
