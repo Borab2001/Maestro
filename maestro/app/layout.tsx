@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/header";
 import ScrollProvider from "@/lib/scroll-provider";
+import { ViewTransitions } from "next-view-transitions";
 
 
 const geistSans = Geist({
@@ -28,15 +29,17 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<ScrollProvider>
-				<body
-					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-				>
-					<Header />
-					{children}
-				</body>
-			</ScrollProvider>
-		</html>
+		<ViewTransitions>
+			<html lang="en">
+				<ScrollProvider>
+					<body
+						className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+					>
+						<Header />
+						{children}
+					</body>
+				</ScrollProvider>
+			</html>
+		</ViewTransitions>
 	);
 }
