@@ -2,12 +2,14 @@
     {
       "id": "axelle-grenier",
       "name": "Axelle Grenier",
+      "role": "pianist",
       "bio": "Axelle is a pianist, originally from Chelles",
       "image": "/images/axelle.webp"
     },
     {
       "id": "diane-dinh",
       "name": "Diane Dinh",
+      "role": "harpist / singer",
       "bio": "Diane is a harpist and singer, originally from Paris",
       "image": "/images/diane.webp"
     }

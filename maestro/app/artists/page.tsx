@@ -14,9 +14,9 @@ const ArtistsPage = () => {
     const router = useTransitionRouter();
 
     return (
-        <div className="p-10">
-            <h1 className="text-3xl font-bold mb-5">Our Artists</h1>
-            <div className="grid grid-cols-3 gap-5">
+        <div className="pt-48 px-4 sm:px-8 md:px-20">
+            <h1 className="text-3xl font-medium mb-4">The Artists</h1>
+            <div className="grid grid-cols-4 gap-4">
                 {artists.map((artist) => (
                     <Link 
                         key={artist.id} 
@@ -29,15 +29,18 @@ const ArtistsPage = () => {
                             });
                         }}
                     >
-                        <div className="border p-5 rounded-lg shadow hover:shadow-lg transition">
-                        <Image
-                            src={artist.image}
-                            alt={artist.name}
-                            width={300}
-                            height={200}
-                            className="w-full h-40 object-cover rounded"
-                        />
-                        <h2 className="text-xl mt-3 group-hover:underline">{artist.name}</h2>
+                        <div className="flex flex-col gap-4 border p-4 rounded-lg">
+                            <Image
+                                src={artist.image}
+                                alt={artist.name}
+                                width={300}
+                                height={200}
+                                className="w-full aspect-[9/16] object-cover rounded-md"
+                            />
+                            <div className="flex flex-col gap-2">
+                                <h2 className="text-2xl font-medium text-white">{artist.name}</h2>
+                                <p className="text-lg font-medium text-zinc-400 capitalize">{artist.role}</p>
+                            </div>
                         </div>
                     </Link>
                 ))}
