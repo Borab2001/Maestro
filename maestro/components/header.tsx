@@ -3,15 +3,17 @@
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
+import { usePathname } from "next/navigation";
 
 
 const Header = () => {
 
     const router = useTransitionRouter();
+    const pathname = usePathname();
 
     const links = [
-        { name: "Home", href: "/" },
         { name: "Artists", href: "/artists" },
+        { name: "Our Story", href: "/story" },
     ];
 
     return (
@@ -24,7 +26,7 @@ const Header = () => {
                         onTransitionReady: slideInOut
                     });
                 }}
-                className="uppercase font-medium"
+                className={`uppercase font-medium ${pathname === "/" ? "pointer-events-none" : ""}`}
             >
                 Maestro
             </Link>
@@ -33,7 +35,7 @@ const Header = () => {
                     <Link
                         key={index}
                         href={link.href}
-                        className="uppercase font-medium"
+                        className={`uppercase font-medium ${pathname === link.href ? "pointer-events-none" : ""}`}
                         onClick={(e) => {
                             e.preventDefault();
                             router.push(link.href, {
