@@ -1,28 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import artists from "@/data/artists.json";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 
 
-interface ArtistProps {
-    params: { 
-        id: string 
-        name: string
-        role: string
-        bio: string
-        image: string
-    };
-};
+const ArtistPage = () => {
 
-
-const ArtistPage: React.FC<ArtistProps> = ({
-    params
-}) => {
+    const params = useParams();
 
     const artist = artists.find((a) => a.id === params.id);
 
     if (!artist) {
         return notFound();
-      }
+    }
 
     return (
         <div>
@@ -48,21 +39,21 @@ const ArtistPage: React.FC<ArtistProps> = ({
             <div className="w-full p-4 sm:p-8 md:p-20 grid grid-cols-3 gap-4">
                 <Image
                     src={artist.image}
-                    alt={`${artist.name} portrait`}
+                    alt={`${artist.name} image 1`}
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center"
                 />
                 <Image
                     src={artist.image}
-                    alt={`${artist.name} portrait`}
+                    alt={`${artist.name} image 2`}
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center"
                 />
                 <Image
                     src={artist.image}
-                    alt={`${artist.name} portrait`}
+                    alt={`${artist.name} image 3`}
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center"
