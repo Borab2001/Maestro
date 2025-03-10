@@ -16,7 +16,7 @@ const ArtistsPage = () => {
     return (
         <div className="pt-48 px-4 sm:px-8 md:px-20">
             <h1 className="text-3xl font-medium mb-4">The Artists</h1>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {artists.map((artist) => (
                     <Link 
                         key={artist.id} 
@@ -35,7 +35,7 @@ const ArtistsPage = () => {
                                 alt={artist.name}
                                 width={300}
                                 height={200}
-                                className="w-full aspect-[9/16] object-cover rounded-md"
+                                className="w-full aspect-[12/16] object-cover rounded-md"
                             />
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-2xl font-medium text-white">{artist.name}</h2>
