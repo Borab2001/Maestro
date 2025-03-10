@@ -1,8 +1,34 @@
+"use client";
+
 import Image from "next/image";
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+
+gsap.registerPlugin(SplitType);
+
+
 export default function Home() {
+	const container = useRef(null);
+	
+	useGSAP(() => {
+		const heroText = new SplitType("h1", { types: "words" });
+		gsap.set(heroText.words, { y: 400 });
+
+		gsap.to(heroText.words, {
+			y: 0,
+			duration: 1,
+			stagger: 0.075,
+			ease: "power4.out",
+			delay: 1
+		})
+	},{ scope: container });
+
+
 	return (
-		<main className="w-screen min-h-screen">
+		<main className="w-screen min-h-screen" ref={container}>
 			<div className="w-full flex flex-col pt-[40vh]">
 				<div className="grid grid-cols-5 grid-rows-2">
 					<div className="col-span-2" />
