@@ -17,7 +17,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="fixed top-0 w-full h-[72px] flex flex-row justify-between items-center p-8">
+        <header className="fixed top-0 z-50 w-full h-[72px] backdrop-blur-md bg-background/10 flex flex-row justify-between items-center p-8">
             <Link
                 href="/"
                 onClick={(e) => {
