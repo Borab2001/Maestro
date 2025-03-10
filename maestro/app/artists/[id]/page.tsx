@@ -4,7 +4,13 @@ import { notFound } from "next/navigation";
 
 
 interface ArtistProps {
-    params: { id: string };
+    params: { 
+        id: string 
+        name: string
+        role: string
+        bio: string
+        image: string
+    };
 };
 
 
