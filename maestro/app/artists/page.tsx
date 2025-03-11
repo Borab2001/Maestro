@@ -58,7 +58,7 @@ const Artists = () => {
                     >
                         <Image
                             src={artist.image}
-                            alt={artist.name}
+                            alt={`${artist.name} portrait`}
                             width={300}
                             height={500}
                             className="group-hover:grayscale-100 w-full aspect-[3/5] object-center object-cover transition-all duration-300 ease-in-out"
