@@ -10,7 +10,7 @@ import { slideInOut } from "@/lib/slide-in-out";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 
-const ArtistsPage = () => {
+const Artists = () => {
 
     const router = useTransitionRouter();
 
@@ -80,4 +80,4 @@ const ArtistsPage = () => {
     );
 }
  
-export default ArtistsPage;
+export default Artists;

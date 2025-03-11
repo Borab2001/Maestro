@@ -51,7 +51,8 @@ export default function Home() {
 					alt="Maestro group shot of first concert" 
 					width={1920} 
 					height={1080} 
-					className="w-full aspect-[16/9] object-cover object-center" />
+					className="w-full aspect-[16/9] object-cover object-center" 
+				/>
 			</div>
 		</main>
 	);

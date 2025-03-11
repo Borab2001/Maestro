@@ -5,7 +5,7 @@ import artists from "@/data/artists.json";
 import { notFound, useParams } from "next/navigation";
 
 
-const ArtistPage = () => {
+const Artist = () => {
 
     const params = useParams();
 
@@ -64,4 +64,4 @@ const ArtistPage = () => {
     );
 }
  
-export default ArtistPage;
+export default Artist;
