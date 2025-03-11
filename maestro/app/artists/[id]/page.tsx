@@ -16,7 +16,7 @@ const ArtistPage = () => {
     }
 
     return (
-        <div>
+        <div className="min-h-screen">
             <div className="grid grid-cols-2">
                 <div className="flex">
                     <Image

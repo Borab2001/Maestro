@@ -15,7 +15,7 @@ const ArtistsPage = () => {
     const router = useTransitionRouter();
 
     return (
-        <div className="pt-48 px-8 md:px-16 xl:px-24">
+        <div className="min-h-screen pt-48 px-8 md:px-16 xl:px-24">
             <h1 className="text-3xl font-medium mb-4">The Artists</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-8 md:gap-16 xl:gap-24 2xl:gap-24">
                 {artists.map((artist) => (

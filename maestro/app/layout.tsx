@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import ScrollProvider from "@/lib/scroll-provider";
 import { ViewTransitions } from "next-view-transitions";
+import Footer from "@/components/footer";
 
 
 const geistSans = Geist({
@@ -38,6 +39,7 @@ export default function RootLayout({
 					>
 						<Header />
 						{children}
+						<Footer />
 						<Analytics />
 					</body>
 				</ScrollProvider>
