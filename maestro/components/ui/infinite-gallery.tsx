@@ -107,7 +107,7 @@ const InfiniteGallery: React.FC = () => {
     }, [images.length]);
 
     return (
-        <div className="py-6 md:py-12">
+        <div className="py-6 md:py-12 pointer-events-none select-none">
             <div 
                 ref={wrapperRef}
                 className="overflow-hidden relative" 
