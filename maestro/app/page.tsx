@@ -64,7 +64,7 @@ export default function Home() {
 			</section>
 
 			<section className="flex flex-col md:flex-row px-4 md:px-8 lg:px-16 py-8">
-				<div className="md:w-3/4 relative aspect-[16/12]">
+				<div className="md:w-3/4 relative rounded-lg aspect-[16/12]">
 					<Image 
 						src="/images/group2.webp" 
 						alt="Groupe de musiciens Maestro" 

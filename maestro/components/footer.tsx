@@ -7,33 +7,48 @@ const Footer = () => {
     const socials = [
         {
             name: 'Instagram',
+            username: "@maestro.concert",
             link: '/',
         },
         {
             name: 'TikTok',
+            username: "@maestro.concert",
             link: '/',
         },
     ]
 
     return (
-        <footer className="w-full h-[72px] backdrop-blur-md bg-background/10 flex flex-row justify-between items-center p-8">
-            <Link
-                href="/"
-                target="_blank"
-                className="uppercase font-medium text-sm"
-            >
-                &#169; {currentYear} Maestro
-            </Link>
-            <div className="flex flex-row space-x-4">
-                {socials.map((link, index) => (
-                    <Link
-                        key={index}
-                        href={link.link}
-                        className="uppercase font-medium text-sm"
-                    >
-                        {link.name}
-                    </Link>
-                ))}
+        <footer className="w-full flex flex-col pt-6 md:pt-12 lg:pt-24">
+            <div className="">
+                <div className="flex flex-col items-end">
+                    <div className="w-full max-w-4xl px-4">
+                        <span className="text-secondary text-sm md:text-base capitalize">
+                            &#169; {currentYear} Maestro
+                        </span>
+                        <p className="text-3xl md:text-6xl lg:text-[80px] py-8 border-b border-secondary">Suivez-nous</p>
+                        <div className="flex flex-row space-x-8 pt-8">
+                            {socials.map((link, index) => (
+                                <div key={index} className="flex flex-col items-start gap-2 md:gap-4">
+                                    <span className="text-foreground text-lg md:text-xl capitalize font-medium">
+                                        {link.name}
+                                    </span>
+                                    <Link
+                                        key={index}
+                                        href={link.link}
+                                        className="text-secondary font-medium text-base md:text-lg"
+                                    >
+                                        {link.username}
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="relative overflow-hidden h-[27vw] w-full">
+                <span className="text-foreground text-[30vw] absolute -left-[4vw] w-auto">
+                    Maestro
+                </span>
             </div>
         </footer>
     );
