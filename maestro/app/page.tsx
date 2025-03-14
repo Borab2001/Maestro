@@ -70,10 +70,23 @@ export default function Home() {
 					/>
 				</div>
 				<div className="md:w-1/2 md:pl-8 py-6">
-					<p className="text-sm md:text-base mb-6">
+					<p className="text-base mb-6">
 						Nous sommes une troupe d&apos;artistes, réunis par une passion commune : repousser les limites de la scène musicale. Nous jouons à un, à deux, à trois... jusqu&apos;à neuf sur scène. Entre compositions, improvisations et interactions avec le public, chaque spectacle est une expérience unique.
 					</p>
 				</div>
+			</section>
+			<section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 py-8">
+				<div className="col-span-1">
+					<p className="text-base">
+						L&apos;idée de créer cette troupe est née il y a plusieurs mois, avant d&apos;aboutir, il y a environ un an. Tout est parti d&apos;échanges avec d&apos;autres musiciens. Certains viennent d&apos;écoles de musique, d&apos;autres proviennent du conservatoire, d&apos;autres des genres et même autodidacte.
+					</p>
+				</div>
+				
+				<div className="col-span-1">
+					<p className="text-base">
+						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+					</p>
+					</div>
 			</section>
 		</main>
 	);
