@@ -87,7 +87,7 @@ export default function Home() {
 					<p className="text-base leading-loose">
 						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
 					</p>
-					</div>
+				</div>
 			</section>
 
 			<section className="py-16 md:py-64 px-4 md:px-8 lg:px-16 text-center">
@@ -107,6 +107,13 @@ export default function Home() {
 						<p className="text-2xl md:text-3xl lg:text-[40px] mt-2 font-medium text-secondary">artistes</p>
 					</div>
 				</div>
+			</section>
+
+			<section className="px-4 md:px-8 lg:px-16 py-12">
+				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6">Titre ici</h2>
+				<p className="max-w-3xl text-base leading-loose">
+					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
+				</p>
 			</section>
 		</main>
 	);
