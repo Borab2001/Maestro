@@ -12,12 +12,12 @@ const Header = () => {
     const pathname = usePathname();
 
     const links = [
-        { name: "Artists", href: "/artists" },
-        { name: "Our Story", href: "/story" },
+        { name: "Artistes", href: "/artists" },
+        { name: "Concerts", href: "/concerts" },
     ];
 
     return (
-        <header className="fixed top-0 z-50 w-full h-[72px] backdrop-blur-md bg-background/10 flex flex-row justify-between items-center p-8">
+        <header className="fixed top-0 z-50 w-full h-[72px] p-8 backdrop-blur-md text-base bg-background/10 flex flex-row justify-between items-center">
             <Link
                 href="/"
                 onClick={(e) => {
@@ -26,16 +26,16 @@ const Header = () => {
                         onTransitionReady: slideInOut
                     });
                 }}
-                className={`uppercase font-medium ${pathname === "/" ? "pointer-events-none" : ""}`}
+                className={`capitalize font-medium ${pathname === "/" ? "pointer-events-none" : ""}`}
             >
                 Maestro
             </Link>
-            <nav className="flex flex-row space-x-4">
+            <nav className="flex flex-row space-x-8">
                 {links.map((link, index) => (
                     <Link
                         key={index}
                         href={link.href}
-                        className={`uppercase font-medium ${pathname === link.href ? "pointer-events-none" : ""}`}
+                        className={`capitalize font-medium ${pathname === link.href ? "pointer-events-none" : ""}`}
                         onClick={(e) => {
                             e.preventDefault();
                             router.push(link.href, {
