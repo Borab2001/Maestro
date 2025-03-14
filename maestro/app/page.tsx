@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+// import dynamic from 'next/dynamic';
+import InfiniteGallery from "@/components/ui/infinite-gallery";
 
 // import { useRef } from "react";
 // import gsap from "gsap";
@@ -8,6 +10,7 @@ import Image from "next/image";
 // import SplitType from "split-type";
 
 // gsap.registerPlugin(SplitType);
+// const InfiniteGallery = dynamic(() => import('@/components/ui/infinite-gallery'), { ssr: false });
 
 
 export default function Home() {
@@ -109,12 +112,14 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="px-4 md:px-8 lg:px-16 py-12">
+			<section className="px-4 md:px-8 py-6 md:py-12">
 				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6">Titre ici</h2>
 				<p className="max-w-3xl text-base leading-loose">
 					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
 				</p>
 			</section>
+
+			<InfiniteGallery />
 		</main>
 	);
 }
