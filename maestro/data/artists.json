@@ -1,122 +1,246 @@
 [
     {
-      "id": "axelle-grenier",
-      "name": "Axelle Grenier",
-      "role": "pianist",
-      "bio": "Axelle is a pianist, originally from Chelles",
-      "image": "/images/axelle.webp"
+		"id": "axelle-grenier",
+		"name": "Axelle Grenier",
+		"role": "pianist",
+		"bio": "Axelle is a pianist, originally from Chelles",
+		"image": "/images/axelle.webp",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "diane-dinh",
-      "name": "Diane Dinh",
-      "role": "harpist / singer",
-      "bio": "Diane is a harpist and singer, originally from Paris",
-      "image": "/images/diane.webp"
+		"id": "diane-dinh",
+		"name": "Diane Dinh",
+		"role": "harpist / singer",
+		"bio": "Diane is a harpist and singer, originally from Paris",
+		"image": "/images/diane.webp",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@dianeadinh",
+				"url": "https://www.tiktok.com/@dianeadinh/"
+			}
+		]
     },
     {
-      "id": "david-dang",
-      "name": "David Dang",
-      "role": "pianist",
-      "bio": "David, alias Symphonique, is a pianist, originally from Paris",
-      "image": "/"
+		"id": "david-dang",
+		"name": "David Dang",
+		"role": "pianist",
+		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "clement-seiler",
-      "name": "Clément Seiler",
-      "role": "pianist",
-      "bio": "Clément is a pianist, originally from Rennes",
-      "image": "/"
+		"id": "clement-seiler",
+		"name": "Clément Seiler",
+		"role": "pianist",
+		"bio": "Clément is a pianist, originally from Rennes",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "billie-pioger",
-      "name": "Billie Pioger",
-      "role": "pianist",
-      "bio": "Billie is a pianist, originally from Caen",
-      "image": "/"
+		"id": "billie-pioger",
+		"name": "Billie Pioger",
+		"role": "pianist",
+		"bio": "Billie is a pianist, originally from Caen",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "pauline-chaboche",
-      "name": "Pauline Chaboche",
-      "role": "pianist",
-      "bio": "Pauline is a pianist, originally from Paris",
-      "image": "/"
+		"id": "pauline-chaboche",
+		"name": "Pauline Chaboche",
+		"role": "pianist",
+		"bio": "Pauline is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "annalia-vu-miethe",
-      "name": "Annalia Vu Miethe",
-      "role": "guitarist / singer",
-      "bio": "Annalia is a guitarist and singer, originally from Paris",
-      "image": "/"
+		"id": "annalia-vu-miethe",
+		"name": "Annalia Vu Miethe",
+		"role": "guitarist / singer",
+		"bio": "Annalia is a guitarist and singer, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "loris-swider",
-      "name": "Loris Swider",
-      "role": "pianist",
-      "bio": "Loris is a pianist, originally from Montpellier",
-      "image": "/"
+		"id": "loris-swider",
+		"name": "Loris Swider",
+		"role": "pianist",
+		"bio": "Loris is a pianist, originally from Montpellier",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "alia-ghaley",
-      "name": "Alia Ghaley",
-      "role": "pianist",
-      "bio": "Alia is a pianist, originally from Paris",
-      "image": "/"
+		"id": "alia-ghaley",
+		"name": "Alia Ghaley",
+		"role": "pianist",
+		"bio": "Alia is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "kenji-lorkovic",
-      "name": "Kenji Lorkovic",
-      "role": "pianist",
-      "bio": "Kenji is a pianist, originally from Paris",
-      "image": "/"
+		"id": "kenji-lorkovic",
+		"name": "Kenji Lorkovic",
+		"role": "pianist",
+		"bio": "Kenji is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "eloise-mercier",
-      "name": "Eloïse Mercier",
-      "role": "pianist",
-      "bio": "Eloïse is a pianist, originally from ...",
-      "image": "/"
+		"id": "eloise-mercier",
+		"name": "Eloïse Mercier",
+		"role": "pianist",
+		"bio": "Eloïse is a pianist, originally from ...",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "ilona-mateus",
-      "name": "Ilona Mateus",
-      "role": "pianist",
-      "bio": "Ilona is a pianist, originally from Paris",
-      "image": "/"
+		"id": "ilona-mateus",
+		"name": "Ilona Mateus",
+		"role": "pianist",
+		"bio": "Ilona is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
+	},
+    {
+		"id": "jeanne-dormoy",
+		"name": "Jeanne Dormoy",
+		"role": "pianist",
+		"bio": "Jeanne is a pianist, originally from ...",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "jeanne-dormoy",
-      "name": "Jeanne Dormoy",
-      "role": "pianist",
-      "bio": "Jeanne is a pianist, originally from ...",
-      "image": "/"
+		"id": "urban-douarka",
+		"name": "Urban Douarka",
+		"role": "pianist",
+		"bio": "Urban is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "urban-douarka",
-      "name": "Urban Douarka",
-      "role": "pianist",
-      "bio": "Urban is a pianist, originally from Paris",
-      "image": "/"
+		"id": "astrid-correia",
+		"name": "Astrid Correia",
+		"role": "pianist",
+		"bio": "Astrid is a pianist, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "astrid-correia",
-      "name": "Astrid Correia",
-      "role": "pianist",
-      "bio": "Astrid is a pianist, originally from Paris",
-      "image": "/"
+		"id": "hugo-bach",
+		"name": "Hugo Bach",
+		"role": "pianist",
+		"bio": "Hugo is a pianist, originally from ...",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     },
     {
-      "id": "hugo-bach",
-      "name": "Hugo Bach",
-      "role": "pianist",
-      "bio": "Hugo is a pianist, originally from ...",
-      "image": "/"
-    },
-    {
-      "id": "christina-kriegel",
-      "name": "Christina Kriegel",
-      "role": "dancer",
-      "bio": "Christina is a dancer, originally from Paris",
-      "image": "/"
+		"id": "christina-kriegel",
+		"name": "Christina Kriegel",
+		"role": "dancer",
+		"bio": "Christina is a dancer, originally from Paris",
+		"image": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@dianeadinh",
+				"url": "https://www.instagram.com/dianeadinh/"
+			}
+		]
     }
-  ]
+]
   
