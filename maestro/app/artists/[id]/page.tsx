@@ -48,31 +48,32 @@ const Artist = () => {
                 </div>
             </section>
 
-            <div className="w-[70%] pt-48 px-4 sm:px-8 md:px-20 flex flex-col gap-4">
-                <h2 className="text-3xl font-medium">Artist Background</h2>
+            <div className="w-[70%] py-48 flex flex-col gap-4 md:gap-8">
+                <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6">Background</h2>
                 <p className="text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?</p>
             </div>
-            <div className="w-full p-4 sm:p-8 md:p-20 grid grid-cols-3 gap-4">
+
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 <Image
                     src={artist.image}
                     alt={`${artist.name} image 1`}
                     width={1920}
                     height={1080}
-                    className="flex-1 w-full object-cover object-center"
+                    className="flex-1 w-full object-cover object-center rounded-lg"
                 />
                 <Image
                     src={artist.image}
                     alt={`${artist.name} image 2`}
                     width={1920}
                     height={1080}
-                    className="flex-1 w-full object-cover object-center"
+                    className="flex-1 w-full object-cover object-center rounded-lg"
                 />
                 <Image
                     src={artist.image}
                     alt={`${artist.name} image 3`}
                     width={1920}
                     height={1080}
-                    className="flex-1 w-full object-cover object-center"
+                    className="flex-1 w-full object-cover object-center rounded-lg"
                 />
             </div>
         </div>
