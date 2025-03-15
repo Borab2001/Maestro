@@ -21,32 +21,6 @@ const Artists = () => {
             </section>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                 {artists.map((artist) => (
-                    // <Link 
-                    //     key={artist.id} 
-                    //     href={`/artists/${artist.id}`} 
-                    //     className="group"
-                    //     onClick={(e) => {
-                    //         e.preventDefault();
-                    //         router.push(`artists/${artist.id}`, {
-                    //             onTransitionReady: slideInOut
-                    //         });
-                    //     }}
-                    // >
-                    //     <div className="flex flex-col gap-4 border p-4 rounded-lg">
-                    //         <Image
-                    //             src={artist.image}
-                    //             alt={artist.name}
-                    //             width={300}
-                    //             height={200}
-                    //             className="w-full aspect-[12/16] object-cover rounded-md"
-                    //         />
-                    //         <div className="flex flex-col gap-2">
-                    //             <h2 className="text-2xl font-medium text-white">{artist.name}</h2>
-                    //             <p className="text-lg font-medium text-zinc-400 capitalize">{artist.role}</p>
-                    //         </div>
-                    //     </div>
-                    // </Link>
-
                     <Link 
                         className='group relative w-full aspect-[3/5] overflow-hidden rounded-lg'
                         key={artist.id}
