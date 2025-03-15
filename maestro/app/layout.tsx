@@ -8,6 +8,7 @@ import Header from "@/components/header";
 import ScrollProvider from "@/lib/scroll-provider";
 import { ViewTransitions } from "next-view-transitions";
 import Footer from "@/components/footer";
+import PreloadAnimation from "@/components/preload-animation";
 
 
 const geistSans = Geist({
@@ -60,6 +61,7 @@ export default function RootLayout({
 					<body
 						className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 					>
+						<PreloadAnimation />
 						<Header />
 						{children}
 						<Footer />
