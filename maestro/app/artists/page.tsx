@@ -15,9 +15,11 @@ const Artists = () => {
     const router = useTransitionRouter();
 
     return (
-        <div className="min-h-screen pt-48 px-8 md:px-16 xl:px-24">
-            <h1 className="text-3xl font-medium mb-4">The Artists</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-8 md:gap-16 xl:gap-24 2xl:gap-24">
+        <main className="min-h-screen px-4 md:px-8 pt-[72px]">
+            <section className="py-6 md:py-12">
+                <h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium">Les Artistes</h1>
+            </section>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                 {artists.map((artist) => (
                     // <Link 
                     //     key={artist.id} 
@@ -46,7 +48,7 @@ const Artists = () => {
                     // </Link>
 
                     <Link 
-                        className='group relative w-full aspect-[3/5] overflow-hidden rounded-xl'
+                        className='group relative w-full aspect-[3/5] overflow-hidden rounded-lg'
                         key={artist.id}
                         href={`/artists/${artist.id}`}
                         onClick={(e) => {
@@ -64,7 +66,7 @@ const Artists = () => {
                             className="group-hover:grayscale-100 w-full aspect-[3/5] object-center object-cover transition-all duration-300 ease-in-out"
                         />
                         <ProgressiveBlur
-                            className='pointer-events-none absolute bottom-0 left-0 h-[20%] w-full'
+                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full'
                             blurIntensity={6}
                         />
                         <div className='absolute bottom-0 left-0'>
@@ -76,7 +78,7 @@ const Artists = () => {
                     </Link>
                 ))}
             </div>
-        </div>
+        </main>
     );
 }
  
