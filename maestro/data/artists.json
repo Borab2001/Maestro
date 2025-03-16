@@ -1,10 +1,10 @@
 [
-    {
+	{
 		"id": "axelle-grenier",
 		"name": "Axelle Grenier",
 		"role": "pianist",
 		"bio": "Axelle is a pianist, originally from Chelles",
-		"image": "/images/axelle.webp",
+		"portrait": "/images/axelle.webp",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -18,7 +18,7 @@
 		"name": "Diane Dinh",
 		"role": "harpist / singer",
 		"bio": "Diane is a 21 year old harpist and singer, originally from Paris",
-		"image": "/images/diane.webp",
+		"portrait": "/images/diane.webp",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -37,7 +37,7 @@
 		"name": "David Dang",
 		"role": "pianist",
 		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -51,7 +51,7 @@
 		"name": "Clément Seiler",
 		"role": "pianist",
 		"bio": "Clément is a pianist, originally from Rennes",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -65,7 +65,7 @@
 		"name": "Billie Pioger",
 		"role": "pianist",
 		"bio": "Billie is a pianist, originally from Caen",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -79,7 +79,7 @@
 		"name": "Pauline Chaboche",
 		"role": "pianist",
 		"bio": "Pauline is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -93,7 +93,7 @@
 		"name": "Annalia Vu Miethe",
 		"role": "guitarist / singer",
 		"bio": "Annalia is a guitarist and singer, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -107,7 +107,7 @@
 		"name": "Loris Swider",
 		"role": "pianist",
 		"bio": "Loris is a pianist, originally from Montpellier",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -121,7 +121,7 @@
 		"name": "Alia Ghaley",
 		"role": "pianist",
 		"bio": "Alia is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -135,7 +135,7 @@
 		"name": "Kenji Lorkovic",
 		"role": "pianist",
 		"bio": "Kenji is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -149,7 +149,7 @@
 		"name": "Eloïse Mercier",
 		"role": "pianist",
 		"bio": "Eloïse is a pianist, originally from ...",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -163,7 +163,7 @@
 		"name": "Ilona Mateus",
 		"role": "pianist",
 		"bio": "Ilona is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -177,7 +177,7 @@
 		"name": "Jeanne Dormoy",
 		"role": "pianist",
 		"bio": "Jeanne is a pianist, originally from ...",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -191,7 +191,7 @@
 		"name": "Urban Douarka",
 		"role": "pianist",
 		"bio": "Urban is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -205,7 +205,7 @@
 		"name": "Astrid Correia",
 		"role": "pianist",
 		"bio": "Astrid is a pianist, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -219,7 +219,7 @@
 		"name": "Hugo Bach",
 		"role": "pianist",
 		"bio": "Hugo is a pianist, originally from ...",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
@@ -233,7 +233,7 @@
 		"name": "Christina Kriegel",
 		"role": "dancer",
 		"bio": "Christina is a dancer, originally from Paris",
-		"image": "/",
+		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",

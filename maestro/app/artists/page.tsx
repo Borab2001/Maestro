@@ -33,7 +33,7 @@ const Artists = () => {
                         }}
                     >
                         <Image
-                            src={artist.image}
+                            src={artist.portrait}
                             alt={`${artist.name} portrait`}
                             width={300}
                             height={500}
