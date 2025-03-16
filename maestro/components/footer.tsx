@@ -8,12 +8,12 @@ const Footer = () => {
         {
             name: 'Instagram',
             username: "@maestro.concert",
-            link: '/',
+            link: 'https://www.instagram.com/maestro.concert/',
         },
         {
             name: 'TikTok',
             username: "@maestro.concert",
-            link: '/',
+            link: 'https://www.tiktok.com/@maestro.concert',
         },
     ]
 
