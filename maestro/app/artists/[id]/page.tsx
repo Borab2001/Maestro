@@ -19,13 +19,12 @@ const Artist = () => {
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
             <section className="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex">
+                <div className="relative w-full h-[calc(100vh-104px)]">
                     <Image
                         src={artist.portrait}
                         alt={`${artist.name} portrait`}
-                        width={1920}
-                        height={1080}
-                        className="w-full h-[calc(100vh-104px)] flex-1 rounded-lg object-cover object-center"
+                        fill
+                        className="rounded-lg object-cover object-center"
                     />
                 </div>
                 <div className="pt-18 flex flex-col gap-24 items-start justify-end">
