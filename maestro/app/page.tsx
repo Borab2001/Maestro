@@ -106,7 +106,7 @@ export default function Home() {
 						<p className="text-2xl md:text-3xl lg:text-[40px] mt-2 font-medium text-secondary">places vendues</p>
 					</div>
 					<div>
-						<p className="text-6xl lg:text-[80px] font-medium">17</p>
+						<p className="text-6xl lg:text-[80px] font-medium">20</p>
 						<p className="text-2xl md:text-3xl lg:text-[40px] mt-2 font-medium text-secondary">artistes</p>
 					</div>
 				</div>

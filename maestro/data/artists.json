@@ -71,6 +71,11 @@
 				"platform": "instagram",
 				"username": "@_symphonique_",
 				"url": "https://www.instagram.com/_symphonique_/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@_symphonique_",
+				"url": "https://www.tiktok.com/@_symphonique_"
 			}
 		],
 		"images": [
@@ -99,6 +104,11 @@
 				"platform": "instagram",
 				"username": "@clementpianist__",
 				"url": "https://www.instagram.com/clementpianist__/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@_clement_slr",
+				"url": "https://www.tiktok.com/@_clement_slr"
 			}
 		],
 		"images": [
@@ -127,6 +137,11 @@
 				"platform": "instagram",
 				"username": "@pianobillie",
 				"url": "https://www.instagram.com/pianobillie/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@pianobillie",
+				"url": "https://www.tiktok.com/@pianobillie"
 			}
 		],
 		"images": [
@@ -155,6 +170,11 @@
 				"platform": "instagram",
 				"username": "@reeds_cover",
 				"url": "https://www.instagram.com/reeds_cover/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@reeds_cover",
+				"url": "https://www.tiktok.com/@reeds_cover"
 			}
 		],
 		"images": [
@@ -174,8 +194,8 @@
     },
     {
 		"id": "annalia-vu-miethe",
-		"name": "Annalia Vu Miethe",
-		"role": "guitarist / singer",
+		"name": "Annalia Vu-Miethé Gahbiche",
+		"role": "guitarist / singer / photographer",
 		"bio": "Annalia is a guitarist and singer, originally from Paris",
 		"portrait": "/",
 		"socials": [
@@ -183,6 +203,11 @@
 				"platform": "instagram",
 				"username": "@annaliavmg",
 				"url": "https://www.instagram.com/annaliavmg/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@annaliavmg",
+				"url": "https://www.tiktok.com/@annaliavmg"
 			}
 		],
 		"images": [
@@ -211,6 +236,11 @@
 				"platform": "instagram",
 				"username": "@lorisotto_officiel",
 				"url": "https://www.instagram.com/lorisotto_officiel/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@lorisotto_officiel",
+				"url": "https://www.tiktok.com/@lorisotto_officiel"
 			}
 		],
 		"images": [
@@ -239,6 +269,11 @@
 				"platform": "instagram",
 				"username": "@aliaghl_",
 				"url": "https://www.instagram.com/aliaghl_/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@aliapiano_",
+				"url": "https://www.tiktok.com/@aliapiano_"
 			}
 		],
 		"images": [
@@ -267,6 +302,11 @@
 				"platform": "instagram",
 				"username": "@kenji_lrk",
 				"url": "https://www.instagram.com/kenji_lrk/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@kenji_lrk",
+				"url": "https://www.tiktok.com/@kenji_lrk"
 			}
 		],
 		"images": [
@@ -295,6 +335,11 @@
 				"platform": "instagram",
 				"username": "@elomrce",
 				"url": "https://www.instagram.com/elomrce/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@elomrce",
+				"url": "https://www.tiktok.com/@elomrce"
 			}
 		],
 		"images": [
@@ -323,6 +368,11 @@
 				"platform": "instagram",
 				"username": "@ilonamateus",
 				"url": "https://www.instagram.com/ilonamateus/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@iroonachan",
+				"url": "https://www.tiktok.com/@iroonachan"
 			}
 		],
 		"images": [
@@ -351,6 +401,11 @@
 				"platform": "instagram",
 				"username": "@piavvio",
 				"url": "https://www.instagram.com/piavvio/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@piavvio",
+				"url": "https://www.tiktok.com/@piavvio"
 			}
 		],
 		"images": [
@@ -379,6 +434,11 @@
 				"platform": "instagram",
 				"username": "@fromurban",
 				"url": "https://www.instagram.com/fromurban/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@fromurban",
+				"url": "https://www.tiktok.com/@fromurban"
 			}
 		],
 		"images": [
@@ -407,6 +467,11 @@
 				"platform": "instagram",
 				"username": "@strida2.0",
 				"url": "https://www.instagram.com/strida2.0/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@strida.2.0",
+				"url": "https://www.tiktok.com/@strida.2.0"
 			}
 		],
 		"images": [
@@ -435,6 +500,110 @@
 				"platform": "instagram",
 				"username": "@hugobach_83",
 				"url": "https://www.instagram.com/hugobach_83/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@hugobach_83",
+				"url": "https://www.tiktok.com/@hugobach_83"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "theo-foy",
+		"name": "Théo Foy",
+		"role": "pianist",
+		"bio": "Théo is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@theo.foy",
+				"url": "https://www.instagram.com/theo.foy/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@theo.tfy",
+				"url": "https://www.tiktok.com/@theo.tfy"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "sacha-lhuillier",
+		"name": "Sacha L'Huillier",
+		"role": "pianist",
+		"bio": "Sacha is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@sacha.lhuillier",
+				"url": "https://www.instagram.com/sacha.lhuillier/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@lhuillier_p",
+				"url": "https://www.tiktok.com/@lhuillier_p"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "pacome-schulte",
+		"name": "Pacôme Schulte",
+		"role": "pianist",
+		"bio": "Pacôme is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@pac.schlt",
+				"url": "https://www.instagram.com/pac_schlt/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@pac_schlt",
+				"url": "https://www.tiktok.com/@pac_schlt"
 			}
 		],
 		"images": [
@@ -463,6 +632,11 @@
 				"platform": "instagram",
 				"username": "@chriskdanse",
 				"url": "https://www.instagram.com/chriskdanse/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@chriskdanse",
+				"url": "https://www.tiktok.com/@chriskdanse"
 			}
 		],
 		"images": [
