@@ -37,6 +37,7 @@ const Artists = () => {
                             alt={`${artist.name} portrait`}
                             fill
                             className="group-hover:grayscale-100 w-full aspect-[3/5] object-center object-cover transition-all duration-300 ease-in-out"
+                            loading="lazy"
                         />
                         <ProgressiveBlur
                             className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full'

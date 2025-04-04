@@ -25,6 +25,7 @@ const Artist = () => {
                         alt={`${artist.name} portrait`}
                         fill
                         className="rounded-lg object-cover object-center"
+                        priority
                     />
                 </div>
                 <div className="pt-18 flex flex-col gap-24 items-start justify-end">
@@ -59,6 +60,7 @@ const Artist = () => {
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center rounded-lg"
+                    loading="lazy"
                 />
                 <Image
                     src={artist.portrait}
@@ -66,6 +68,7 @@ const Artist = () => {
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center rounded-lg"
+                    loading="lazy"
                 />
                 <Image
                     src={artist.portrait}
@@ -73,6 +76,7 @@ const Artist = () => {
                     width={1920}
                     height={1080}
                     className="flex-1 w-full object-cover object-center rounded-lg"
+                    loading="lazy"
                 />
             </div>
         </div>

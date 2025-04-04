@@ -70,6 +70,7 @@ export default function Home() {
 						alt="Groupe de musiciens Maestro" 
 						fill
 						className="object-cover"
+						priority
 					/>
 				</div>
 				<div className="md:w-1/2 md:pl-8 py-6">

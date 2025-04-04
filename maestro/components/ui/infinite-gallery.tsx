@@ -127,7 +127,8 @@ const InfiniteGallery: React.FC = () => {
                                 alt={image.alt} 
                                 fill
                                 className="object-cover"
-                                priority={index < 2}
+                                // priority={index < 2}
+                                loading='lazy'
                             />
                         </div>
                     ))}
