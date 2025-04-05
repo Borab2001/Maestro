@@ -65,8 +65,8 @@ export default function RootLayout({
 							animationDelay={1.5}
 							animationDuration={0.5}
 							stagger={0.025}
-							whiteKeyClassName="bg-gradient-to-b from-zinc-50 to-zinc-200 z-10000"
-							blackKeyClassName="bg-gradient-to-b from-zinc-800 to-black z-10000"
+							whiteKeyClassName=""
+							blackKeyClassName=""
 						>	
 							<Header />
 							{children}

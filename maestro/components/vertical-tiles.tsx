@@ -118,8 +118,8 @@ export default function PianoTiles({
             key={key.id}
             className={cn(
               key.isBlack 
-                ? "bg-black z-10" + (blackKeyClassName ? ` ${blackKeyClassName}` : "")
-                : "bg-white border-x border-gray-200" + (whiteKeyClassName ? ` ${whiteKeyClassName}` : "")
+                ? "z-100" + (blackKeyClassName ? ` ${blackKeyClassName}` : "")
+                : "z-100 bg-gradient-to-b from-zinc-50 to-zinc-200  border-x border-gray-200" + (whiteKeyClassName ? ` ${whiteKeyClassName}` : "")
             )}
             style={{
               width: key.width,
@@ -137,7 +137,19 @@ export default function PianoTiles({
               delay: animationDelay + key.order * stagger,
               ease: [0.45, 0, 0.55, 1],
             }}
-          />
+          >
+            {key.isBlack ? (
+                <div
+                    className="bg-gradient-to-b from-zinc-800 to-black w-full h-[60%]"
+                    style={{
+                    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                    borderBottomLeftRadius: 4,
+                    borderBottomRightRadius: 4,
+                    }}
+                />
+                ) : null
+            }
+          </motion.div>
         ))}
       </div>
     </div>
