@@ -4,30 +4,45 @@ import Image from "next/image";
 // import dynamic from 'next/dynamic';
 import InfiniteGallery from "@/components/ui/infinite-gallery";
 
-// import { useRef } from "react";
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import SplitType from "split-type";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
 
-// gsap.registerPlugin(SplitType);
+gsap.registerPlugin(SplitType);
 // const InfiniteGallery = dynamic(() => import('@/components/ui/infinite-gallery'), { ssr: false });
 
 
 export default function Home() {
-	// const container = useRef(null);
+	const container = useRef(null);
 	
-	// useGSAP(() => {
-	// 	const heroText = new SplitType("h1", { types: "words" });
-	// 	gsap.set(heroText.words, { y: 400 });
+	useGSAP(() => {
+		const text = new SplitType("h1", { types: "lines", lineClass: "line" });
 
-	// 	gsap.to(heroText.words, {
-	// 		y: 0,
-	// 		duration: 1,
-	// 		stagger: 0.075,
-	// 		ease: "power4.out",
-	// 		delay: 1
-	// 	})
-	// },{ scope: container });
+		if (text.lines) {
+			text.lines.forEach((line) => {
+				const content = line.innerHTML;
+				line.innerHTML = `<span>${content}</span>`;
+			});
+
+			gsap.set("h1", { y: 400, display: "block" });
+			gsap.to("h1", { y: 0, duration: 2, ease: "power4.out", delay: 0.25 });
+		}
+
+		// if (text.words) {
+		// 	gsap.to(text.words, {
+		// 		y: -400,
+		// 		duration: 2,
+		// 		stagger: 0.075,
+		// 		ease: "power4.out",
+		// 		delay: 0.25
+		// 	});
+		// }
+
+		return () => {
+			if (text) text.revert();
+		}
+	},{ scope: container });
 
 
 	return (
@@ -74,7 +89,7 @@ export default function Home() {
 					/>
 				</div>
 				<div className="md:w-1/2 md:pl-8 py-6">
-					<p className="text-base leading-loose mb-6">
+					<p className="text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
 						Nous sommes une troupe d&apos;artistes, réunis par une passion commune : repousser les limites de la scène musicale. Nous jouons à un, à deux, à trois... jusqu&apos;à neuf sur scène. Entre compositions, improvisations et interactions avec le public, chaque spectacle est une expérience unique.
 					</p>
 				</div>
