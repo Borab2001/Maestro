@@ -8,6 +8,7 @@ import Header from "@/components/header";
 import ScrollProvider from "@/lib/scroll-provider";
 import { ViewTransitions } from "next-view-transitions";
 import Footer from "@/components/footer";
+import PianoTiles from "@/components/vertical-tiles";
 
 
 const geistSans = Geist({
@@ -60,10 +61,18 @@ export default function RootLayout({
 					<body
 						className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 					>
-						<Header />
-						{children}
-						<Footer />
-						<Analytics />
+						<PianoTiles
+							animationDelay={1.5}
+							animationDuration={0.5}
+							stagger={0.025}
+							whiteKeyClassName="bg-gradient-to-b from-zinc-50 to-zinc-200 z-10000"
+							blackKeyClassName="bg-gradient-to-b from-zinc-800 to-black z-10000"
+						>	
+							<Header />
+							{children}
+							<Footer />
+							<Analytics />
+						</PianoTiles>
 					</body>
 				</ScrollProvider>
 			</html>
