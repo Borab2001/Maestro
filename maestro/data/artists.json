@@ -12,6 +12,28 @@
 				"url": "https://www.instagram.com/thepianogirl_/"
 			}
 		],
+		"timeline": [
+			{
+				"year": "2020",
+				"title": "Titre timeline 1",
+				"description": "Description de la timeline 1"
+			},
+			{
+				"year": "2021",
+				"title": "Titre timeline 2",
+				"description": "Description de la timeline 2"
+			},
+			{
+				"year": "2022",
+				"title": "Titre timeline 3",
+				"description": "Description de la timeline 3"
+			},
+			{
+				"year": "2023",
+				"title": "Titre timeline 4",
+				"description": "Description de la timeline 4"
+			}
+		],
 		"images": [
 			{
 				"src": "/",
