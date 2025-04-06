@@ -27,6 +27,237 @@
 			}
 		]
     },
+	{
+		"id": "billie-pioger",
+		"name": "Billie Pioger",
+		"role": "pianist",
+		"bio": "Billie is a pianist, originally from Caen",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@pianobillie",
+				"url": "https://www.instagram.com/pianobillie/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@pianobillie",
+				"url": "https://www.tiktok.com/@pianobillie"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "alia-ghaley",
+		"name": "Alia Ghaley",
+		"role": "pianist",
+		"bio": "Alia is a pianist, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@aliaghl_",
+				"url": "https://www.instagram.com/aliaghl_/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@aliapiano_",
+				"url": "https://www.tiktok.com/@aliapiano_"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "clement-seiler",
+		"name": "Clément Seiler",
+		"role": "pianist",
+		"bio": "Clément is a pianist, originally from Rennes",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@clementpianist__",
+				"url": "https://www.instagram.com/clementpianist__/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@_clement_slr",
+				"url": "https://www.tiktok.com/@_clement_slr"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "annalia-vu-miethe",
+		"name": "Annalia Vu-Miethé Gahbiche",
+		"role": "guitarist / singer / photographer",
+		"bio": "Annalia is a guitarist and singer, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@annaliavmg",
+				"url": "https://www.instagram.com/annaliavmg/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@annaliavmg",
+				"url": "https://www.tiktok.com/@annaliavmg"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "david-dang",
+		"name": "David Dang",
+		"role": "pianist",
+		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@_symphonique_",
+				"url": "https://www.instagram.com/_symphonique_/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@_symphonique_",
+				"url": "https://www.tiktok.com/@_symphonique_"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "astrid-correia",
+		"name": "Astrid Correia",
+		"role": "pianist",
+		"bio": "Astrid is a pianist, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@strida2.0",
+				"url": "https://www.instagram.com/strida2.0/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@strida.2.0",
+				"url": "https://www.tiktok.com/@strida.2.0"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "hugo-bach",
+		"name": "Hugo Bach",
+		"role": "pianist",
+		"bio": "Hugo is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@hugobach_83",
+				"url": "https://www.instagram.com/hugobach_83/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@hugobach_83",
+				"url": "https://www.tiktok.com/@hugobach_83"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
     {
 		"id": "diane-dinh",
 		"name": "Diane Dinh",
@@ -60,22 +291,88 @@
 			}
 		]
     },
-    {
-		"id": "david-dang",
-		"name": "David Dang",
+	{
+		"id": "kenji-lorkovic",
+		"name": "Kenji Lorkovic",
 		"role": "pianist",
-		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
+		"bio": "Kenji is a pianist, originally from Paris",
 		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
-				"username": "@_symphonique_",
-				"url": "https://www.instagram.com/_symphonique_/"
+				"username": "@kenji_lrk",
+				"url": "https://www.instagram.com/kenji_lrk/"
 			},
 			{
 				"platform": "tiktok",
-				"username": "@_symphonique_",
-				"url": "https://www.tiktok.com/@_symphonique_"
+				"username": "@kenji_lrk",
+				"url": "https://www.tiktok.com/@kenji_lrk"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "christina-kriegel",
+		"name": "Christina Kriegel",
+		"role": "dancer",
+		"bio": "Christina is a dancer, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@chriskdanse",
+				"url": "https://www.instagram.com/chriskdanse/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@chriskdanse",
+				"url": "https://www.tiktok.com/@chriskdanse"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "loris-swider",
+		"name": "Loris Swider",
+		"role": "pianist",
+		"bio": "Loris is a pianist, originally from Montpellier",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@lorisotto_officiel",
+				"url": "https://www.instagram.com/lorisotto_officiel/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@lorisotto_officiel",
+				"url": "https://www.tiktok.com/@lorisotto_officiel"
 			}
 		],
 		"images": [
@@ -94,21 +391,21 @@
 		]
     },
     {
-		"id": "clement-seiler",
-		"name": "Clément Seiler",
+		"id": "eloise-mercier",
+		"name": "Eloïse Mercier",
 		"role": "pianist",
-		"bio": "Clément is a pianist, originally from Rennes",
+		"bio": "Eloïse is a pianist, originally from ...",
 		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
-				"username": "@clementpianist__",
-				"url": "https://www.instagram.com/clementpianist__/"
+				"username": "@elomrce",
+				"url": "https://www.instagram.com/elomrce/"
 			},
 			{
 				"platform": "tiktok",
-				"username": "@_clement_slr",
-				"url": "https://www.tiktok.com/@_clement_slr"
+				"username": "@elomrce",
+				"url": "https://www.tiktok.com/@elomrce"
 			}
 		],
 		"images": [
@@ -126,22 +423,154 @@
 			}
 		]
     },
-    {
-		"id": "billie-pioger",
-		"name": "Billie Pioger",
+	{
+		"id": "pacome-schulte",
+		"name": "Pacôme Schulte",
 		"role": "pianist",
-		"bio": "Billie is a pianist, originally from Caen",
+		"bio": "Pacôme is a pianist, originally from ...",
 		"portrait": "/",
 		"socials": [
 			{
 				"platform": "instagram",
-				"username": "@pianobillie",
-				"url": "https://www.instagram.com/pianobillie/"
+				"username": "@pac.schlt",
+				"url": "https://www.instagram.com/pac_schlt/"
 			},
 			{
 				"platform": "tiktok",
-				"username": "@pianobillie",
-				"url": "https://www.tiktok.com/@pianobillie"
+				"username": "@pac_schlt",
+				"url": "https://www.tiktok.com/@pac_schlt"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "ilona-mateus",
+		"name": "Ilona Mateus",
+		"role": "pianist",
+		"bio": "Ilona is a pianist, originally from Paris",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@ilonamateus",
+				"url": "https://www.instagram.com/ilonamateus/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@iroonachan",
+				"url": "https://www.tiktok.com/@iroonachan"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+	},
+	{
+		"id": "sacha-lhuillier",
+		"name": "Sacha L'Huillier",
+		"role": "pianist",
+		"bio": "Sacha is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@sacha.lhuillier",
+				"url": "https://www.instagram.com/sacha.lhuillier/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@lhuillier_p",
+				"url": "https://www.tiktok.com/@lhuillier_p"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "jeanne-dormoy",
+		"name": "Jeanne Dormoy",
+		"role": "pianist",
+		"bio": "Jeanne is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@piavvio",
+				"url": "https://www.instagram.com/piavvio/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@piavvio",
+				"url": "https://www.tiktok.com/@piavvio"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "theo-foy",
+		"name": "Théo Foy",
+		"role": "pianist",
+		"bio": "Théo is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "instagram",
+				"username": "@theo.foy",
+				"url": "https://www.instagram.com/theo.foy/"
+			},
+			{
+				"platform": "tiktok",
+				"username": "@theo.tfy",
+				"url": "https://www.tiktok.com/@theo.tfy"
 			}
 		],
 		"images": [
@@ -193,237 +622,6 @@
 		]
     },
     {
-		"id": "annalia-vu-miethe",
-		"name": "Annalia Vu-Miethé Gahbiche",
-		"role": "guitarist / singer / photographer",
-		"bio": "Annalia is a guitarist and singer, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@annaliavmg",
-				"url": "https://www.instagram.com/annaliavmg/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@annaliavmg",
-				"url": "https://www.tiktok.com/@annaliavmg"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "loris-swider",
-		"name": "Loris Swider",
-		"role": "pianist",
-		"bio": "Loris is a pianist, originally from Montpellier",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@lorisotto_officiel",
-				"url": "https://www.instagram.com/lorisotto_officiel/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@lorisotto_officiel",
-				"url": "https://www.tiktok.com/@lorisotto_officiel"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "alia-ghaley",
-		"name": "Alia Ghaley",
-		"role": "pianist",
-		"bio": "Alia is a pianist, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@aliaghl_",
-				"url": "https://www.instagram.com/aliaghl_/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@aliapiano_",
-				"url": "https://www.tiktok.com/@aliapiano_"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "kenji-lorkovic",
-		"name": "Kenji Lorkovic",
-		"role": "pianist",
-		"bio": "Kenji is a pianist, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@kenji_lrk",
-				"url": "https://www.instagram.com/kenji_lrk/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@kenji_lrk",
-				"url": "https://www.tiktok.com/@kenji_lrk"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "eloise-mercier",
-		"name": "Eloïse Mercier",
-		"role": "pianist",
-		"bio": "Eloïse is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@elomrce",
-				"url": "https://www.instagram.com/elomrce/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@elomrce",
-				"url": "https://www.tiktok.com/@elomrce"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "ilona-mateus",
-		"name": "Ilona Mateus",
-		"role": "pianist",
-		"bio": "Ilona is a pianist, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@ilonamateus",
-				"url": "https://www.instagram.com/ilonamateus/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@iroonachan",
-				"url": "https://www.tiktok.com/@iroonachan"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-	},
-    {
-		"id": "jeanne-dormoy",
-		"name": "Jeanne Dormoy",
-		"role": "pianist",
-		"bio": "Jeanne is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@piavvio",
-				"url": "https://www.instagram.com/piavvio/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@piavvio",
-				"url": "https://www.tiktok.com/@piavvio"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
 		"id": "urban-douarka",
 		"name": "Urban Douarka",
 		"role": "pianist",
@@ -455,204 +653,5 @@
 				"alt": ""
 			}
 		]
-    },
-    {
-		"id": "astrid-correia",
-		"name": "Astrid Correia",
-		"role": "pianist",
-		"bio": "Astrid is a pianist, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@strida2.0",
-				"url": "https://www.instagram.com/strida2.0/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@strida.2.0",
-				"url": "https://www.tiktok.com/@strida.2.0"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "hugo-bach",
-		"name": "Hugo Bach",
-		"role": "pianist",
-		"bio": "Hugo is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@hugobach_83",
-				"url": "https://www.instagram.com/hugobach_83/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@hugobach_83",
-				"url": "https://www.tiktok.com/@hugobach_83"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-	{
-		"id": "theo-foy",
-		"name": "Théo Foy",
-		"role": "pianist",
-		"bio": "Théo is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@theo.foy",
-				"url": "https://www.instagram.com/theo.foy/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@theo.tfy",
-				"url": "https://www.tiktok.com/@theo.tfy"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-	{
-		"id": "sacha-lhuillier",
-		"name": "Sacha L'Huillier",
-		"role": "pianist",
-		"bio": "Sacha is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@sacha.lhuillier",
-				"url": "https://www.instagram.com/sacha.lhuillier/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@lhuillier_p",
-				"url": "https://www.tiktok.com/@lhuillier_p"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-	{
-		"id": "pacome-schulte",
-		"name": "Pacôme Schulte",
-		"role": "pianist",
-		"bio": "Pacôme is a pianist, originally from ...",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@pac.schlt",
-				"url": "https://www.instagram.com/pac_schlt/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@pac_schlt",
-				"url": "https://www.tiktok.com/@pac_schlt"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
-		"id": "christina-kriegel",
-		"name": "Christina Kriegel",
-		"role": "dancer",
-		"bio": "Christina is a dancer, originally from Paris",
-		"portrait": "/",
-		"socials": [
-			{
-				"platform": "instagram",
-				"username": "@chriskdanse",
-				"url": "https://www.instagram.com/chriskdanse/"
-			},
-			{
-				"platform": "tiktok",
-				"username": "@chriskdanse",
-				"url": "https://www.tiktok.com/@chriskdanse"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
     }
 ]
-  
