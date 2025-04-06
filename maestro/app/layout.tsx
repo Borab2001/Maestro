@@ -8,7 +8,7 @@ import Header from "@/components/header";
 import ScrollProvider from "@/lib/scroll-provider";
 import { ViewTransitions } from "next-view-transitions";
 import Footer from "@/components/footer";
-import PianoTiles from "@/components/vertical-tiles";
+import PianoTiles from "@/components/piano-tiles";
 
 
 const geistSans = Geist({

@@ -45,7 +45,7 @@ export default function PianoTiles({
             const keyPattern = [0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0];
 
             // Calculate how many octaves we can fit in the container
-            const baseWhiteKeyWidth = 40;
+            const baseWhiteKeyWidth = 60;
             const whiteKeysPerOctave = 7;
             const octaves = Math.max(
                 1,
