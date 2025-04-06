@@ -1,73 +1,120 @@
 "use client";
 
 import Image from "next/image";
-// import dynamic from 'next/dynamic';
 import InfiniteGallery from "@/components/ui/infinite-gallery";
 
-// import { useRef } from "react";
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import SplitType from "split-type";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(SplitType);
-// const InfiniteGallery = dynamic(() => import('@/components/ui/infinite-gallery'), { ssr: false });
 
+gsap.registerPlugin(SplitType, ScrollTrigger);
 
 export default function Home() {
-	// const container = useRef(null);
-	
-	// useGSAP(() => {
-	// 	const heroText = new SplitType("h1", { types: "words" });
-	// 	gsap.set(heroText.words, { y: 400 });
+	const container = useRef(null);
 
-	// 	gsap.to(heroText.words, {
-	// 		y: 0,
-	// 		duration: 1,
-	// 		stagger: 0.075,
-	// 		ease: "power4.out",
-	// 		delay: 1
-	// 	})
-	// },{ scope: container });
+	useGSAP(() => {
+		const title = new SplitType("h1", { types: "chars" });
+		const subtitle = new SplitType("h2", { types: "chars" });
+		const text = new SplitType("p", { types: "lines", tagName: "div", lineClass: "line" });
 
+		if (title.chars) {
+			title.chars.forEach((char) => {
+				const content = char.innerHTML;
+				char.innerHTML = `<span className="relative will-change-transform">${content}</span>`;
+			});
+
+			gsap.set(title.chars, { 
+				y: 100 
+			});
+			gsap.to(title.chars, { 
+				y: 0, 
+				duration: 0.75, 
+                stagger: 0.075, 
+                ease: "power4.out", 
+                delay: 0.25 
+            });
+		}
+
+		if (subtitle.chars) {
+			subtitle.chars.forEach((char) => {
+				const content = char.innerHTML;
+				char.innerHTML = `<span className="relative will-change-transform">${content}</span>`;
+			});
+			
+			gsap.set(subtitle.chars, { 
+				y: 100,
+			});
+
+			document.querySelectorAll("h2").forEach(subtitle => {
+				const chars = subtitle.querySelectorAll(".char");
+				
+				gsap.to(chars, { 
+					y: 0, 
+					duration: 1, 
+					stagger: 0.075, 
+					ease: "power4.out",
+					scrollTrigger: {
+						trigger: subtitle,
+						start: "top 80%"
+					}
+				});
+			});
+		}
+
+
+		if (text.lines) {
+			text.lines.forEach((line) => {
+				const content = line.innerHTML;
+				line.innerHTML = `<span className="relative will-change-transform">${content}</span>`;
+			});
+
+			gsap.set(".line span", { 
+				y: 100,
+                display: "block" 
+			});
+			
+			document.querySelectorAll("p").forEach(paragraph => {
+				const lines = paragraph.querySelectorAll(".line span");
+                
+				gsap.to(lines, { 
+                    y: 0, 
+                    duration: 1.5, 
+                    stagger: 0.075, 
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: paragraph,
+                        start: "top 80%",    // Animation commence quand le haut du paragraphe atteint 80% de la hauteur de la fenêtre
+                    }
+                });
+            });
+		}
+
+        // Animation des statistiques
+        gsap.from(".grid > div", {
+            y: 30,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".grid",
+                start: "top 80%"
+            }
+        });
+
+        return () => {
+            if (title) title.revert();
+			if (subtitle) subtitle.revert();
+            if (text) text.revert();
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, { scope: container });
 
 	return (
-		// <main className="w-screen min-h-screen" ref={container}>
-		// 	<div className="w-full flex flex-col pt-[40vh]">
-		// 		<div className="grid grid-cols-5 grid-rows-2">
-		// 			<div className="col-span-2" />
-		// 			{/* <h1 
-		// 				className="text-[20vw] font-semibold tracking-[-0.5rem] leading-none [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]"
-		// 			>
-		// 				Maestro
-		// 			</h1> */}
-		// 			<div className="col-span-2 row-span-1 h-auto">
-		// 				<h1 
-		// 					className="text-2xl font-medium leading-relaxed [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]"
-		// 				>
-		// 					We are a group of artist between the age of 18 and 28, coming from all corners of france. We all have one goal in common- reinventing music to continue to make it live.
-		// 				</h1>
-		// 			</div>
-		// 		</div>
-		// 		<div className="col-span-1" />
-		// 		<Image 
-		// 			src={"/images/group.webp"} 
-		// 			alt="Maestro group shot of first concert" 
-		// 			width={1920} 
-		// 			height={1080} 
-		// 			className="w-full aspect-[16/9] object-cover object-center" 
-		// 		/>
-		// 	</div>
-		// </main>
-		// <VerticalTiles
-		// 	animationDelay={1}
-		// 	animationDuration={1.5}
-		// 	minTileWidth={64}
-		// 	stagger={0.05}
-		// 	tileClassName="bg-gradient-to-r from-zinc-100 to-zinc-300 z-10000"
-		// >
-		<main className="min-h-screen pt-[72px]">
+		<main className="min-h-screen pt-[72px]" ref={container}>
 			<section className="px-4 md:px-8 py-6 md:py-12">
-				<h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium">La Musique Réinventée</h1>
+				<h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">La Musique Réinventée</h1>
 			</section>
 
 			<section className="flex flex-col md:flex-row px-4 md:px-8 lg:px-16 py-8">
@@ -81,7 +128,7 @@ export default function Home() {
 					/>
 				</div>
 				<div className="md:w-1/2 md:pl-8 py-6">
-					<p className="text-base leading-loose mb-6">
+					<p className="text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
 						Nous sommes une troupe d&apos;artistes, réunis par une passion commune : repousser les limites de la scène musicale. Nous jouons à un, à deux, à trois... jusqu&apos;à neuf sur scène. Entre compositions, improvisations et interactions avec le public, chaque spectacle est une expérience unique.
 					</p>
 				</div>
@@ -89,20 +136,20 @@ export default function Home() {
 			
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 py-8">
 				<div className="col-span-1">
-					<p className="text-base leading-loose">
+					<p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
 						L&apos;idée de créer cette troupe est née il y a plusieurs mois, avant d&apos;aboutir, il y a environ un an. Tout est parti d&apos;échanges avec d&apos;autres musiciens. Certains viennent d&apos;écoles de musique, d&apos;autres proviennent du conservatoire, d&apos;autres des genres et même autodidacte.
 					</p>
 				</div>
 				
 				<div className="col-span-1">
-					<p className="text-base leading-loose">
+					<p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
 						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
 					</p>
 				</div>
 			</section>
 
 			<section className="py-16 md:py-64 px-4 md:px-8 lg:px-16 text-center">
-				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-20 sm:mb-24 md:mb-32">Maestro, c&apos;est...</h2>
+				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-20 sm:mb-24 md:mb-32 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Maestro, c&apos;est...</h2>
 				
 				<div className="grid grid-cols-1 sm:grid-cols-3 gap-16 sm:gap-8">
 					<div>
@@ -121,8 +168,8 @@ export default function Home() {
 			</section>
 
 			<section className="px-4 md:px-8 py-6 md:py-12">
-				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6">Titre ici</h2>
-				<p className="max-w-3xl text-base leading-loose">
+				<h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Titre ici</h2>
+				<p className="max-w-3xl text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
 					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.
 				</p>
 			</section>
