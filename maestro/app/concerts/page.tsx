@@ -14,25 +14,36 @@ const Concerts = () => {
             {/* <hr className="border-t border-neutral-200" /> */}
 
             {concerts.map((concert) => (
-                <section 
-                    className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} py-16 gap-8`} 
-                    key={concert.name}
-                >
-                    <div className="md:w-1/2 py-6 flex flex-col">
-                        <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">{concert.name}</h2>
-                        <span className="text-secondary font-medium text-lg md:text-2xl mb-6">{concert.date}</span>
-                        <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-                            {concert.description}
-                        </p>
+                <section className="py-24" key={concert.name}>
+                    <div 
+                        className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`} 
+                    >
+                        <div className="md:w-1/2 py-6 flex flex-col">
+                            <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">{concert.name}</h2>
+                            <span className="text-secondary font-medium text-lg md:text-2xl mb-6">{concert.date}</span>
+                            <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
+                                {concert.description}
+                            </p>
+                        </div>
+                        <div className="md:w-2/3 relative rounded-lg aspect-[16/12]">
+                            <Image 
+                                src={concert.image} 
+                                alt={concert.alt}
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
                     </div>
-                    <div className="md:w-2/3 relative rounded-lg aspect-[16/12]">
-                        <Image 
-                            src={concert.image} 
-                            alt={concert.alt}
-                            fill
-                            className="object-cover"
-                            priority
-                        />
+                    <div>
+                        {concert.tracklist?.map((tracklist) => (
+                            <div 
+                                className="" 
+                                key={tracklist.id}
+                            >
+                                {tracklist.name} - {tracklist.artists}
+                            </div>
+                        ))}
                     </div>
                 </section>
             ))}
