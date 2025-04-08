@@ -1,6 +1,5 @@
-// import Image from "next/image";
-
 import Image from "next/image";
+import concerts from "@/data/concerts.json";
 
 const Concerts = () => {
     return (
@@ -14,24 +13,29 @@ const Concerts = () => {
             
             {/* <hr className="border-t border-neutral-200" /> */}
 
-            <section className="flex flex-col md:flex-row px-4 md:px-8 lg:px-16 py-8">
-                <div className="md:w-3/4 relative rounded-lg aspect-[16/12]">
-                    <Image 
-                        src="/images/group2.webp" 
-                        alt="Groupe de musiciens Maestro" 
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                </div>
-                <div className="md:w-1/2 md:pl-8 py-6 flex flex-col">
-                    <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">Concert 2</h2>
-                    <span className="text-secondary font-medium text-lg md:text-2xl mb-6">8 mars 2025</span>
-                    <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?
-                    </p>
-                </div>
-            </section>
+            {concerts.map((concert) => (
+                <section 
+                    className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} py-16 gap-8`} 
+                    key={concert.name}
+                >
+                    <div className="md:w-1/2 py-6 flex flex-col">
+                        <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">{concert.name}</h2>
+                        <span className="text-secondary font-medium text-lg md:text-2xl mb-6">{concert.date}</span>
+                        <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
+                            {concert.description}
+                        </p>
+                    </div>
+                    <div className="md:w-2/3 relative rounded-lg aspect-[16/12]">
+                        <Image 
+                            src={concert.image} 
+                            alt={concert.alt}
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                </section>
+            ))}
         </div>
     );
 }
