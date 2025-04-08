@@ -5,7 +5,7 @@
 		"date": "9 November 2024",
 		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?",
 		"image": "/images/group.webp",
-        "alt": "Group photo" 
+        "alt": "Group photo"
     },
     {
         "id": 2,
@@ -13,6 +13,92 @@
 		"date": "8 Mars 2025",
 		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?",
 		"image": "/images/group2.webp",
-        "alt": "Group photo 2" 
+        "alt": "Group photo 2",
+        "traclist": [
+            {
+                "name": "Time",
+                "artists": "Loris, Hugo, Pauline, Astrid, Axelle, Jeanne"
+            },
+            {
+                "name": "Medley",
+                "artists": "Eloïse"
+            },
+            {
+                "name": "All of Me",
+                "artists": "Pauline, Théo, Annalia, Urban, Pacôme, Diane"
+            },
+            {
+                "name": "L'Estate Concert No 2",
+                "artists": "Axelle"
+            },
+            {
+                "name": "Compo",
+                "artists": "Pacôme"
+            },
+            {
+                "name": "Voilà",
+                "artists": "Jeanne, Clément, Kenji, Ilona, Éloïse"
+            },
+            {
+                "name": "Clair de Lune",
+                "artists": "Urban, Axelle"
+            },
+            {
+                "name": "Medellin",
+                "artists": "Pacôme, Loris, Billie, Hugo, Kenji"
+            },
+            {
+                "name": "Medley",
+                "artists": "Hugo"
+            },
+            {
+                "name": "La Valse d'Amélie",
+                "artists": "Alia, Axelle, Jeanne, Éloïse, Astrid"
+            },
+            {
+                "name": "Soulmate",
+                "artists": "Astrid"
+            },
+            {
+                "name": "River Flows in You",
+                "artists": "Clément, Pauline, Théo, Diane, Billie"
+            },
+            {
+                "name": "Medley",
+                "artists": "Loris"
+            },
+            {
+                "name": "Someone Like You",
+                "artists": "Théo, Alia, Clément, Kenji, Jeanne, Annalia, Pacôme"
+            },
+            {
+                "name": "Ballade in G Minor",
+                "artists": "Billie"
+            },
+            {
+                "name": "Prestation chorégraphiée",
+                "artists": "Chris"
+            },
+            {
+                "name": "Medley",
+                "artists": "Éloïse, Alia"
+            },
+            {
+                "name": "Demon Slayer",
+                "artists": "Urban"
+            },
+            {
+                "name": "Experience",
+                "artists": "Astrid, Alia, Annalia, Billie, Hugo, Ilona"
+            },
+            {
+                "name": "Compo accompagnée de danse",
+                "artists": "Ilona, Chris"
+            },
+            {
+                "name": "Interstellar",
+                "artists": "Éloïse, Pacôme, Jeanne, Kenji, Axelle, Ilona, Invitée surprise"
+            }
+        ]
     }
 ]
