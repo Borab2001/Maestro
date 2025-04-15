@@ -7,13 +7,13 @@ const Footer = () => {
     const socials = [
         {
             name: 'Instagram',
-            username: "@maestro.concert",
-            link: 'https://www.instagram.com/maestro.concert/',
+            username: "@maestro.concerts",
+            link: 'https://www.instagram.com/maestro.concerts/',
         },
         {
             name: 'TikTok',
-            username: "@maestro.concert",
-            link: 'https://www.tiktok.com/@maestro.concert',
+            username: "@maestro.concerts",
+            link: 'https://www.tiktok.com/@maestro.concerts',
         },
     ]
 
