@@ -63,7 +63,13 @@ const Artist = () => {
 
             <div className="w-full md:w-[70%] py-48 flex flex-col gap-4 md:gap-8">
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6">Background</h2>
-                <p className="text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?</p>
+                {Array.isArray(artist.background) ? (
+                    artist.background.map((paragraph, index) => (
+                        <p key={index} className="text-lg mb-4">{paragraph}</p>
+                    ))
+                ) : (
+                    <p className="text-lg">{artist.background}</p>
+                )}
                 {timelineData.length > 0 && (
                     <Timeline data={timelineData} />
                 )}
