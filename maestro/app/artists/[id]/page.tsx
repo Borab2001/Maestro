@@ -76,30 +76,19 @@ const Artist = () => {
             </div>
 
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-                <Image
-                    src={artist.portrait}
-                    alt={`${artist.name} image 1`}
-                    width={1920}
-                    height={1080}
-                    className="flex-1 w-full object-cover object-center rounded-lg"
-                    loading="lazy"
-                />
-                <Image
-                    src={artist.portrait}
-                    alt={`${artist.name} image 2`}
-                    width={1920}
-                    height={1080}
-                    className="flex-1 w-full object-cover object-center rounded-lg"
-                    loading="lazy"
-                />
-                <Image
-                    src={artist.portrait}
-                    alt={`${artist.name} image 3`}
-                    width={1920}
-                    height={1080}
-                    className="flex-1 w-full object-cover object-center rounded-lg"
-                    loading="lazy"
-                />
+                {artist.images && (
+                    artist.images.slice(0, 3).map((image, index) => (
+                        <Image
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            width={1920}
+                            height={1080}
+                            className="flex-1 w-full object-cover object-center rounded-lg"
+                            loading="lazy"
+                        />
+                    ))
+                )}
             </div>
         </div>
 
