@@ -51,16 +51,16 @@
 		],
 		"images": [
 			{
-				"src": "/",
-				"alt": ""
+				"src": "/images/axelle.webp",
+				"alt": "Axelle image 1"
 			},
 			{
-				"src": "/",
-				"alt": ""
+				"src": "/images/axelle.webp",
+				"alt": "Axelle image 2"
 			},
 			{
-				"src": "/",
-				"alt": ""
+				"src": "/images/axelle.webp",
+				"alt": "Axelle image 3"
 			}
 		]
     },
