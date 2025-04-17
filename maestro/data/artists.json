@@ -2,8 +2,13 @@
 	{
 		"id": "axelle-grenier",
 		"name": "Axelle Grenier",
-		"role": "pianist",
-		"bio": "Axelle is a pianist, originally from Chelles",
+		"role": "pianiste",
+		"bio": "Originaire de Paris, la pianiste franco-russe développe depuis treize ans une pratique musicale nourrie par une formation classique en conservatoire. Fondatrice de la troupe Maestro, elle mène également une carrière solo, entre composition, performance et enseignement.",
+		"background": [
+			"Issue d’une famille de guitaristes, elle choisit très tôt le piano, un peu à contre-courant. Sans vocation évidente, elle intègre le conservatoire presque par hasard, et en découvre d’abord la rigueur et les contraintes d’un univers qui lui semblait froid, rigide et trop tourné vers la compétition. Mais c’est en enseignant, quelques années plus tard, qu’elle trouve une première source de plaisir/un regard différent dans la musique, en réalisant le pouvoir de transmission que lui offrait son parcours.",
+			"Aujourd’hui, elle se consacre à une vie artistique complète à travers le piano : compositions pour piano et voix, création de contenu, direction de projets et pédagogie. Forte de plus d’une centaine d’élèves formés, elle défend une vision vivante du piano, à la croisée de la musique classique et de la pop, loin des codes figés du récital traditionnel.",
+			"Avec Maestro, elle s’engage aussi pour une meilleure reconnaissance des instrumentistes, une représentation plus juste des femmes dans la musique et la libération de la parole autour de la santé mentale dans le milieu artistique."
+		],
 		"portrait": "/images/axelle.webp",
 		"socials": [
 			{
@@ -15,23 +20,33 @@
 		"timeline": [
 			{
 				"year": "2020",
-				"title": "Titre timeline 1",
-				"description": "Description de la timeline 1"
+				"title": "Intervenante musicale pour Cekedubonheur",
+				"description": "Elle rejoint l’association Cekedubonheur et joue dans les hôpitaux auprès d’enfants malades."
 			},
 			{
 				"year": "2021",
-				"title": "Titre timeline 2",
-				"description": "Description de la timeline 2"
+				"title": "Duo piano-violon dans des lieux d’exception",
+				"description": "Elle forme un duo avec une violoniste et se produit dans des lieux prestigieux : péniches, châteaux, hôtels de luxe."
 			},
 			{
 				"year": "2022",
-				"title": "Titre timeline 3",
-				"description": "Description de la timeline 3"
+				"title": "Prestation télévisée à Rome",
+				"description": "Elle participe à l’émission italienne Tu sí que vales, où elle interprète L’Été de Vivaldi sur un plateau télé."
 			},
 			{
 				"year": "2023",
-				"title": "Titre timeline 4",
-				"description": "Description de la timeline 4"
+				"title": "Lancement de la troupe Maestro",
+				"description": "Elle crée la première troupe de pianistes, réunit des artistes, des sponsors et des salles autour du projet Maestro."
+			},
+			{
+				"year": "2023",
+				"title": "Compositions et diffusion",
+				"description": "Elle compose ses premiers morceaux pour accompagner des chanteurs, diffusés sur les plateformes musicales."
+			},
+			{
+				"year": "2023",
+				"title": "Pédagogie et événements",
+				"description": "Elle enseigne le piano, et organise concerts, stages et ateliers pour ses élèves."
 			}
 		],
 		"images": [
