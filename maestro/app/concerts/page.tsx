@@ -13,7 +13,7 @@ const Concerts = () => {
             
             {/* <hr className="border-t border-neutral-200" /> */}
 
-            {concerts.map((concert) => (
+            {concerts.slice().reverse().map((concert) => (
                 <section className="py-24" key={concert.name}>
                     <div 
                         className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`} 
