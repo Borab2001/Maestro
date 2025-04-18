@@ -55,6 +55,31 @@ body {
 	animation: none !important;
 }
 
+*::selection {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+  
+*::-moz-selection {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+  
+*::-o-selection {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+  
+*::-ms-selection {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+  
+*::-webkit-selection {
+	background-color: #fff;
+	color: #0a0a0a;
+}
+
 p .line {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
