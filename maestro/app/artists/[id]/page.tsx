@@ -152,7 +152,7 @@ const Artist = () => {
                     <h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                         {artist.name}
                     </h1>
-                    <p className="font-medium text-base md:text-lg leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
+                    <p className="font-medium text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                         {artist.bio}
 					</p>
                     <div className="w-full flex flex-row items-center justify-between gap-8">
@@ -172,10 +172,10 @@ const Artist = () => {
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
-                        <p key={index} className="text-lg mb-4 leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{paragraph}</p>
+                        <p key={index} className="text-base mb-4 leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{paragraph}</p>
                     ))
                 ) : (
-                    <p className="text-base md:text-lg leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{artist.background}</p>
+                    <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{artist.background}</p>
                 )}
                 {timelineData.length > 0 && (
                     <Timeline data={timelineData} />
