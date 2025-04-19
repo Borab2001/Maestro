@@ -29,8 +29,8 @@ export function Tracklist({ tracklist }: TracklistProps) {
             </motion.span>
           </button>
         </MorphingPopoverTrigger>
-        <MorphingPopoverContent className='z-100 w-[300px] h-[400px] left-0 top-0 overflow-x-hidden overflow-y-auto'>
-          <div className='grid gap-4'>
+        <MorphingPopoverContent className='z-100 w-[400px] h-[400px] left-0 top-0 overflow-x-hidden overflow-y-auto'>
+          <div className='grid gap-3'>
             <div className='space-y-2'>
               <motion.h4
                 layoutId='morphing-popover-basic-label'
@@ -44,7 +44,7 @@ export function Tracklist({ tracklist }: TracklistProps) {
               </p>
             </div>
             <div className='grid gap-2'>
-				<div>
+				<div className="grid gap-4">
 					{tracklist?.map((tracklist) => (
 						<div 
 							className="" 
