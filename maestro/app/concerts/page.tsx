@@ -1,5 +1,6 @@
 import Image from "next/image";
 import concerts from "@/data/concerts.json";
+import { Tracklist } from "@/components/tracklist";
 
 const Concerts = () => {
     return (
@@ -18,12 +19,13 @@ const Concerts = () => {
                     <div 
                         className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`} 
                     >
-                        <div className="md:w-1/2 py-6 flex flex-col">
+                        <div className="md:w-1/2 py-6 flex flex-col items-start">
                             <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">{concert.name}</h2>
                             <span className="text-secondary font-medium text-lg md:text-2xl mb-6">{concert.date}</span>
                             <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                                 {concert.description}
                             </p>
+                            <Tracklist tracklist={concert.tracklist} />
                         </div>
                         <div className="md:w-2/3 relative rounded-lg aspect-[16/12]">
                             <Image 
@@ -35,7 +37,7 @@ const Concerts = () => {
                             />
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         {concert.tracklist?.map((tracklist) => (
                             <div 
                                 className="" 
@@ -44,7 +46,7 @@ const Concerts = () => {
                                 {tracklist.name} - {tracklist.artists}
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </section>
             ))}
         </div>
