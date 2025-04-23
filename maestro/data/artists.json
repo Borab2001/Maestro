@@ -626,10 +626,10 @@
 		]
     },
     {
-		"id": "pauline-chaboche",
-		"name": "Pauline Chaboche",
+		"id": "pauline",
+		"name": "Pauline",
 		"role": "pianist",
-		"bio": "Pauline is a pianist, originally from Paris",
+		"bio": "Originaire de Toulouse, Pauline",
 		"portrait": "/",
 		"socials": [
 			{

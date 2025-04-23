@@ -158,7 +158,7 @@ const Artist = () => {
                     <div className="w-full flex flex-row items-center justify-between gap-8">
                         {artist.socials.map((social, index) => (
                             <div key={index} className="flex flex-col items-start gap-4">
-                                <span className="text-lg md:text-xl font-medium capitalize">{social.platform}</span>
+                                <span className="text-lg md:text-xl font-medium capitalize leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{social.platform}</span>
                                 <Link href={social.url} target="_blank" rel="noopener noreferrer" className="text-secondary text-base md:text-lg font-medium">
                                     {social.username}
                                 </Link>
