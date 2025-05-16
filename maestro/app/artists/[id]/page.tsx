@@ -149,8 +149,8 @@ const Artist = () => {
                     />
                 </div>
                 <div className="pt-18 flex flex-col gap-24 items-start justify-end">
-                    <h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-                        {artist.name}
+                    <h1 className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
+                        {artist.name} {artist.surname}
                     </h1>
                     <p className="font-medium text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                         {artist.bio}
