@@ -13,6 +13,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import artists from "@/data/artists.json";
 
 import { Timeline } from "@/components/ui/timeline";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselNavigation,
+	CarouselItem,
+} from '@/components/ui/carousel';
+
 
 gsap.registerPlugin(SplitType, ScrollTrigger);
 
@@ -168,7 +175,7 @@ const Artist = () => {
                 </div>
             </section>
 
-            <div className="w-full md:w-[70%] py-48 flex flex-col gap-4 md:gap-8">
+            <section className="w-full md:w-[70%] py-48 flex flex-col gap-4 md:gap-8">
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
@@ -180,9 +187,9 @@ const Artist = () => {
                 {timelineData.length > 0 && (
                     <Timeline data={timelineData} />
                 )}
-            </div>
+            </section>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
                 {artist.images && (
                     artist.images.slice(0, 3).map((image, index) => (
                         <Image
@@ -191,14 +198,43 @@ const Artist = () => {
                             alt={image.alt}
                             width={1920}
                             height={1080}
-                            className="flex-1 w-full object-cover object-center rounded-lg"
+                            className="flex-1 w-full object-cover object-center rounded-lg aspect-[2/3]"
                             loading="lazy"
                         />
                     ))
                 )}
-            </div>
-        </div>
+            </section>
 
+            <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
+				<Carousel>
+					<CarouselContent className='flex gap-4'>
+						{artist.images.slice(0, 3).map((image, index) => (
+							<CarouselItem 
+								// className='basis-1/3 pl-4'
+								// className="relative min-w-96 w-[40vw] aspect-[16/12] flex-shrink-0 rounded-lg overflow-hidden"
+								className="basis-5/6 w-full relative aspect-[2/3] flex-shrink-0 rounded-lg overflow-hidden"
+								key={`img-${index}`}	
+							>
+								<Image 
+									src={image.src} 
+									alt={image.alt} 
+									fill
+									className="object-cover select-none pointer-events-none"
+									// priority={index < 2}
+									loading='lazy'
+								/>
+							</CarouselItem>
+												
+						))}
+					</CarouselContent>
+					<CarouselNavigation
+					className='absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'
+					// classNameButton='bg-transparent *:stroke-zinc-200'
+					alwaysShow
+					/>
+				</Carousel>
+            </section>
+        </div>
     );
 }
  
