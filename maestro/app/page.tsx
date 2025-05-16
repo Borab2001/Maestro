@@ -216,46 +216,11 @@ export default function Home() {
 			<div className='relative w-full px-4'>
 				<Carousel>
 					<CarouselContent className='flex gap-4'>
-					{/* <CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						1
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						2
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						3
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						4
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						5
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						6
-						</div>
-					</CarouselItem>
-					<CarouselItem className='basis-1/3 pl-4'>
-						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
-						7
-						</div>
-					</CarouselItem> */}
 						{images.map((image, index) => (
 							<CarouselItem 
 								// className='basis-1/3 pl-4'
 								// className="relative min-w-96 w-[40vw] aspect-[16/12] flex-shrink-0 rounded-lg overflow-hidden"
-								className="basis-2/3 w-full relative aspect-video flex-shrink-0 rounded-lg overflow-hidden"
+								className="basis-5/6 w-full relative aspect-[4/3] xl:aspect-[7/4] flex-shrink-0 rounded-lg overflow-hidden"
 								key={`img-${index}`}	
 							>
 								<Image 

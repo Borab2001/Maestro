@@ -232,7 +232,7 @@ function CarouselIndicator({
                     <button
                         key={i}
                         type='button'
-                        aria-label={`Go to slide ${i + 1}`}
+                        aria-label={`Slide ${i + 1}`}
                         onClick={() => setIndex(i)}
                         className={cn(
                             'h-2 w-2 rounded-full transition-opacity duration-300',
@@ -322,7 +322,7 @@ function CarouselContent({
                 x: disableDrag ? undefined : dragX,
             }}
             animate={{
-                translateX: `-${index * ((100 * 2 / 3) / visibleItemsCount) }%`,
+                translateX: `-${index * ((100 * 5 / 6) / visibleItemsCount) }%`,
             }}
             onDragEnd={disableDrag ? undefined : onDragEnd}
             transition={
