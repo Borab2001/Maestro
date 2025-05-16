@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import InfiniteGallery from "@/components/ui/infinite-gallery";
+// import InfiniteGallery from "@/components/ui/infinite-gallery";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselNavigation,
+	CarouselItem,
+  } from '@/components/ui/carousel';
 
 import { useRef } from "react";
 import gsap from "gsap";
@@ -111,6 +117,19 @@ export default function Home() {
         };
     }, { scope: container });
 
+	interface ImageItem {
+		src: string;
+		alt: string;
+	}
+
+	const images: ImageItem[] = [
+        { src: '/images/group.webp', alt: 'Performance Maestro 1' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 2' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 3' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 4' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 5' },
+    ];
+
 	return (
 		<main className="min-h-screen pt-[72px]" ref={container}>
 			<section className="px-4 md:px-8 py-6 md:py-12">
@@ -192,7 +211,72 @@ export default function Home() {
 				</p>
 			</section>
 
-			<InfiniteGallery />
+			{/* <InfiniteGallery /> */}
+
+			<div className='relative w-full px-4'>
+				<Carousel>
+					<CarouselContent className='flex gap-4'>
+					{/* <CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						1
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						2
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						3
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						4
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						5
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						6
+						</div>
+					</CarouselItem>
+					<CarouselItem className='basis-1/3 pl-4'>
+						<div className='flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800'>
+						7
+						</div>
+					</CarouselItem> */}
+						{images.map((image, index) => (
+							<CarouselItem 
+								// className='basis-1/3 pl-4'
+								// className="relative min-w-96 w-[40vw] aspect-[16/12] flex-shrink-0 rounded-lg overflow-hidden"
+								className="basis-2/3 w-full relative aspect-video flex-shrink-0 rounded-lg overflow-hidden"
+								key={`img-${index}`}	
+							>
+								<Image 
+									src={image.src} 
+									alt={image.alt} 
+									fill
+									className="object-cover select-none pointer-events-none"
+									// priority={index < 2}
+									loading='lazy'
+								/>
+							</CarouselItem>
+												
+						))}
+					</CarouselContent>
+					<CarouselNavigation
+					className='absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'
+					// classNameButton='bg-transparent *:stroke-zinc-200'
+					alwaysShow
+					/>
+				</Carousel>
+			</div>
 		</main>
 	);
 }
