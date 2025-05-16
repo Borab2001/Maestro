@@ -155,7 +155,7 @@ const Artist = () => {
                         priority
                     />
                 </div>
-                <div className="pt-18 flex flex-col gap-24 items-start justify-end">
+                <div className="pt-18 flex flex-col gap-10 md:gap-24 items-start justify-end">
                     <h1 className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                         {artist.name} {artist.surname}
                     </h1>
@@ -175,7 +175,7 @@ const Artist = () => {
                 </div>
             </section>
 
-            <section className="w-full md:w-[70%] py-48 flex flex-col gap-4 md:gap-8">
+            <section className="w-full md:w-[70%] py-24 md:py-48 flex flex-col gap-8 md:gap-12">
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
