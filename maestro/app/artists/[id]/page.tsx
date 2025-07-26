@@ -13,12 +13,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import artists from "@/data/artists.json";
 
 import { Timeline } from "@/components/ui/timeline";
-import {
-	Carousel,
-	CarouselContent,
-	CarouselNavigation,
-	CarouselItem,
-} from '@/components/ui/carousel';
 
 
 gsap.registerPlugin(SplitType, ScrollTrigger);
@@ -205,35 +199,8 @@ const Artist = () => {
                 )}
             </section>
 
-            <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
-				<Carousel>
-					<CarouselContent className='flex gap-4'>
-						{artist.images.slice(0, 3).map((image, index) => (
-							<CarouselItem 
-								// className='basis-1/3 pl-4'
-								// className="relative min-w-96 w-[40vw] aspect-[16/12] flex-shrink-0 rounded-lg overflow-hidden"
-								className="basis-5/6 w-full relative aspect-[2/3] flex-shrink-0 rounded-lg overflow-hidden"
-								key={`img-${index}`}	
-							>
-								<Image 
-									src={image.src} 
-									alt={image.alt} 
-									fill
-									className="object-cover select-none pointer-events-none"
-									// priority={index < 2}
-									loading='lazy'
-								/>
-							</CarouselItem>
-												
-						))}
-					</CarouselContent>
-					<CarouselNavigation
-					className='absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'
-					// classNameButton='bg-transparent *:stroke-zinc-200'
-					alwaysShow
-					/>
-				</Carousel>
-            </section>
+            {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
+            </section> */}
         </div>
     );
 }
