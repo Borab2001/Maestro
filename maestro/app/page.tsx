@@ -1,14 +1,6 @@
 "use client";
 
 import Image from "next/image";
-// import InfiniteGallery from "@/components/ui/infinite-gallery";
-import {
-	Carousel,
-	CarouselContent,
-	CarouselNavigation,
-	CarouselItem,
-  } from '@/components/ui/carousel';
-
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -210,38 +202,6 @@ export default function Home() {
 					faire découvrir notre univers à un public de plus en plus large, tout en restant fidèles à ce qui nous fait vibrer.
 				</p>
 			</section>
-
-			{/* <InfiniteGallery /> */}
-
-			<div className='relative w-full px-4'>
-				<Carousel>
-					<CarouselContent className='flex gap-4'>
-						{images.map((image, index) => (
-							<CarouselItem 
-								// className='basis-1/3 pl-4'
-								// className="relative min-w-96 w-[40vw] aspect-[16/12] flex-shrink-0 rounded-lg overflow-hidden"
-								className="basis-5/6 w-full relative aspect-[4/3] xl:aspect-[7/4] flex-shrink-0 rounded-lg overflow-hidden"
-								key={`img-${index}`}	
-							>
-								<Image 
-									src={image.src} 
-									alt={image.alt} 
-									fill
-									className="object-cover select-none pointer-events-none"
-									// priority={index < 2}
-									loading='lazy'
-								/>
-							</CarouselItem>
-												
-						))}
-					</CarouselContent>
-					<CarouselNavigation
-					className='absolute -bottom-20 left-auto top-auto w-full justify-end gap-2'
-					// classNameButton='bg-transparent *:stroke-zinc-200'
-					alwaysShow
-					/>
-				</Carousel>
-			</div>
 		</main>
 	);
 }
