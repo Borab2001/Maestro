@@ -7,6 +7,8 @@ import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { Carousel } from "@/components/ui/carousel"
+
 
 gsap.registerPlugin(SplitType, ScrollTrigger);
 
@@ -109,12 +111,7 @@ export default function Home() {
         };
     }, { scope: container });
 
-	interface ImageItem {
-		src: string;
-		alt: string;
-	}
-
-	const images: ImageItem[] = [
+	const images = [
         { src: '/images/group.webp', alt: 'Performance Maestro 1' },
         { src: '/images/group.webp', alt: 'Performance Maestro 2' },
         { src: '/images/group.webp', alt: 'Performance Maestro 3' },
@@ -202,6 +199,13 @@ export default function Home() {
 					faire découvrir notre univers à un public de plus en plus large, tout en restant fidèles à ce qui nous fait vibrer.
 				</p>
 			</section>
+
+			<Carousel
+				images={images}
+				autoplayDelay={2000}
+				showPagination={true}
+				showNavigation={true}
+			/>
 		</main>
 	);
 }
