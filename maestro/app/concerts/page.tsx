@@ -11,39 +11,52 @@ const Concerts = () => {
                 </div>
             </section>
             
-            {/* <hr className="border-t border-neutral-200" /> */}
-
             {concerts.slice().reverse().map((concert) => (
                 <section className="py-24" key={concert.name}>
                     <div 
-                        className={`flex flex-col ${concert.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8`} 
+                        className="grid grid-cols-1 lg:grid-cols-5 gap-8" 
                     >
-                        <div className="md:w-1/2 py-6 flex flex-col">
+                        <div className={`col-span-1 lg:col-span-2 py-6 flex flex-col ${concert.id % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}`}>
                             <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4">{concert.name}</h2>
                             <span className="text-secondary font-medium text-lg md:text-2xl mb-6">{concert.date}</span>
                             <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                                 {concert.description}
                             </p>
-                        </div>
-                        <div className="md:w-2/3 relative rounded-lg aspect-[16/12]">
-                            <Image 
-                                src={concert.image} 
-                                alt={concert.alt}
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
-                    </div>
-                    <div>
-                        {concert.tracklist?.map((tracklist) => (
-                            <div 
-                                className="" 
-                                key={tracklist.id}
-                            >
-                                {tracklist.name} - {tracklist.artists}
+
+                            <div className="hidden lg:block space-y-2 mt-6">
+                                {concert.tracklist?.map((tracklist) => (
+                                    <div 
+                                        className="py-2" 
+                                        key={tracklist.id}
+                                    >
+                                        <span className="font-medium">{tracklist.name}</span> - <span className="text-neutral-400">{tracklist.artists}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+                        <div className="col-span-1 lg:col-span-3">
+                            <div className="sticky top-1/6 self-start">
+                                <div className="relative aspect-[16/12]">
+                                    <Image 
+                                        src={concert.image} 
+                                        alt={concert.alt}
+                                        fill
+                                        className="object-cover w-full"
+                                        priority
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="lg:hidden space-y-2">
+                            {concert.tracklist?.map((tracklist) => (
+                                <div 
+                                    className="py-2" 
+                                    key={tracklist.id}
+                                >
+                                    <span className="font-medium">{tracklist.name}</span> - <span className="text-neutral-400">{tracklist.artists}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
             ))}

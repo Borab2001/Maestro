@@ -14,6 +14,7 @@ import artists from "@/data/artists.json";
 
 import { Timeline } from "@/components/ui/timeline";
 
+
 gsap.registerPlugin(SplitType, ScrollTrigger);
 
 const Artist = () => {
@@ -148,9 +149,9 @@ const Artist = () => {
                         priority
                     />
                 </div>
-                <div className="pt-18 flex flex-col gap-24 items-start justify-end">
-                    <h1 className="text-3xl md:text-6xl lg:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-                        {artist.name}
+                <div className="pt-18 flex flex-col gap-10 md:gap-24 items-start justify-end">
+                    <h1 className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
+                        {artist.name} {artist.surname}
                     </h1>
                     <p className="font-medium text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
                         {artist.bio}
@@ -168,7 +169,7 @@ const Artist = () => {
                 </div>
             </section>
 
-            <div className="w-full md:w-[70%] py-48 flex flex-col gap-4 md:gap-8">
+            <section className="w-full md:w-[70%] py-24 md:py-48 flex flex-col gap-8 md:gap-12">
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
@@ -180,9 +181,9 @@ const Artist = () => {
                 {timelineData.length > 0 && (
                     <Timeline data={timelineData} />
                 )}
-            </div>
+            </section>
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
                 {artist.images && (
                     artist.images.slice(0, 3).map((image, index) => (
                         <Image
@@ -191,14 +192,16 @@ const Artist = () => {
                             alt={image.alt}
                             width={1920}
                             height={1080}
-                            className="flex-1 w-full object-cover object-center rounded-lg"
+                            className="flex-1 w-full object-cover object-center rounded-lg aspect-[2/3]"
                             loading="lazy"
                         />
                     ))
                 )}
-            </div>
-        </div>
+            </section>
 
+            {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
+            </section> */}
+        </div>
     );
 }
  

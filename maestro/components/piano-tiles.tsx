@@ -144,7 +144,7 @@ export default function PianoTiles({
     const sortedKeys = [...keys].sort((a, b) => (a.isBlack ? 1 : -1));
 
     return (
-        <div ref={containerRef} className={`${animationComplete ? "h-auto overflow-auto" : "relative h-screen overflow-hidden"}`}>
+        <div ref={containerRef} className={`${animationComplete ? "h-auto overflow-visible" : "relative h-screen overflow-hidden"}`}>
             {children}
 
             <div className={`${animationComplete ? "hidden" : "absolute inset-0"}`}>

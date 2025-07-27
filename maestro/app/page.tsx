@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import InfiniteGallery from "@/components/ui/infinite-gallery";
-
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { Carousel } from "@/components/ui/carousel"
 
 
 gsap.registerPlugin(SplitType, ScrollTrigger);
@@ -111,6 +111,14 @@ export default function Home() {
         };
     }, { scope: container });
 
+	const images = [
+        { src: '/images/group.webp', alt: 'Performance Maestro 1' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 2' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 3' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 4' },
+        { src: '/images/group.webp', alt: 'Performance Maestro 5' },
+    ];
+
 	return (
 		<main className="min-h-screen pt-[72px]" ref={container}>
 			<section className="px-4 md:px-8 py-6 md:py-12">
@@ -192,7 +200,12 @@ export default function Home() {
 				</p>
 			</section>
 
-			<InfiniteGallery />
+			<Carousel
+				images={images}
+				autoplayDelay={2000}
+				showPagination={true}
+				showNavigation={true}
+			/>
 		</main>
 	);
 }
