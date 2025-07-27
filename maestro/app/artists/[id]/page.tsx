@@ -27,7 +27,7 @@ const Artist = () => {
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
             <section className="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative w-full h-[calc(100vh-104px)]">
+                <div className="relative w-full aspect-[3/4] sm:aspect-[5/4] md:aspect-auto md:h-[calc(100vh-104px)]">
                     <Image
                         src={artist.portrait}
                         alt={`${artist.name} portrait`}
