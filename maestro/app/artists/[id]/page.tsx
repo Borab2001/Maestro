@@ -25,8 +25,8 @@ const Artist = () => {
     })) || [];
 
     return (
-        <div className="min-h-screen px-4 md:px-8 pt-[72px]">
-            <section className="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="min-h-screen pt-[72px]">
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 px-4 md:px-8">
                 <div className="relative w-full aspect-[3/4] sm:aspect-[5/4] md:aspect-auto md:h-[calc(100vh-104px)]">
                     <Image
                         src={artist.portrait}
@@ -36,7 +36,7 @@ const Artist = () => {
                         priority
                     />
                 </div>
-                <div className="pt-18 flex flex-col gap-10 md:gap-24 items-start justify-end">
+                <div className="md:pt-18 flex flex-col gap-6 md:gap-24 items-start justify-end">
                     <TextEffect
                         per="char"
                         preset="fade-in-blur"
@@ -59,7 +59,7 @@ const Artist = () => {
                         {artist.bio}
                     </TextEffect>
 
-                    <div className="w-full flex flex-row items-center justify-between gap-8">
+                    <div className="w-full flex flex-row items-center justify-between gap-6">
                         {artist.socials.map((social, index) => (
                             <div key={index} className="flex flex-col items-start gap-4">
                                 <span className="text-lg md:text-xl font-medium capitalize leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{social.platform}</span>
@@ -72,8 +72,8 @@ const Artist = () => {
                 </div>
             </section>
 
-            <section className="w-full md:w-[70%] py-24 md:py-48 flex flex-col gap-8 md:gap-12">
-                <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
+            <section className="w-full md:w-[70%] flex flex-col gap-6 md:gap-12 py-16 md:py-48 px-4 md:px-8">
+                <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
                         <p key={index} className="text-base mb-4 leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{paragraph}</p>
@@ -86,7 +86,7 @@ const Artist = () => {
                 )}
             </section>
 
-            <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8">
+            <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
                 {artist.images && (
                     artist.images.slice(0, 3).map((image, index) => (
                         <Image
@@ -101,9 +101,10 @@ const Artist = () => {
                     ))
                 )}
             </section>
-
+            
             {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
             </section> */}
+
         </div>
     );
 }
