@@ -6,8 +6,9 @@ import Link from "next/link";
 
 import artists from "@/data/artists.json";
 
-import { Timeline } from "@/components/ui/timeline";
 import { TextEffect } from "@/components/ui/text-effect";
+import { Timeline } from "@/components/ui/timeline";
+import { Carousel } from "@/components/ui/carousel";
 
 
 const Artist = () => {
@@ -100,6 +101,15 @@ const Artist = () => {
                         />
                     ))
                 )}
+            </section>
+
+            <section className="w-full md:hidden">
+                <Carousel
+                    images={artist.images}
+                    autoplayDelay={2000}
+                    showPagination={true}
+                    showNavigation={true}
+                    />
             </section>
             
             {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
