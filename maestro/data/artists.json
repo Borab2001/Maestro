@@ -2,7 +2,6 @@
 	{
 		"id": "axelle-grenier",
 		"name": "Axelle Grenier",
-		"surname": "Grenier",
 		"role": "pianiste",
 		"bio": "Originaire de Paris, la pianiste franco-russe développe depuis treize ans une pratique musicale nourrie par une formation classique en conservatoire. Fondatrice de la troupe Maestro, elle mène également une carrière solo, entre composition, performance et enseignement.",
 		"background": [
@@ -67,8 +66,7 @@
     },
 	{
 		"id": "billie-pioger",
-		"name": "Billie",
-		"surname": "Pioger",
+		"name": "Billie Pioger",
 		"role": "pianist",
 		"bio": "Billie is a pianist, originally from Caen",
 		"portrait": "/",
@@ -101,8 +99,7 @@
     },
 	{
 		"id": "alia-ghaley",
-		"name": "Alia",
-		"surname": "Ghaley",
+		"name": "Alia Ghaley",
 		"role": "pianist",
 		"bio": "Alia is a pianist, originally from Paris",
 		"portrait": "/",
@@ -135,8 +132,7 @@
     },
 	{
 		"id": "clement-seiler",
-		"name": "Clément",
-		"surname": "Seiler",
+		"name": "Clément Seiler",
 		"role": "pianist",
 		"bio": "Clément is a pianist, originally from Rennes",
 		"portrait": "/",
@@ -169,8 +165,7 @@
     },
 	{
 		"id": "annalia-vu-miethe",
-		"name": "Annalia",
-		"surname": "Vu-Miethé Gahbiche",
+		"name": "Annalia Vu-Miethé Gahbiche",
 		"role": "guitarist / singer / photographer",
 		"bio": "Annalia is a guitarist and singer, originally from Paris",
 		"portrait": "/",
@@ -203,8 +198,7 @@
     },
 	{
 		"id": "david-dang",
-		"name": "David",
-		"surname": "Dang",
+		"name": "David Dang",
 		"role": "pianist",
 		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
 		"portrait": "/",
@@ -237,8 +231,7 @@
     },
 	{
 		"id": "astrid-correia",
-		"name": "Astrid",
-		"surname": "Correia",
+		"name": "Astrid Correia",
 		"role": "pianist",
 		"bio": "Astrid is a pianist, originally from Paris",
 		"portrait": "/",
@@ -271,8 +264,7 @@
     },
 	{
 		"id": "hugo-bach",
-		"name": "Hugo",
-		"surname": "Bach",
+		"name": "Hugo Bach",
 		"role": "pianist",
 		"bio": "Hugo is a pianist, originally from ...",
 		"portrait": "/",
@@ -305,8 +297,7 @@
     },
     {
 		"id": "diane-dinh",
-		"name": "Diane",
-		"surname": "Dinh",
+		"name": "Diane Dinh",
 		"role": "harpist / singer",
 		"bio": "Diane is a 22 year old harpist and singer, originally from Paris",
 		"portrait": "/images/diane.webp",
@@ -339,8 +330,7 @@
     },
 	{
 		"id": "kenji-lorkovic",
-		"name": "Kenji",
-		"surname": "Lorkovic",
+		"name": "Kenji Lorkovic",
 		"role": "pianist",
 		"bio": "Kenji is a pianist, originally from Paris",
 		"portrait": "/",
@@ -373,8 +363,7 @@
     },
 	{
 		"id": "christina-kriegel",
-		"name": "Christina",
-		"surname": "Kriegel",
+		"name": "Christina Kriegel",
 		"role": "dancer",
 		"bio": "Christina is a dancer, originally from Paris",
 		"portrait": "/",
@@ -407,8 +396,7 @@
     },
 	{
 		"id": "loris-swider",
-		"name": "Loris",
-		"surname": "Swider",
+		"name": "Loris Swider",
 		"role": "pianist",
 		"bio": "Loris is a pianist, originally from Montpellier",
 		"portrait": "/",
@@ -441,8 +429,7 @@
     },
     {
 		"id": "eloise-mercier",
-		"name": "Eloïse",
-		"surname": "Mercier",
+		"name": "Eloïse Mercier",
 		"role": "pianist",
 		"bio": "Eloïse is a pianist, originally from ...",
 		"portrait": "/",
@@ -475,8 +462,7 @@
     },
 	{
 		"id": "pacome-schulte",
-		"name": "Pacôme",
-		"surname": "Schulte",
+		"name": "Pacôme Schulte",
 		"role": "pianist",
 		"bio": "Pacôme is a pianist, originally from ...",
 		"portrait": "/",
@@ -509,8 +495,7 @@
     },
 	{
 		"id": "ilona-mateus",
-		"name": "Ilona",
-		"surname": "Mateus",
+		"name": "Ilona Mateus",
 		"role": "pianist",
 		"bio": "Ilona is a pianist, originally from Paris",
 		"portrait": "/",
@@ -543,8 +528,7 @@
 	},
 	{
 		"id": "sacha-lhuillier",
-		"name": "Sacha",
-		"surname": "L'Huillier",
+		"name": "Sacha L'Huillier",
 		"role": "pianist",
 		"bio": "Sacha is a pianist, originally from ...",
 		"portrait": "/",
@@ -577,8 +561,7 @@
     },
 	{
 		"id": "jeanne-dormoy",
-		"name": "Jeanne",
-		"surname": "Dormoy",
+		"name": "Jeanne Dormoy",
 		"role": "pianist",
 		"bio": "Jeanne, alias Piavvio, est une pianiste originaire de Besançon ...",
 		"portrait": "/",
@@ -611,8 +594,7 @@
     },
 	{
 		"id": "theo-foy",
-		"name": "Théo",
-		"surname": "Foy",
+		"name": "Théo Foy",
 		"role": "pianist",
 		"bio": "Théo is a pianist, originally from ...",
 		"portrait": "/",
@@ -646,7 +628,6 @@
     {
 		"id": "pauline",
 		"name": "Pauline",
-		"surname": "",
 		"role": "pianist",
 		"bio": "Pauline, alias Reeds Cover, originaire de Toulouse...",
 		"portrait": "/",
@@ -679,8 +660,7 @@
     },
     {
 		"id": "urban-douarka",
-		"name": "Urban",
-		"surname": "Douarka",
+		"name": "Urban Douarka",
 		"role": "pianist",
 		"bio": "Urban is a pianist, originally from Paris",
 		"portrait": "/",
