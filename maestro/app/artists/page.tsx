@@ -45,7 +45,7 @@ const Artists = () => {
                         />
                         <div className='absolute bottom-0 left-0'>
                             <div className='flex flex-col items-start gap-0 p-4'>
-                                <h2 className='text-2xl font-medium text-white capitalize'>{artist.name} {artist.surname}</h2>
+                                <h2 className='text-2xl font-medium text-white capitalize'>{artist.name}</h2>
                                 <span className='text-base font-medium text-zinc-400 capitalize'>{artist.role}</span>
                             </div>
                         </div>
