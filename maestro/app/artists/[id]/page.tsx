@@ -51,7 +51,7 @@ const Artist = () => {
 
                     <TextEffect
                         per="char"
-                        preset="fade-in-blur"
+                        preset="slide"
                         as="p"
                         className="font-medium text-base leading-loose mb-6"
                         delay={2.5}
@@ -63,9 +63,28 @@ const Artist = () => {
                     <div className="w-full flex flex-row items-center justify-between gap-6">
                         {artist.socials.map((social, index) => (
                             <div key={index} className="flex flex-col items-start gap-4">
-                                <span className="text-lg md:text-xl font-medium capitalize leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{social.platform}</span>
-                                <Link href={social.url} target="_blank" rel="noopener noreferrer" className="text-secondary text-base md:text-lg font-medium">
-                                    {social.username}
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="span"
+                                    className="text-lg md:text-xl font-medium leading-tight"
+                                    delay={2.25}
+                                    speedReveal={2}
+                                >
+                                    {social.platform}
+                                </TextEffect>
+                                
+                                <Link href={social.url} target="_blank" rel="noopener noreferrer">
+                                    <TextEffect
+                                        per="char"
+                                        preset="fade-in-blur"
+                                        as="span"
+                                        className="text-secondary text-base md:text-lg font-medium"
+                                        delay={2.25}
+                                        speedReveal={2}
+                                    >
+                                        {social.username}
+                                    </TextEffect>
                                 </Link>
                             </div>
                         ))}
@@ -73,7 +92,7 @@ const Artist = () => {
                 </div>
             </section>
 
-            <section className="w-full md:w-[70%] flex flex-col gap-6 md:gap-12 py-16 md:py-48 px-4 md:px-8">
+            <section className="w-full lg:w-[70%] flex flex-col gap-6 md:gap-12 py-16 md:py-48 px-4 md:px-8">
                 <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
