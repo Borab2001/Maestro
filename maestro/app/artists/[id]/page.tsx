@@ -43,19 +43,21 @@ const Artist = () => {
                         preset="fade-in-blur"
                         as="h1"
                         className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
-                        delay={2.25}
+                        delay={2}
                         speedReveal={2}
+                        useInViewTrigger
                     >
                         {artist.name}
                     </TextEffect>
 
                     <TextEffect
-                        per="char"
+                        per="word"
                         preset="slide"
                         as="p"
                         className="font-medium text-base leading-loose mb-6"
-                        delay={2.5}
+                        delay={2}
                         speedReveal={6}
+                        useInViewTrigger
                     >
                         {artist.bio}
                     </TextEffect>
@@ -68,8 +70,9 @@ const Artist = () => {
                                     preset="fade-in-blur"
                                     as="span"
                                     className="text-lg md:text-xl font-medium leading-tight"
-                                    delay={2.25}
+                                    delay={2}
                                     speedReveal={2}
+                                    useInViewTrigger
                                 >
                                     {social.platform}
                                 </TextEffect>
@@ -80,8 +83,9 @@ const Artist = () => {
                                         preset="fade-in-blur"
                                         as="span"
                                         className="text-secondary text-base md:text-lg font-medium"
-                                        delay={2.25}
+                                        delay={2}
                                         speedReveal={2}
+                                        useInViewTrigger
                                     >
                                         {social.username}
                                     </TextEffect>
@@ -93,10 +97,31 @@ const Artist = () => {
             </section>
 
             <section className="w-full lg:w-[70%] flex flex-col gap-6 md:gap-12 py-16 md:py-48 px-4 md:px-8">
-                <h2 className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">Background</h2>
+                <TextEffect
+                    per="char"
+                    preset="fade-in-blur"
+                    as="h2"
+                    className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight"
+                    delay={0.3}
+                    speedReveal={2}
+                    useInViewTrigger
+                >
+                    Background
+                </TextEffect>
                 {Array.isArray(artist.background) ? (
                     artist.background.map((paragraph, index) => (
-                        <p key={index} className="text-base mb-4 leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{paragraph}</p>
+                        <TextEffect
+                            key={index}
+                            per="line"
+                            preset="fade-in-blur"
+                            as="p"
+                            className="text-base mb-4 leading-loose"
+                            delay={0.3}
+                            speedReveal={0.2}
+                            useInViewTrigger
+                        >
+                            {paragraph}
+                        </TextEffect>
                     ))
                 ) : (
                     <p className="text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{artist.background}</p>

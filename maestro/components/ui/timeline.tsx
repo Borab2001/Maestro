@@ -1,16 +1,17 @@
 "use client";
+
 import {
     useScroll,
     useTransform,
     motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { TextEffect } from "./text-effect";
 
 interface TimelineEntry {
     year: string;
     title: string;
     description: string;
-    // content: React.ReactNode;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -46,16 +47,42 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                 <div className="h-8 w-8 rounded-full bg-transparent border-3 border-neutral-300 p-2" />
                             </div>
                             <div className="flex flex-col gap-4 md:gap-8 w-full pl-14 md:pl-20">
-                                <h3 className="w-full text-3xl md:text-5xl font-medium">
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="h3"
+                                    className="w-full text-3xl md:text-5xl font-medium"
+                                    delay={0.3}
+                                    speedReveal={2}
+                                    useInViewTrigger
+                                >
                                     {item.year}
-                                </h3>
+                                </TextEffect>
                                 <div className="flex flex-col gap-2 md:gap-4">
-                                    <span className="w-full text-xl md:text-3xl">
+                                    <TextEffect
+                                        per="char"
+                                        preset="fade-in-blur"
+                                        as="span"
+                                        className="w-full text-xl md:text-3xl"
+                                        delay={0.3}
+                                        speedReveal={2}
+                                        useInViewTrigger
+                                    >
                                         {item.title}
-                                    </span>
-                                    <p className="w-full text-base text-secondary md:text-xl">
+                                    </TextEffect>
+
+                                    <TextEffect
+                                        key={index}
+                                        per="line"
+                                        preset="fade-in-blur"
+                                        as="p"
+                                        className="w-full text-base text-secondary md:text-xl"
+                                        delay={0.3}
+                                        speedReveal={0.2}
+                                        useInViewTrigger
+                                    >
                                         {item.description}
-                                    </p>
+                                    </TextEffect>
                                 </div>
                             </div>
                         </div>
