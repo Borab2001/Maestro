@@ -24,10 +24,7 @@ export default function Home() {
 				</div>
 				<div className="md:w-1/2 md:pl-8 py-6">
 					<p className="text-base leading-loose mb-6 [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-						Nous sommes la première troupe de pianistes en France et nous avons entre 18 et 28 ans.
-						Le piano est souvent perçu comme un art solitaire, mais nous le transformons en expérience collective.
-						Notre concept ? Mélanger nos parcours – conservatoire, gares ou autodidacte – et proposer un format inédit
-						où la mise en scène et l’univers visuel sont aussi puissants que la musique. Le piano peut être un vrai spectacle vivant.
+						{homeData.hero.description}
 					</p>
 				</div>
 			</section>
@@ -59,14 +56,17 @@ export default function Home() {
 				</h2>
 				{/* <p className="max-w-4xl text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">{homeData.future.description}</p> */}
 				<p className="max-w-4xl text-base leading-loose [clip-path:polygon(0_0,_100%_0,_100%_100%,_0_100%)]">
-					Grâce à notre travail collectif, nous avons donné nos premiers concerts cette année, et les retours nous encouragent d&apos;autant plus à continuer.
-					Mais l&apos;histoire ne fait que commencer. En plus de nos concerts, nous rêvons de nous diversifier, de créer notre propre musique,
-					de fusionner les arts, de multiplier les collaborations, de créer des ponts entre les styles musicaux.
-					<br />
-					<br />
-					Nous voulons repousser les limites et prouver qu&apos;un instrument classique peut porter des messages forts et actuels.
-					Nous aimerions aussi étendre notre présence au-delà de Paris, jouer dans des villes où la musique résonne différemment et
-					faire découvrir notre univers à un public de plus en plus large, tout en restant fidèles à ce qui nous fait vibrer.
+					{homeData.future.description.split('\n\n').map((paragraph, index) => (
+						<span key={index}>
+							{paragraph}
+							{index < homeData.future.description.split('\n\n').length - 1 && (
+								<>
+									<br />
+									<br />
+								</>
+							)}
+						</span>
+					))}
 				</p>
 			</section>
 
