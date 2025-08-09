@@ -1,0 +1,46 @@
+{
+    "hero": {
+        "title": "La Musique Réinventée",
+        "image": {
+            "src": "/images/group2.webp",
+            "alt": "Groupe de musiciens Maestro"
+        },
+        "description": "Nous sommes la première troupe de pianistes en France et nous avons entre 18 et 28 ans. Le piano est souvent perçu comme un art solitaire, mais nous le transformons en expérience collective. Notre concept ? Mélanger nos parcours – conservatoire, gares ou autodidacte – et proposer un format inédit où la mise en scène et l'univers visuel sont aussi puissants que la musique. Le piano peut être un vrai spectacle vivant."
+    },
+    "about": {
+        "paragraphs": [
+            "Nos concerts mélangent musiques de film, pop, classiques et compositions personnelles. Chaque performance est pensée pour raconter une histoire à la fois musicale et visuelle à travers un voyage émotionnel. Nous improvisons, interagissons avec le public, et créons des ponts entre les styles pour créer un format hybride qui mêle le meilleur de la scène et des gares. C'est en construisant avec une liberté totale que ce projet est devenu réalité.",
+            "Certains d'entre nous sont très suivis sur les réseaux sociaux, mais, n'étant pas issus d'un parcours traditionnel, ils ressentent parfois un manque de légitimité à l'idée de monter sur scène. Pourtant, leur talent est indéniable. Nous voulons montrer qu'il est possible de passer des réseaux sociaux aux grandes scènes, du virtuel au réel, montrant une unité artistique et humaine, venant des quatre coins de la France, qui donne toute sa force à notre projet."
+        ]
+    },
+    "stats": {
+        "title": "Maestro, c'est...",
+        "items": [
+            {
+                "number": "2",
+                "label": "concerts"
+            },
+            {
+                "number": "500",
+                "label": "places vendues"
+            },
+            {
+                "number": "20",
+                "label": "artistes"
+            }
+        ]
+    },
+    "future": {
+        "title": "L'avenir du Projet",
+        "description": "Grâce à notre travail collectif, nous avons donné nos premiers concerts cette année, et les retours nous encouragent d'autant plus à continuer. Mais l'histoire ne fait que commencer. En plus de nos concerts, nous rêvons de nous diversifier, de créer notre propre musique, de fusionner les arts, de multiplier les collaborations, de créer des ponts entre les styles musicaux.\n\nNous voulons repousser les limites et prouver qu'un instrument classique peut porter des messages forts et actuels. Nous aimerions aussi étendre notre présence au-delà de Paris, jouer dans des villes où la musique résonne différemment et faire découvrir notre univers à un public de plus en plus large, tout en restant fidèles à ce qui nous fait vibrer."
+    },
+    "carousel": {
+        "images": [
+            { "src": "/images/group.webp", "alt": "Performance Maestro 1" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 2" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 3" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 4" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 5" }
+        ]
+    }
+}
