@@ -37,7 +37,7 @@ export const Carousel: React.FC<CarouselProps> = ({
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 300px;
+        width: 400px;
         /* height: 300px; */
         /* margin: 20px; */
     }
