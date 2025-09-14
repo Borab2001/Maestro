@@ -13,8 +13,6 @@ const PlayButton = ({ isPlaying, onClick }: PlayButtonProps) => {
     <motion.div
       onClick={onClick}
       className="cursor-pointer relative flex items-center justify-center"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
     >
       <div className="w-12 h-12 rounded-full border-2 border-white/40 bg-white/10 backdrop-blur-sm flex items-center justify-center">
         <motion.div

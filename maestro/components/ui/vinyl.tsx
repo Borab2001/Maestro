@@ -11,31 +11,31 @@ const VinylAlbum = ({
 }) => {
 
   const sizeClasses = size === "small" 
-    ? "w-[150px] h-[150px]" 
+    ? "w-[200px] h-[200px]" 
     : "w-[300px] h-[300px]";
   
   const vinylSize = size === "small" 
-    ? "w-[130px] h-[130px]" 
+    ? "w-[180px] h-[180px]" 
     : "w-[280px] h-[280px]";
 
-  const marginClass = size === "small" 
-    ? "mx-[70px]" 
-    : "mx-[100px]";
+//   const marginClass = size === "small" 
+//     ? "mx-[70px]" 
+//     : "mx-[100px]";
 
   const coverTransform = size === "small"
-    ? (isOpen ? "-translate-x-[5px] -rotate-1" : "")
-    : (isOpen ? "-translate-x-[10px] -rotate-2" : "");
+    ? (isOpen ? "-translate-x-[7.5px]" : "")
+    : (isOpen ? "-translate-x-[10px]" : "");
 
   const vinylTransform = size === "small"
     ? (isOpen ? "translate-x-1/2" : "translate-x-0")
     : (isOpen ? "translate-x-1/2" : "translate-x-0");
 
   const vinylCoverSize = size === "small"
-    ? "w-[46px] h-[46px]"
+    ? "w-[66px] h-[66px]"
     : "w-[100px] h-[100px]";
 
   return (
-    <div className={`relative ${sizeClasses} ${marginClass} my-4`}>
+    <div className={`relative ${sizeClasses} my-4`}>
       {/* Album Cover */}
       <div 
         className={`
@@ -91,9 +91,9 @@ const VinylAlbum = ({
           absolute top-[10px] right-0 ${vinylSize} rounded-full z-10
           flex justify-center items-center
           shadow-[0_0_15px_rgba(0,0,0,0.5)]
-          transition-transform duration-500 ease-in-out
+          transition-transform duration-1000 ease-in-out
           ${vinylTransform}
-          ${isSpinning ? "animate-spin" : ""}
+          ${isSpinning ? "animate-[spin_2s_linear_infinite]" : ""}
           bg-black
         `}
         style={{

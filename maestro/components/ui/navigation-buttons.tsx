@@ -32,8 +32,6 @@ const NavigationButtons = ({
           ${canGoPrevious ? 'text-white hover:bg-white/10' : 'text-white/30 cursor-not-allowed'}
           transition-colors duration-200
         `}
-        whileHover={canGoPrevious ? { scale: 1.1 } : {}}
-        whileTap={canGoPrevious ? { scale: 0.95 } : {}}
       >
         <PrevIcon size={14} />
       </motion.button>
@@ -47,8 +45,6 @@ const NavigationButtons = ({
           ${canGoNext ? 'text-white hover:bg-white/10' : 'text-white/30 cursor-not-allowed'}
           transition-colors duration-200
         `}
-        whileHover={canGoNext ? { scale: 1.1 } : {}}
-        whileTap={canGoNext ? { scale: 0.95 } : {}}
       >
         <NextIcon size={14} />
       </motion.button>
