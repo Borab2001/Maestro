@@ -1,7 +1,7 @@
 import Image from "next/image";
 import concerts from "@/data/concerts.json";
 import { TextEffect } from "@/components/ui/text-effect";
-import VinylAlbum from "@/components/ui/vinyl";
+import AlbumSection from "@/components/ui/album-section";
 
 const Concerts = () => {
     return (
@@ -154,15 +154,7 @@ const Concerts = () => {
                     </div>
                 </section>
             ))}
-            <section className="h-screen">
-                <div className="flex flex-col justify-center items-center min-h-screen py-16">
-                    <div className="w-full flex flex-row flex-wrap justify-between items-center mb-10">
-                        <VinylAlbum 
-                        coverUrl="/images/group2.webp"
-                        />
-                    </div>
-                    </div>
-            </section>
+            <AlbumSection />
         </div>
     );
 }
