@@ -201,7 +201,7 @@ const AlbumSection = () => {
                         : 'p-4 relative flex items-center'
                     }
                 `}>
-                    <div className="w-full flex flex-row justify-start items-center gap-8 bg-white/1 rounded-3xl p-6 overflow-hidden">    
+                    <div className="max-h-[580px] w-full flex flex-row justify-start items-center gap-8 bg-white/1 rounded-3xl p-6 overflow-hidden">    
                         {/* <div className="absolute inset-0 z-20 pointer-events-none" /> */}
                         {/* Navigation Buttons */}
                         <div className={`
@@ -221,7 +221,7 @@ const AlbumSection = () => {
 
                         {/* Track List */}
                         <div className={`
-                            relative
+                            relative py-16
                             ${isMobile 
                                 ? 'flex h-full justify-center items-center'
                                 : 'w-full'
