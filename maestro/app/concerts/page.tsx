@@ -155,22 +155,10 @@ const Concerts = () => {
                 </section>
             ))}
             <section className="h-screen">
-                <div className="flex flex-col justify-center items-center min-h-screen py-16 bg-[#d5d5d5]">
-                    {/* Container for albums */}
-                    <div className="flex flex-row flex-wrap justify-between items-center mb-10 min-w-[600px]">
+                <div className="flex flex-col justify-center items-center min-h-screen py-16">
+                    <div className="w-full flex flex-row flex-wrap justify-between items-center mb-10">
                         <VinylAlbum 
                         coverUrl="/images/group2.webp"
-                        isOpen={false}
-                        size="normal"
-                        />
-                    </div>
-                    
-                    {/* Smaller albums */}
-                    <div className="flex flex-row flex-wrap justify-between items-center min-w-[400px]">
-                        <VinylAlbum 
-                        coverUrl="/images/group2.webp"
-                        isOpen={false}
-                        size="small"
                         />
                     </div>
                     </div>
