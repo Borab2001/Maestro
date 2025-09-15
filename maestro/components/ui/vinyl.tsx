@@ -93,10 +93,11 @@ const VinylAlbum = ({
           shadow-[0_0_15px_rgba(0,0,0,0.5)]
           transition-transform duration-1000 ease-in-out
           ${vinylTransform}
-          ${isSpinning ? "animate-[spin_2s_linear_infinite]" : ""}
+          ${isOpen ? "animate-[spin_2s_linear_infinite]" : ""}
           bg-black
         `}
         style={{
+          animationPlayState: isSpinning ? 'running' : 'paused',
           background: `
             conic-gradient(from 50deg at 50% 50%, 
               transparent 46%, 
