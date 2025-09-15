@@ -23,7 +23,7 @@ const PlayButton = ({ isPlaying, onClick }: PlayButtonProps) => {
 					{isPlaying ? (
 						<Pause size={16} className="text-white fill-current" />
 					) : (
-						<Play size={16} className="text-white fill" />
+						<Play size={16} className="text-white fill-current" />
 					)}
 				</motion.div>
 			</div>

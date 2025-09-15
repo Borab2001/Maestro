@@ -87,6 +87,7 @@ const AlbumSection = () => {
     
     const audioRef = useRef<HTMLAudioElement>(null);
     const sectionRef = useRef<HTMLDivElement>(null);
+    const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
     const isInView = useInView(sectionRef, { amount: 0.8 });
 
     useEffect(() => {
@@ -94,6 +95,50 @@ const AlbumSection = () => {
         checkMobile();
         window.addEventListener('resize', checkMobile);
         return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Fade functions for smooth audio transitions
+    const fadeIn = (audio: HTMLAudioElement, duration = 1000) => {
+        audio.volume = 0;
+        const step = 0.05;
+        const stepTime = duration / (1 / step);
+        
+        const fadeInterval = setInterval(() => {
+            if (audio.volume < 0.95) {
+                audio.volume = Math.min(audio.volume + step, 1);
+            } else {
+                audio.volume = 1;
+                clearInterval(fadeInterval);
+            }
+        }, stepTime);
+        
+        fadeIntervalRef.current = fadeInterval;
+    };
+
+    const fadeOut = (audio: HTMLAudioElement, duration = 800) => {
+        const step = 0.05;
+        const stepTime = duration / (audio.volume / step);
+        
+        const fadeInterval = setInterval(() => {
+            if (audio.volume > 0.05) {
+                audio.volume = Math.max(audio.volume - step, 0);
+            } else {
+                audio.volume = 0;
+                audio.pause();
+                clearInterval(fadeInterval);
+            }
+        }, stepTime);
+        
+        fadeIntervalRef.current = fadeInterval;
+    };
+
+    // Cleanup fade intervals
+    useEffect(() => {
+        return () => {
+            if (fadeIntervalRef.current) {
+                clearInterval(fadeIntervalRef.current);
+            }
+        };
     }, []);
 
     // Auto-start when section is 80% in view
@@ -111,28 +156,52 @@ const AlbumSection = () => {
         }
     }, [isInView, currentTrack, isVinylOpen]);
 
-    // Audio control
+    // Audio control with fade effects
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
+        // Clear any existing fade intervals
+        if (fadeIntervalRef.current) {
+            clearInterval(fadeIntervalRef.current);
+        }
+
         if (isPlaying) {
-        audio.play().catch(console.error);
+            audio.play().then(() => {
+                fadeIn(audio, 1200); // 1.2 second fade in
+            }).catch(console.error);
         } else {
-        audio.pause();
+            if (audio.volume > 0) {
+                fadeOut(audio, 800); // 0.8 second fade out
+            } else {
+                audio.pause();
+            }
         }
     }, [isPlaying]);
 
-    // Change track
+    // Change track with crossfade effect
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
-        audio.src = tracks[currentTrack].audioUrl;
-        audio.load();
-        
-        if (isPlaying) {
-        audio.play().catch(console.error);
+        // If currently playing, fade out first
+        if (isPlaying && audio.volume > 0) {
+            fadeOut(audio, 600); // Quick fade out for track change
+            
+            // Load new track after fade out
+            setTimeout(() => {
+                audio.src = tracks[currentTrack].audioUrl;
+                audio.load();
+                if (isPlaying) {
+                    audio.play().then(() => {
+                        fadeIn(audio, 800); // Fade in new track
+                    }).catch(console.error);
+                }
+            }, 650);
+        } else {
+            // If not playing, just load the new track
+            audio.src = tracks[currentTrack].audioUrl;
+            audio.load();
         }
     }, [currentTrack, isPlaying]);
 
