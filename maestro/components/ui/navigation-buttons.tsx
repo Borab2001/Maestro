@@ -27,26 +27,26 @@ const NavigationButtons = ({
         onClick={onPrevious}
         disabled={!canGoPrevious}
         className={`
-          w-8 h-8 rounded-full border border-white/40 
+          w-8 h-8 rounded-full border border-neutral-400
           flex items-center justify-center
-          ${canGoPrevious ? 'text-white hover:bg-white/10' : 'text-white/30 cursor-not-allowed'}
+          ${canGoPrevious ? 'text-white hover:bg-white/10 cursor-pointer' : 'text-neutral-400 cursor-not-allowed'}
           transition-colors duration-200
         `}
       >
-        <PrevIcon size={14} />
+        <PrevIcon size={16} />
       </motion.button>
 
       <motion.button
         onClick={onNext}
         disabled={!canGoNext}
         className={`
-          w-8 h-8 rounded-full border border-white/40 
+          w-8 h-8 rounded-full border border-neutral-400
           flex items-center justify-center
-          ${canGoNext ? 'text-white hover:bg-white/10' : 'text-white/30 cursor-not-allowed'}
+          ${canGoNext ? 'text-white hover:bg-white/10 cursor-pointer' : 'text-neutral-400 cursor-not-allowed'}
           transition-colors duration-200
         `}
       >
-        <NextIcon size={14} />
+        <NextIcon size={16} />
       </motion.button>
     </div>
   );

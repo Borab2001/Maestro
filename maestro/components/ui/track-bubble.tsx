@@ -18,9 +18,9 @@ const TrackBubble = ({ track, isActive, onClick }: TrackBubbleProps) => {
             {/* Bubble */}
             <motion.div
                 onClick={onClick}
-                className="cursor-pointer border border-white/40 px-4 py-2 rounded-2xl"
+                className="cursor-pointer"
                 animate={{ 
-                    height: isActive ? 100 : 40
+                    height: isActive ? 100 : 20
                 }}
                     transition={{
                     duration: 0.4,
@@ -44,7 +44,7 @@ const TrackBubble = ({ track, isActive, onClick }: TrackBubbleProps) => {
                             }}
                             className="whitespace-nowrap"
                         >
-                            <p className="text-white/60 text-sm mt-1">
+                            <p className="text-neutral-400 text-sm mt-1">
                                 {track.description}
                             </p>
                         </motion.div>
