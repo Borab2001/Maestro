@@ -11,7 +11,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     return (
         <>
             <section className="w-full flex flex-col items-center justify-start py-12">
-                <div className="flex items-center gap-2 h-[600px] w-full px-4">
+                <div className="flex items-center gap-2 h-[600px] w-full">
                     {images.map((image, index) => (
                         <div
                             key={index}

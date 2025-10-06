@@ -33,7 +33,7 @@ const Artists = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
                 {artists.map((artist) => (
                     <Link 
-                        className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] xl:aspect-[3/5] overflow-hidden rounded-lg'
+                        className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] xl:aspect-[3/5] overflow-hidden rounded-md'
                         key={artist.id}
                         href={`/artists/${artist.id}`}
                         onClick={(e) => {
@@ -60,7 +60,7 @@ const Artists = () => {
                                     per="char"
                                     preset="fade-in-blur"
                                     as="h2"
-                                    className="text-2xl font-medium text-white capitalize leading-tight"
+                                    className="text-2xl font-medium text-white leading-tight"
                                     delay={0.3}
                                     speedReveal={2}
                                     useInViewTrigger
