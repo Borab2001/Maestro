@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { Carousel } from "@/components/ui/carousel"
 import homeData from "@/data/home.json";
 import { TextEffect } from "@/components/ui/text-effect";
+import ImageReveal from "@/components/ui/image-reveal";
 
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
 					preset="fade-in-blur"
 					as="h1"
 					className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
-					delay={2}
+					delay={0}
 					speedReveal={2}
 					useInViewTrigger
 				>
@@ -24,15 +24,14 @@ export default function Home() {
 			</section>
 
 			<section className="flex flex-col md:flex-row px-4 md:px-8 lg:px-16 py-8">
-				<div className="md:w-3/4 relative rounded-lg aspect-[16/12]">
-					<Image 
-						src={homeData.hero.image.src} 
-						alt={homeData.hero.image.alt} 
-						fill
-						className="object-cover"
-						priority
-					/>
-				</div>
+				<ImageReveal
+					src={homeData.hero.image.src}
+					alt={homeData.hero.image.alt}
+					className="md:w-3/4 aspect-[16/12]"
+					duration={1}
+					delay={0}
+					ease=""
+				/>
 				<div className="md:w-1/2 md:pl-8 py-6">
 					<TextEffect
                         per="word"
