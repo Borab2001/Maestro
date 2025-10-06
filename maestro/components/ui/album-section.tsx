@@ -247,7 +247,7 @@ const AlbumSection = () => {
         <section 
             ref={sectionRef}
             className={`
-                relative overflow-x-hidden h-screen w-screen flex items-center justify-center pt-[72px] bg-background
+                relative overflow-x-hidden h-screen w-full flex items-center justify-center pt-[72px] bg-background
             `}
         >
             <audio
@@ -264,13 +264,13 @@ const AlbumSection = () => {
                 }
             `}>
                 <div className={`
-                    w-full max-w-96 col-span-1 md:col-span-2
+                    w-full col-span-1 md:col-span-2
                     ${isMobile 
-                        ? '' 
-                        : 'p-4 relative flex items-center'
+                        ? 'order-2' 
+                        : 'max-w-96 p-4 relative flex items-center'
                     }
                 `}>
-                    <div className="max-h-[580px] w-full flex flex-row justify-start items-center gap-8 bg-white/1 rounded-3xl p-6 overflow-hidden">    
+                    <div className={`max-h-[580px] w-full flex flex-row justify-start items-center gap-8 ${isMobile ? '' : 'p-6 bg-white/1 rounded-3xl'} overflow-hidden`}>
                         {/* <div className="absolute inset-0 z-20 pointer-events-none" /> */}
                         {/* Navigation Buttons */}
                         <div className={`
@@ -290,16 +290,16 @@ const AlbumSection = () => {
 
                         {/* Track List */}
                         <div className={`
-                            relative py-16
+                            relative
                             ${isMobile 
                                 ? 'flex h-full justify-center items-center'
-                                : 'w-full'
+                                : 'w-full py-16'
                             }
                         `}>
                             {tracks.map((track, index) => (
                                 <motion.div
                                     key={track.id}
-                                    className="relative transition-transform duration-1000 ease-in-out"
+                                    className={`relative transition-transform duration-1000 ease-in-out ${isMobile ? 'p-6 bg-white/1 rounded-3xl' : ''}`}
                                     style={{
                                         transform: isMobile 
                                             ? `translateX(${getTrackTransform(index)}px)`
