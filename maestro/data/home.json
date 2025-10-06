@@ -42,5 +42,15 @@
             { "src": "/images/group.webp", "alt": "Performance Maestro 4" },
             { "src": "/images/group.webp", "alt": "Performance Maestro 5" }
         ]
+    },
+    "gallery": {
+        "images": [
+            { "src": "/images/group.webp", "alt": "Performance Maestro 1" },
+            { "src": "/images/group2.webp", "alt": "Performance Maestro 2" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 3" },
+            { "src": "/images/group2.webp", "alt": "Performance Maestro 4" },
+            { "src": "/images/group.webp", "alt": "Performance Maestro 5" },
+            { "src": "/images/group2.webp", "alt": "Performance Maestro 6" }
+        ]
     }
 }
