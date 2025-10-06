@@ -1,9 +1,10 @@
 "use client";
 
-import { Carousel } from "@/components/ui/carousel"
+// import { Carousel } from "@/components/ui/carousel"
 import homeData from "@/data/home.json";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
+import ImageGallery from "@/components/ui/image-gallery";
 
 
 export default function Home() {
@@ -147,12 +148,13 @@ export default function Home() {
 				</div>
 			</section>
 
-			<Carousel
+			{/* <Carousel
 				images={homeData.carousel.images}
 				autoplayDelay={2000}
 				showPagination={true}
 				showNavigation={true}
-			/>
+			/> */}
+			<ImageGallery images={homeData.gallery.images} />
 		</main>
 	);
 }
