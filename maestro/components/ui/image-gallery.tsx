@@ -17,13 +17,13 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                             key={index}
                             className="relative group flex-grow transition-all w-56 overflow-hidden h-[600px] duration-500 hover:w-full"
                         >
-                        <Image
-                            className="h-full w-full object-cover object-center"
-                            src={image.src}
-                            alt={image.alt}
-                            layout="fill"
-                            objectFit="cover"
-                        />
+                            <Image
+                                className="h-full w-full object-cover object-center"
+                                src={image.src}
+                                alt={image.alt}
+                                layout="fill"
+                                objectFit="cover"
+                            />
                         </div>
                     ))}
                 </div>
