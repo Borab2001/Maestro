@@ -9,7 +9,7 @@ import ImageGallery from "@/components/ui/image-gallery";
 
 export default function Home() {
 	return (
-		<main className="min-h-screen pt-[72px]">
+		<main className="min-h-screen">
 			{/* <section className="px-4 md:px-8 py-6 md:py-12">
 				<TextEffect
 					per="char"
@@ -47,15 +47,15 @@ export default function Home() {
                     </TextEffect>
 				</div>
 			</section> */}
-			<section className="flex flex-col">
-				<div className="grid grid-cols-1 md:grid-cols-2 items-end px-4 md:px-8 pb-6 md:pb-12 pt-[62vh]">
+			<section className="min-h-screen flex flex-col">
+				<div className="grid grid-cols-1 md:grid-cols-2 items-end px-4 md:px-8 pb-6 md:pb-12 pt-[30vh]">
 					<TextEffect
 						per="char"
 						preset="fade-in-blur"
 						as="h1"
 						className="text-3xl md:text-8xl font-medium leading-tight"
 						delay={0}
-						speedReveal={2}
+						speedReveal={1.2}
 						useInViewTrigger
 					>
 						{homeData.hero.title}
@@ -65,7 +65,7 @@ export default function Home() {
 						preset="slide"
 						as="p"
 						className="h-auto font-medium text-base leading-loose"
-						delay={0.3}
+						delay={0.6}
 						speedReveal={6}
 						useInViewTrigger
 					>
@@ -76,23 +76,34 @@ export default function Home() {
 				<ImageReveal
 					src={homeData.hero.image.src}
 					alt={homeData.hero.image.alt}
-					className="w-full aspect-[3/2]"
-					duration={2}
+					className="w-full aspect-[3/2] md:aspect-[16/9]"
+					duration={1.5}
 					delay={0}
-					ease=""
+					ease="ease-out"
 				/>
+				{/* <div className="absolute h-full inset-0 -z-10">
+					<ImageReveal
+						src={homeData.hero.image.src}
+						alt={homeData.hero.image.alt}
+						className="w-full h-full object-cover"
+						duration={1}
+						delay={0}
+						ease=""
+					/>
+					<div className="absolute inset-0 bg-background/90 backdrop-blur-md" />
+				</div> */}
 			</section>
 			
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 py-8">
 				{homeData.about.paragraphs.map((paragraph, index) => (
 					<div key={index} className="col-span-1">
 						<TextEffect
-							per="word"
+							per="line"
 							preset="slide"
 							as="p"
 							className="font-medium text-base leading-loose mb-6"
 							delay={0}
-							speedReveal={6}
+							speedReveal={0.2}
 							useInViewTrigger
 						>
 							{paragraph}
