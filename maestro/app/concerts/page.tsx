@@ -1,40 +1,41 @@
-import Image from "next/image";
 import concerts from "@/data/concerts.json";
+
 import { TextEffect } from "@/components/ui/text-effect";
 import AlbumSection from "@/components/ui/album-section";
+import ImageReveal from "@/components/ui/image-reveal";
 
 const Concerts = () => {
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
             <section className="py-6 md:py-12">
-                <div className="w-full md:w-[70%] max-w-5xl pb-48 flex flex-col gap-4 md:gap-8">
+                <div className="w-full md:w-[70%] max-w-5xl flex flex-col gap-4 md:gap-8">
                     <TextEffect
                         per="char"
                         preset="fade-in-blur"
                         as="h1"
-                        className="text-3xl md:text-6xl xl:text-[80px] font-medium mb-6 leading-tight"
-                        delay={2}
-                        speedReveal={2}
+                        className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
+                        delay={0}
+                        speedReveal={1.2}
                         useInViewTrigger
                     >
                         Les Concerts
                     </TextEffect>
                     <TextEffect
-                        per="word"
-                        preset="slide"
-                        as="p"
-                        className="font-medium text-lg leading-loose mb-6"
-                        delay={2}
-                        speedReveal={6}
-                        useInViewTrigger
-                    >
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?
-                    </TextEffect>
+						per="word"
+						preset="slide"
+						as="p"
+						className="font-medium text-base leading-loose mb-6"
+						delay={0.6}
+						speedReveal={6}
+						useInViewTrigger
+					>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?
+					</TextEffect>
                 </div>
             </section>
             
             {concerts.slice().reverse().map((concert) => (
-                <section className="py-24" key={concert.name}>
+                <section className="py-16" key={concert.name}>
                     <div 
                         className="grid grid-cols-1 lg:grid-cols-5 gap-8" 
                     >
@@ -43,7 +44,7 @@ const Concerts = () => {
                                 per="char"
                                 preset="fade-in-blur"
                                 as="h2"
-                                className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight"
+                                className="text-xl md:text-3xl xl:text-6xl font-medium mb-0 md:mb-6 leading-tight"
                                 delay={0.3}
                                 speedReveal={2}
                                 useInViewTrigger
@@ -109,15 +110,14 @@ const Concerts = () => {
                         </div>
                         <div className="col-span-1 lg:col-span-3">
                             <div className="sticky top-1/6 self-start">
-                                <div className="relative aspect-[16/12]">
-                                    <Image 
-                                        src={concert.image} 
-                                        alt={concert.alt}
-                                        fill
-                                        className="object-cover w-full"
-                                        priority
-                                    />
-                                </div>
+                                <ImageReveal
+                                    src={concert.image}
+                                    alt={concert.alt}
+                                    className="aspect-[16/12] object-cover w-full"
+                                    duration={1.8}
+                                    delay={0}
+                                    ease=""
+                                />
                             </div>
                         </div>
                         <div className="lg:hidden space-y-2">

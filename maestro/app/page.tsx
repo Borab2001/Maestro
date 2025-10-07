@@ -9,7 +9,7 @@ import ImageGallery from "@/components/ui/image-gallery";
 
 export default function Home() {
 	return (
-		<main className="min-h-screen">
+		<main className="min-h-screen pt-[72px]">
 			{/* <section className="px-4 md:px-8 py-6 md:py-12">
 				<TextEffect
 					per="char"
@@ -53,7 +53,7 @@ export default function Home() {
 						per="char"
 						preset="fade-in-blur"
 						as="h1"
-						className="text-3xl md:text-8xl font-medium leading-tight"
+						className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
 						delay={0}
 						speedReveal={1.2}
 						useInViewTrigger
