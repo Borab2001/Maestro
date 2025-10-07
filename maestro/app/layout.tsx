@@ -44,7 +44,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "Surprise",
+	title: "Maestro - Première troupe de pianistes de France",
 	description: "/",
 };
 
