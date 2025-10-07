@@ -19,8 +19,8 @@ const ImageReveal = ({
     className = "", 
     duration = 1, 
     delay = 0,
-    ease = [0.76, 0, 0.24, 1],
-}: ImageRevealProps) => {
+    ease = [0.87, 0, 0.13, 1]
+    }: ImageRevealProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 

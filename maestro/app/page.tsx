@@ -77,9 +77,9 @@ export default function Home() {
 					src={homeData.hero.image.src}
 					alt={homeData.hero.image.alt}
 					className="w-full aspect-[3/2] md:aspect-[16/9]"
-					duration={1.5}
+					duration={1.8}
 					delay={0}
-					ease="ease-out"
+					ease=""
 				/>
 				{/* <div className="absolute h-full inset-0 -z-10">
 					<ImageReveal
