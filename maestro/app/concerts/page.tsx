@@ -114,9 +114,9 @@ const Concerts = () => {
                                     src={concert.image}
                                     alt={concert.alt}
                                     className="aspect-[16/12] object-cover w-full"
+                                    animationType="clip-path"
                                     duration={1.8}
                                     delay={0}
-                                    ease=""
                                 />
                             </div>
                         </div>

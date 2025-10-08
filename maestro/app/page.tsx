@@ -9,7 +9,7 @@ import ImageGallery from "@/components/ui/image-gallery";
 
 export default function Home() {
 	return (
-		<main className="min-h-screen pt-[72px]">
+		<main className="min-h-screen lg:pt-[72px]">
 			{/* <section className="px-4 md:px-8 py-6 md:py-12">
 				<TextEffect
 					per="char"
@@ -48,12 +48,12 @@ export default function Home() {
 				</div>
 			</section> */}
 			<section className="min-h-screen flex flex-col">
-				<div className="grid grid-cols-1 md:grid-cols-2 items-end px-4 md:px-8 pb-6 md:pb-12 pt-[30vh]">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-8 items-end px-4 md:px-8 pb-6 md:pb-12 mt-auto pt-[72px] lg:mt-0 lg:pt-[30vh]">
 					<TextEffect
 						per="char"
 						preset="fade-in-blur"
 						as="h1"
-						className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
+						className="text-3xl md:text-6xl lg:text-8xl font-medium leading-tight"
 						delay={0}
 						speedReveal={1.2}
 						useInViewTrigger
@@ -73,13 +73,23 @@ export default function Home() {
 					</TextEffect>
 				</div>
 
+				{/* <ImageReveal
+					src={homeData.hero.image.src}
+					alt={homeData.hero.image.alt}
+					className="w-full aspect-[3/2] md:aspect-[16/9]"
+					animationType="clip-path"
+					duration={1.8}
+					delay={0}
+					ease=""
+				/> */}
 				<ImageReveal
 					src={homeData.hero.image.src}
 					alt={homeData.hero.image.alt}
 					className="w-full aspect-[3/2] md:aspect-[16/9]"
-					duration={1.8}
-					delay={0}
-					ease=""
+					animationType="fade-in"
+					duration={0.6}
+					delay={1.5}
+					ease={"easeInOut"}
 				/>
 				{/* <div className="absolute h-full inset-0 -z-10">
 					<ImageReveal
