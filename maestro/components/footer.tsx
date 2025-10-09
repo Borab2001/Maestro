@@ -21,7 +21,7 @@ const Footer = () => {
         <footer className="w-full flex flex-col pt-6 md:pt-12 lg:pt-24">
             <div className="">
                 <div className="flex flex-col items-end">
-                    <div className="w-full max-w-4xl px-4">
+                    <div className="w-full lg:w-2/3 px-4">
                         <span className="text-secondary text-sm md:text-base capitalize">
                             &#169; {currentYear} Maestro
                         </span>
