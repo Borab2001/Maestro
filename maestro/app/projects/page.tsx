@@ -1,8 +1,9 @@
 import projects from "@/data/projects.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
-import AlbumSection from "@/components/ui/album-section";
 import ImageReveal from "@/components/ui/image-reveal";
+// import AlbumSection from "@/components/ui/album-section";
+
 
 const Projects = () => {
     return (
@@ -20,7 +21,7 @@ const Projects = () => {
                     >
                         Les Projets
                     </TextEffect>
-                    <TextEffect
+                    {/* <TextEffect
 						per="word"
 						preset="slide"
 						as="p"
@@ -30,131 +31,87 @@ const Projects = () => {
 						useInViewTrigger
 					>
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?
-					</TextEffect>
+					</TextEffect> */}
                 </div>
             </section>
             
-            {projects.slice().reverse().map((project) => (
-                <section className="py-16" key={project.name}>
-                    <div 
-                        className="grid grid-cols-1 lg:grid-cols-5 gap-8" 
-                    >
-                        <div className={`col-span-1 lg:col-span-2 py-6 flex flex-col ${project.id % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}`}>
-                            <TextEffect
-                                per="char"
-                                preset="fade-in-blur"
-                                as="h2"
-                                className="text-xl md:text-3xl xl:text-6xl font-medium mb-0 md:mb-6 leading-tight"
-                                delay={0.3}
-                                speedReveal={2}
-                                useInViewTrigger
-                            >
-                                {project.name}
-                            </TextEffect>
-
-                            <TextEffect
-                                per="char"
-                                preset="fade-in-blur"
-                                as="span"
-                                className="text-secondary font-medium text-lg md:text-2xl mb-6"
-                                delay={0.3}
-                                speedReveal={2}
-                                useInViewTrigger
-                            >
-                                {project.date}
-                            </TextEffect>
-
-                            <TextEffect
-                                per="word"
-                                preset="slide"
-                                as="p"
-                                className="font-medium text-base leading-loose"
-                                delay={0.3}
-                                speedReveal={6}
-                                useInViewTrigger
-                            >
-                                {project.description}
-                            </TextEffect>
-
-                            <div className="hidden lg:block space-y-2 mt-6">
-                                {project.tracklist?.map((tracklist) => (
-                                    <div 
-                                        className="py-2" 
-                                        key={tracklist.id}
-                                    >
-                                        <TextEffect
-                                            per="word"
-                                            preset="slide"
-                                            as="span"
-                                            className="font-medium text-base leading-loose"
-                                            delay={0.3}
-                                            speedReveal={6}
-                                            useInViewTrigger
-                                        >
-                                            {`${tracklist.name} - `}
-                                        </TextEffect>
-                                         <TextEffect
-                                            per="word"
-                                            preset="slide"
-                                            as="span"
-                                            className="text-neutral-400 font-medium text-base leading-loose"
-                                            delay={0.3}
-                                            speedReveal={6}
-                                            useInViewTrigger
-                                        >
-                                            {tracklist.artists}
-                                        </TextEffect>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="col-span-1 lg:col-span-3">
-                            <div className="sticky top-1/6 self-start">
-                                <ImageReveal
-                                    src={project.image}
-                                    alt={project.alt}
-                                    className="aspect-[16/12] object-cover w-full"
-                                    animationType="clip-path"
-                                    duration={1.8}
-                                    delay={0}
-                                />
-                            </div>
-                        </div>
-                        <div className="lg:hidden space-y-2">
-                            {project.tracklist?.map((tracklist) => (
-                                <div 
-                                    className="py-2" 
-                                    key={tracklist.id}
+            <section className="flex flex-col w-full gap-16">
+                {projects.slice().map((project) => (
+                    <div key={project.name}>
+                        <div 
+                            className="flex flex-col" 
+                        >
+                            {/* <div className={`col-span-1 lg:col-span-2 py-6 flex flex-col ${project.id % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}`}> */}
+                            <div className="flex flex-col gap-4">
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="h2"
+                                    className="text-xl md:text-3xl xl:text-5xl font-medium leading-tight"
+                                    delay={0.3}
+                                    speedReveal={2}
+                                    useInViewTrigger
                                 >
-                                    <TextEffect
-                                        per="word"
-                                        preset="slide"
-                                        as="span"
-                                        className="font-medium text-base leading-loose"
-                                        delay={0.3}
-                                        speedReveal={6}
-                                        useInViewTrigger
-                                    >
-                                        {`${tracklist.name} - `}
-                                    </TextEffect>
-                                    <TextEffect
-                                        per="word"
-                                        preset="slide"
-                                        as="span"
-                                        className="text-neutral-400 font-medium text-base leading-loose"
-                                        delay={0.3}
-                                        speedReveal={6}
-                                        useInViewTrigger
-                                    >
-                                        {tracklist.artists}
-                                    </TextEffect>
+                                    {project.name}
+                                </TextEffect>
+
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="span"
+                                    className="text-secondary font-medium text-base md:text-xl"
+                                    delay={0.3}
+                                    speedReveal={2}
+                                    useInViewTrigger
+                                >
+                                    {project.date}
+                                </TextEffect>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col gap-4 md:gap-8">
+                                    <ImageReveal
+                                        src={project.image}
+                                        alt={project.alt}
+                                        className="aspect-[3/2] lg:aspect-[16/14] object-cover w-full"
+                                        animationType="clip-path"
+                                        duration={1.2}
+                                        delay={0}
+                                        ease={"easeInOut"}
+                                    />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis dolores quo perferendis quod repellat tenetur perspiciatis excepturi itaque, deserunt cumque, cum labore nulla doloribus dicta! Quidem assumenda hic tempore!</p>
                                 </div>
-                            ))}
+
+                                <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
+                                    <div className="w-full flex flex-row ites-center border-b border-neutral-600">
+                                        <div className="w-full h-[58px] flex items-center">
+                                            <p>Morceau</p>
+                                        </div>
+                                        <div className="w-full h-[58px] flex items-center">
+                                            <p>Artistes</p>
+                                        </div>
+                                    </div>
+
+                                    {project.tracklist?.map((tracklist) => (
+                                        <div 
+                                            className="w-full flex flex-row ites-center border-b border-neutral-600"
+                                            key={tracklist.id}    
+                                        >
+                                            <div className="w-full h-[58px] flex items-center">
+                                                <p>{tracklist.name}</p>
+                                            </div>
+                                            <div className="w-full h-[58px] flex items-center">
+                                                <p>{tracklist.artists}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </section>
-            ))}
-            <AlbumSection />
+                ))}
+            </section>
+            {/* <AlbumSection /> */}
         </div>
     );
 }
