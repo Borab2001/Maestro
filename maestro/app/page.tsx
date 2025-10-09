@@ -112,7 +112,7 @@ export default function Home() {
 							preset="slide"
 							as="p"
 							className="font-medium text-base leading-loose mb-6"
-							delay={0}
+							delay={0.3}
 							speedReveal={0.2}
 							useInViewTrigger
 						>
