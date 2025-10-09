@@ -97,10 +97,10 @@ const Projects = () => {
                                             className="w-full flex flex-row ites-center border-b border-neutral-600"
                                             key={tracklist.id}    
                                         >
-                                            <div className="w-full h-[58px] flex items-center">
+                                            <div className="w-full min-h-[58px] flex items-center">
                                                 <p>{tracklist.name}</p>
                                             </div>
-                                            <div className="w-full h-[58px] flex items-center">
+                                            <div className="w-full min-h-[58px] flex items-center">
                                                 <p>{tracklist.artists}</p>
                                             </div>
                                         </div>
