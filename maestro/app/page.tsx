@@ -86,7 +86,7 @@ export default function Home() {
 					src={homeData.hero.image.src}
 					alt={homeData.hero.image.alt}
 					className="w-full aspect-[3/2] md:aspect-[16/9]"
-					animationType="fade-in"
+					animationType="fade-translate-parallax"
 					duration={0.6}
 					delay={1.5}
 					ease={"easeInOut"}

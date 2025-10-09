@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 interface ImageRevealProps {
@@ -11,7 +11,7 @@ interface ImageRevealProps {
     duration?: number;
     delay?: number;
     ease?: string | number[];
-    animationType: "clip-path" | "fade-in";
+    animationType: "clip-path" | "fade-in" | "fade-translate-parallax";
 }
 
 const ImageReveal = ({ 
@@ -25,6 +25,13 @@ const ImageReveal = ({
     }: ImageRevealProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+    
+    // Parallax effect pour la variante fade-translate-parallax
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+    const parallaxY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
     // Animation variants basées sur le type d'animation
     const getAnimationProps = () => {
@@ -32,6 +39,11 @@ const ImageReveal = ({
             return {
                 initial: { opacity: 0 },
                 animate: isInView ? { opacity: 1 } : { opacity: 0 }
+            };
+        } else if (animationType === "fade-translate-parallax") {
+            return {
+                initial: { opacity: 0, y: 40 },
+                animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             };
         } else {
             return {
@@ -46,7 +58,7 @@ const ImageReveal = ({
     return (
         <motion.div 
             ref={ref}
-            className={`relative ${className}`}
+            className={`relative ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
             initial={animationProps.initial}
             animate={animationProps.animate}
             transition={{ 
@@ -55,13 +67,18 @@ const ImageReveal = ({
                 delay
             }}
         >
-            <Image 
-                src={src} 
-                alt={alt} 
-                fill
-                className="object-cover"
-                priority
-            />
+            <motion.div
+                style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
+                className="w-full h-full"
+            >
+                <Image 
+                    src={src} 
+                    alt={alt} 
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </motion.div>
         </motion.div>
     );
 };
