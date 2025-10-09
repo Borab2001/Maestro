@@ -2,6 +2,7 @@ import projects from "@/data/projects.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
+import AnimatedLine from "@/components/ui/animated-line";
 // import AlbumSection from "@/components/ui/album-section";
 
 
@@ -83,7 +84,7 @@ const Projects = () => {
                                 </div>
 
                                 <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
-                                    <div className="w-full flex flex-row ites-center border-b border-neutral-600">
+                                    <div className="w-full flex flex-row items-center">
                                         <div className="w-full h-[58px] flex items-center">
                                             <p>Morceau</p>
                                         </div>
@@ -91,18 +92,19 @@ const Projects = () => {
                                             <p>Artistes</p>
                                         </div>
                                     </div>
+                                    <AnimatedLine delay={0.2} />
 
-                                    {project.tracklist?.map((tracklist) => (
-                                        <div 
-                                            className="w-full flex flex-row ites-center border-b border-neutral-600"
-                                            key={tracklist.id}    
-                                        >
-                                            <div className="w-full min-h-[58px] flex items-center">
-                                                <p>{tracklist.name}</p>
+                                    {project.tracklist?.map((tracklist, index) => (
+                                        <div key={tracklist.id}>
+                                            <div className="w-full flex flex-row items-center">
+                                                <div className="w-full min-h-[58px] flex items-center">
+                                                    <p>{tracklist.name}</p>
+                                                </div>
+                                                <div className="w-full min-h-[58px] flex items-center">
+                                                    <p>{tracklist.artists}</p>
+                                                </div>
                                             </div>
-                                            <div className="w-full min-h-[58px] flex items-center">
-                                                <p>{tracklist.artists}</p>
-                                            </div>
+                                            <AnimatedLine delay={index * 0.03} />
                                         </div>
                                     ))}
                                 </div>
