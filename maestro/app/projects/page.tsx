@@ -1,10 +1,10 @@
-import concerts from "@/data/concerts.json";
+import projects from "@/data/projects.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import AlbumSection from "@/components/ui/album-section";
 import ImageReveal from "@/components/ui/image-reveal";
 
-const Concerts = () => {
+const Projects = () => {
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
             <section className="py-6 md:py-12">
@@ -18,7 +18,7 @@ const Concerts = () => {
                         speedReveal={1.2}
                         useInViewTrigger
                     >
-                        Les Concerts
+                        Les Projets
                     </TextEffect>
                     <TextEffect
 						per="word"
@@ -34,12 +34,12 @@ const Concerts = () => {
                 </div>
             </section>
             
-            {concerts.slice().reverse().map((concert) => (
-                <section className="py-16" key={concert.name}>
+            {projects.slice().reverse().map((project) => (
+                <section className="py-16" key={project.name}>
                     <div 
                         className="grid grid-cols-1 lg:grid-cols-5 gap-8" 
                     >
-                        <div className={`col-span-1 lg:col-span-2 py-6 flex flex-col ${concert.id % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}`}>
+                        <div className={`col-span-1 lg:col-span-2 py-6 flex flex-col ${project.id % 2 === 0 ? 'lg:order-first' : 'lg:order-last'}`}>
                             <TextEffect
                                 per="char"
                                 preset="fade-in-blur"
@@ -49,7 +49,7 @@ const Concerts = () => {
                                 speedReveal={2}
                                 useInViewTrigger
                             >
-                                {concert.name}
+                                {project.name}
                             </TextEffect>
 
                             <TextEffect
@@ -61,7 +61,7 @@ const Concerts = () => {
                                 speedReveal={2}
                                 useInViewTrigger
                             >
-                                {concert.date}
+                                {project.date}
                             </TextEffect>
 
                             <TextEffect
@@ -73,11 +73,11 @@ const Concerts = () => {
                                 speedReveal={6}
                                 useInViewTrigger
                             >
-                                {concert.description}
+                                {project.description}
                             </TextEffect>
 
                             <div className="hidden lg:block space-y-2 mt-6">
-                                {concert.tracklist?.map((tracklist) => (
+                                {project.tracklist?.map((tracklist) => (
                                     <div 
                                         className="py-2" 
                                         key={tracklist.id}
@@ -111,8 +111,8 @@ const Concerts = () => {
                         <div className="col-span-1 lg:col-span-3">
                             <div className="sticky top-1/6 self-start">
                                 <ImageReveal
-                                    src={concert.image}
-                                    alt={concert.alt}
+                                    src={project.image}
+                                    alt={project.alt}
                                     className="aspect-[16/12] object-cover w-full"
                                     animationType="clip-path"
                                     duration={1.8}
@@ -121,7 +121,7 @@ const Concerts = () => {
                             </div>
                         </div>
                         <div className="lg:hidden space-y-2">
-                            {concert.tracklist?.map((tracklist) => (
+                            {project.tracklist?.map((tracklist) => (
                                 <div 
                                     className="py-2" 
                                     key={tracklist.id}
@@ -159,4 +159,4 @@ const Concerts = () => {
     );
 }
  
-export default Concerts;
+export default Projects;
