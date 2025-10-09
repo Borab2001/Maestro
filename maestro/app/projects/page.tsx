@@ -3,7 +3,7 @@ import projects from "@/data/projects.json";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
 import AnimatedLine from "@/components/ui/animated-line";
-// import AlbumSection from "@/components/ui/album-section";
+import AlbumSection from "@/components/ui/album-section";
 
 
 const Projects = () => {
@@ -113,7 +113,7 @@ const Projects = () => {
                     </div>
                 ))}
             </section>
-            {/* <AlbumSection /> */}
+            <AlbumSection />
         </div>
     );
 }

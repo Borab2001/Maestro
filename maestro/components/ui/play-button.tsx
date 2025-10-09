@@ -12,7 +12,7 @@ const PlayButton = ({ isPlaying, onClick }: PlayButtonProps) => {
 	return (
 		<motion.div
 			onClick={onClick}
-			className="cursor-pointer relative flex items-center justify-center"
+			className="w-auto cursor-pointer"
 		>
 			<div className="w-12 h-12 rounded-full border border-white/40 transition-colors duration-200 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
 				<motion.div
