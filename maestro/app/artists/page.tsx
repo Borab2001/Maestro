@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import artists from "@/data/artists.json";
 
@@ -9,6 +9,7 @@ import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { TextEffect } from "@/components/ui/text-effect";
+import ImageReveal from "@/components/ui/image-reveal";
 
 
 const Artists = () => {
@@ -31,9 +32,9 @@ const Artists = () => {
                 </TextEffect>
             </section>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
-                {artists.map((artist) => (
+                {artists.map((artist, index) => (
                     <Link 
-                        className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] xl:aspect-[3/5] overflow-hidden rounded-md'
+                        className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden rounded-md'
                         key={artist.id}
                         href={`/artists/${artist.id}`}
                         onClick={(e) => {
@@ -43,12 +44,13 @@ const Artists = () => {
                             });
                         }}
                     >
-                        <Image
+                        <ImageReveal
                             src={artist.portrait}
                             alt={`${artist.name} portrait`}
-                            fill
-                            className="group-hover:grayscale-100 w-full aspect-[3/5] object-center object-cover transition-all duration-300 ease-in-out"
-                            loading="lazy"
+                            className="group-hover:grayscale-100 w-full aspect-[2/3] object-center object-cover transition-all duration-300 ease-in-out"
+                            duration={1.8}
+                            delay={index * 0.1}
+                            animationType="clip-path"
                         />
                         <ProgressiveBlur
                             className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full'
