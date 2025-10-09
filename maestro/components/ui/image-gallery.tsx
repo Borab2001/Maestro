@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import ImageReveal from "./image-reveal";
 
 interface ImageGalleryProps {
     images: Array<{
@@ -17,12 +18,13 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                             key={index}
                             className="relative group flex-grow transition-all w-56 overflow-hidden h-[600px] duration-500 hover:w-full"
                         >
-                            <Image
-                                className="h-full w-full object-cover object-center"
+                            <ImageReveal
                                 src={image.src}
                                 alt={image.alt}
-                                layout="fill"
-                                objectFit="cover"
+                                className="h-full w-full object-cover object-center"
+                                duration={1.8}
+                                delay={index * 0.1}
+                                animationType="clip-path"
                             />
                         </div>
                     ))}
