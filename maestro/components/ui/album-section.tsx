@@ -1,18 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-
+import AnimatedLine from "./animated-line";
 import VinylAlbum from "./vinyl";
-import TrackBubble from "./track-bubble";
 import PlayButton from "./play-button";
-import NavigationButtons from "./navigation-buttons";
 
 interface Track {
     id: number;
     title: string;
-    description: string;
+    artists: string;
     audioUrl: string;
 }
 
@@ -20,61 +16,49 @@ const tracks: Track[] = [
     {
         id: 1,
         title: "Premier Morceau",
-        description: "Description du premier morceau",
+        artists: "Artiste 1",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 2,
         title: "Deuxième Morceau", 
-        description: "Description du deuxième morceau",
+        artists: "Artiste 2",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 3,
         title: "Troisième Morceau",
-        description: "Description du troisième morceau", 
+        artists: "Artiste 3",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 4,
         title: "Quatrième Morceau",
-        description: "Description du quatrième morceau",
+        artists: "Artiste 4",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 5,
         title: "Cinquième Morceau",
-        description: "Description du cinquième morceau", 
+        artists: "Artiste 5",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 6,
         title: "Sixième Morceau",
-        description: "Description du sixième morceau", 
+        artists: "Artiste 6",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 7,
         title: "Septième Morceau",
-        description: "Description du septième morceau", 
+        artists: "Artiste 7",
         audioUrl: "/audios/runaway.mp3"
     },
     {
         id: 8,
         title: "Huitième Morceau",
-        description: "Description du huitième morceau", 
-        audioUrl: "/audios/runaway.mp3"
-    },
-    {
-        id: 9,
-        title: "Neuvième Morceau",
-        description: "Description du troisième morceau", 
-        audioUrl: "/audios/runaway.mp3"
-    },
-    {
-        id: 10,
-        title: "Dixième Morceau",
-        description: "Description du dixième morceau", 
+        artists: "Artiste 8",
         audioUrl: "/audios/runaway.mp3"
     }
 ];
@@ -83,125 +67,31 @@ const AlbumSection = () => {
     const [currentTrack, setCurrentTrack] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isVinylOpen, setIsVinylOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
     
     const audioRef = useRef<HTMLAudioElement>(null);
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
-    const isInView = useInView(sectionRef, { amount: 0.8 });
 
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    // Fade functions for smooth audio transitions
-    const fadeIn = (audio: HTMLAudioElement, duration = 1000) => {
-        audio.volume = 0;
-        const step = 0.05;
-        const stepTime = duration / (1 / step);
-        
-        const fadeInterval = setInterval(() => {
-            if (audio.volume < 0.95) {
-                audio.volume = Math.min(audio.volume + step, 1);
-            } else {
-                audio.volume = 1;
-                clearInterval(fadeInterval);
-            }
-        }, stepTime);
-        
-        fadeIntervalRef.current = fadeInterval;
-    };
-
-    const fadeOut = (audio: HTMLAudioElement, duration = 800) => {
-        const step = 0.05;
-        const stepTime = duration / (audio.volume / step);
-        
-        const fadeInterval = setInterval(() => {
-            if (audio.volume > 0.05) {
-                audio.volume = Math.max(audio.volume - step, 0);
-            } else {
-                audio.volume = 0;
-                audio.pause();
-                clearInterval(fadeInterval);
-            }
-        }, stepTime);
-        
-        fadeIntervalRef.current = fadeInterval;
-    };
-
-    // Cleanup fade intervals
-    useEffect(() => {
-        return () => {
-            if (fadeIntervalRef.current) {
-                clearInterval(fadeIntervalRef.current);
-            }
-        };
-    }, []);
-
-    // Auto-start when section is 80% in view
-    useEffect(() => {
-        if (isInView && currentTrack === 0 && !isVinylOpen) {
-        const timer = setTimeout(() => {
-            setIsVinylOpen(true);
-            // Wait for vinyl opening animation to complete
-            const playTimer = setTimeout(() => {
-            setIsPlaying(true);
-            }, 1000);
-            return () => clearTimeout(playTimer);
-        }, 100);
-        return () => clearTimeout(timer);
-        }
-    }, [isInView, currentTrack, isVinylOpen]);
-
-    // Audio control with fade effects
+    // Audio control simple
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
-        // Clear any existing fade intervals
-        if (fadeIntervalRef.current) {
-            clearInterval(fadeIntervalRef.current);
-        }
-
         if (isPlaying) {
-            audio.play().then(() => {
-                fadeIn(audio, 1200); // 1.2 second fade in
-            }).catch(console.error);
+            audio.play().catch(console.error);
         } else {
-            if (audio.volume > 0) {
-                fadeOut(audio, 800); // 0.8 second fade out
-            } else {
-                audio.pause();
-            }
+            audio.pause();
         }
     }, [isPlaying]);
 
-    // Change track with crossfade effect
+    // Changement de track
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
-        // If currently playing, fade out first
-        if (isPlaying && audio.volume > 0) {
-            fadeOut(audio, 600); // Quick fade out for track change
-            
-            // Load new track after fade out
-            setTimeout(() => {
-                audio.src = tracks[currentTrack].audioUrl;
-                audio.load();
-                if (isPlaying) {
-                    audio.play().then(() => {
-                        fadeIn(audio, 800); // Fade in new track
-                    }).catch(console.error);
-                }
-            }, 650);
-        } else {
-            // If not playing, just load the new track
-            audio.src = tracks[currentTrack].audioUrl;
-            audio.load();
+        audio.src = tracks[currentTrack].audioUrl;
+        audio.load();
+        
+        if (isPlaying) {
+            audio.play().catch(console.error);
         }
     }, [currentTrack, isPlaying]);
 
@@ -224,131 +114,70 @@ const AlbumSection = () => {
         }
     };
 
-    const handlePrevious = () => {
-        if (currentTrack > 0) {
-            setCurrentTrack(currentTrack - 1);
-        }
-    };
-
-    const handleNext = () => {
-        if (currentTrack < tracks.length - 1) {
-            setCurrentTrack(currentTrack + 1);
-        }
-    };
-
-    // Transform tracks for mobile (centered active track)
-    const getTrackTransform = (index: number) => {
-        // if (isMobile) return 0;
-        const offset = (index - currentTrack) * 40; // 60px spacing
-        return offset;
-    };
-
     return (
-        <section 
-            ref={sectionRef}
-            className={`
-                relative overflow-x-hidden h-screen w-full flex items-center justify-center pt-[72px] bg-background
-            `}
-        >
+        <section className="py-16">
             <audio
                 ref={audioRef}
                 loop
                 preload="metadata"
             />
-
-            <div className={`
-                relative w-full h-full 
-                ${isMobile 
-                    ? 'h-full flex flex-col' 
-                    : 'flex flex-row gap-8'
-                }
-            `}>
-                <div className={`
-                    w-full col-span-1 md:col-span-2
-                    ${isMobile 
-                        ? 'order-2' 
-                        : 'max-w-96 p-4 relative flex items-center'
-                    }
-                `}>
-                    <div className={`max-h-[580px] w-full flex flex-row justify-start items-center gap-8 ${isMobile ? '' : 'p-6 bg-white/1 rounded-3xl'} overflow-hidden`}>
-                        {/* <div className="absolute inset-0 z-20 pointer-events-none" /> */}
-                        {/* Navigation Buttons */}
-                        <div className={`
-                            ${isMobile 
-                                ? 'hidden' 
-                                : 'mb-8'
-                            }
-                        `}>
-                            <NavigationButtons 
-                                onPrevious={handlePrevious}
-                                onNext={handleNext}
-                                canGoPrevious={currentTrack > 0}
-                                canGoNext={currentTrack < tracks.length - 1}
-                                isMobile={isMobile}
-                            />
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col gap-4 md:gap-8">
+                    {/* <div className="aspect-square flex items-center justify-center"> */}
+                        <VinylAlbum
+                            coverUrl="/images/group2.webp"
+                            isOpen={isVinylOpen}
+                            isSpinning={isPlaying}
+                            size="normal"
+                        />
+                    {/* </div> */}
+                    <div className="flex flex-col gap-4 items-start">
+                        <div className="flex flex-col gap-2">
+                            <h3 className="text-xl font-medium">Album</h3>
+                            <p className="text-secondary">2026</p>
                         </div>
-
-                        {/* Track List */}
-                        <div className={`
-                            relative
-                            ${isMobile 
-                                ? 'flex h-full justify-center items-center'
-                                : 'w-full py-16'
-                            }
-                        `}>
-                            {tracks.map((track, index) => (
-                                <motion.div
-                                    key={track.id}
-                                    className={`relative transition-transform duration-1000 ease-in-out ${isMobile ? 'p-6 bg-white/1 rounded-3xl' : ''}`}
-                                    style={{
-                                        transform: isMobile 
-                                            ? `translateX(${getTrackTransform(index)}px)`
-                                            : `translateY(${getTrackTransform(index)}px)`
-                                    }}
-                                    transition={{ duration: 0.5, ease: "easeInOut" }}
-                                >
-                                    <TrackBubble
-                                        track={track}
-                                        isActive={index === currentTrack}
-                                        onClick={() => handleTrackSelect(index)}
-                                    />
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Desktop: Vinyl Right, Mobile: Vinyl Top */}
-                <div className={`
-                    w-full
-                    ${isMobile 
-                        ? 'order-1 flex-1 flex items-center justify-center' 
-                        : 'flex flex-col items-center justify-center'
-                    }
-                `}>
-                    <div className="w-auto sm:w-[450px] h-auto flex justify-start">
-                        <div className="block scale-75 -translate-x-1/6 sm:scale-100 md:scale-125 sm:translate-x-0">
-                            <VinylAlbum
-                                coverUrl="/images/group2.webp"
-                                isOpen={isVinylOpen}
-                                isSpinning={isPlaying}
-                                size="normal"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Play Button */}
-                    <div className={`
-                        ${isMobile 
-                            ? 'absolute -top-16 right-8' 
-                            : 'mt-8 md:mt-12'
-                        }
-                    `}>
+                            
                         <PlayButton 
                             isPlaying={isPlaying}
                             onClick={handlePlayPause}
                         />
                     </div>
+                </div>
+
+                <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
+                    <div className="w-full flex flex-row items-center">
+                        <div className="w-full h-[58px] flex items-center">
+                            <p>Morceau</p>
+                        </div>
+                        <div className="w-full h-[58px] flex items-center">
+                            <p>Artistes</p>
+                        </div>
+                    </div>
+                    <AnimatedLine delay={0.2} />
+
+                    {tracks.map((track, index) => (
+                        <div key={track.id}>
+                            <div 
+                                className={`w-full flex flex-row items-center cursor-pointer hover:bg-white/5 transition-colors duration-200 ${
+                                    index === currentTrack ? 'bg-white/10' : ''
+                                }`}
+                                onClick={() => handleTrackSelect(index)}
+                            >
+                                <div className="w-full min-h-[58px] flex items-center">
+                                    <p className={index === currentTrack ? 'text-white font-medium' : 'text-current'}>
+                                        {track.title}
+                                    </p>
+                                </div>
+                                <div className="w-full min-h-[58px] flex items-center">
+                                    <p className={index === currentTrack ? 'text-white font-medium' : 'text-current'}>
+                                        {track.artists}
+                                    </p>
+                                </div>
+                            </div>
+                            <AnimatedLine delay={0.3 + (index * 0.05)} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
