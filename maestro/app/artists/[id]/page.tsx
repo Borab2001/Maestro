@@ -8,7 +8,7 @@ import artists from "@/data/artists.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import { Timeline } from "@/components/ui/timeline";
-import { Carousel } from "@/components/ui/carousel";
+// import { Carousel } from "@/components/ui/carousel";
 import ImageGallery from "@/components/ui/image-gallery";
 
 
@@ -149,14 +149,14 @@ const Artist = () => {
             </section> */}
             <ImageGallery images={artist.images} />
 
-            <section className="w-full md:hidden">
+            {/* <section className="w-full md:hidden">
                 <Carousel
                     images={artist.images}
                     autoplayDelay={2000}
                     showPagination={true}
                     showNavigation={true}
                     />
-            </section>
+            </section> */}
             
             {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
             </section> */}
