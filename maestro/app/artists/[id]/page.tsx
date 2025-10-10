@@ -147,7 +147,13 @@ const Artist = () => {
                     ))
                 )}
             </section> */}
-            <ImageGallery images={artist.images} />
+            <ImageGallery 
+                images={artist.images}
+                containerHeight="h-[600px] sm:h-[900px] md:h-[600px]" 
+				imageSize="w-full md:w-56 h-56 sm:h-[600px]"
+                // containerHeight="h-[900px] sm:h-[600px]" 
+                // imageSize="w-full md:w-[500px] lg:w-[600px] xl:w-[1300px] h-56 sm:h-[600px]"
+            />
 
             {/* <section className="w-full md:hidden">
                 <Carousel
