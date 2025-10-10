@@ -14,7 +14,7 @@ const PlayButton = ({ isPlaying, onClick }: PlayButtonProps) => {
 			onClick={onClick}
 			className="w-auto cursor-pointer"
 		>
-			<div className="w-12 h-12 rounded-full border border-white/40 transition-colors duration-200 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
+			<div className="w-12 h-12 rounded-full border border-border transition-colors duration-200 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
 				<motion.div
 					initial={false}
 					animate={{ rotate: isPlaying ? 0 : 0 }}

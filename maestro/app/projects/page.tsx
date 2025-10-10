@@ -84,7 +84,7 @@ const Projects = () => {
                                 </div>
 
                                 <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
-                                    <div className="w-full flex flex-row items-center">
+                                    <div className="w-full flex flex-row items-center text-secondary">
                                         <div className="w-full h-[58px] flex items-center">
                                             <p>Morceau</p>
                                         </div>

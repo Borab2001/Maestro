@@ -12,7 +12,7 @@ interface AnimatedLineProps {
 const AnimatedLine = ({ 
     delay = 0, 
     duration = 0.8,
-    className = "h-px bg-neutral-600" 
+    className = "h-px bg-border" 
 }: AnimatedLineProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
