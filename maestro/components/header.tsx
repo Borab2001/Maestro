@@ -13,11 +13,11 @@ const Header = () => {
 
     const links = [
         { name: "Artistes", href: "/artists" },
-        { name: "Concerts", href: "/concerts" },
+        { name: "Projets", href: "/projects" },
     ];
 
     return (
-        <header className="fixed top-0 z-50 w-full h-[72px] px-4 md:p-8 backdrop-blur-md text-base bg-background/10 flex flex-row justify-between items-center">
+        <header className="fixed top-0 z-50 w-full h-[72px] bg-gradient-to-b from-background to-transparent px-4 md:p-8 text-base flex flex-row justify-between items-center">
             <Link
                 href="/"
                 onClick={(e) => {

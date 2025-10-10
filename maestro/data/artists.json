@@ -15,6 +15,11 @@
 				"platform": "Instagram",
 				"username": "@thepianogirl_",
 				"url": "https://www.instagram.com/thepianogirl_/"
+			},
+			{
+				"platform": "TikTok",
+				"username": "@thepianogirl___",
+				"url": "https://www.tiktok.com/@thepianogirl___"
 			}
 		],
 		"timeline": [
@@ -61,6 +66,10 @@
 			{
 				"src": "/images/axelle.webp",
 				"alt": "Axelle image 3"
+			},
+			{
+				"src": "/images/axelle.webp",
+				"alt": "Axelle image 4"
 			}
 		]
     },
@@ -77,7 +86,7 @@
 				"url": "https://www.instagram.com/pianobillie/"
 			},
 			{
-				"platform": "Tiktok",
+				"platform": "TikTok",
 				"username": "@pianobillie",
 				"url": "https://www.tiktok.com/@pianobillie"
 			}

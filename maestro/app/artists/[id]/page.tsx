@@ -9,6 +9,7 @@ import artists from "@/data/artists.json";
 import { TextEffect } from "@/components/ui/text-effect";
 import { Timeline } from "@/components/ui/timeline";
 import { Carousel } from "@/components/ui/carousel";
+import ImageGallery from "@/components/ui/image-gallery";
 
 
 const Artist = () => {
@@ -43,7 +44,7 @@ const Artist = () => {
                         preset="fade-in-blur"
                         as="h1"
                         className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
-                        delay={2}
+                        delay={0}
                         speedReveal={2}
                         useInViewTrigger
                     >
@@ -55,7 +56,7 @@ const Artist = () => {
                         preset="slide"
                         as="p"
                         className="font-medium text-base leading-loose mb-6"
-                        delay={2}
+                        delay={0}
                         speedReveal={6}
                         useInViewTrigger
                     >
@@ -70,7 +71,7 @@ const Artist = () => {
                                     preset="fade-in-blur"
                                     as="span"
                                     className="text-lg md:text-xl font-medium leading-tight"
-                                    delay={2}
+                                    delay={0}
                                     speedReveal={2}
                                     useInViewTrigger
                                 >
@@ -83,7 +84,7 @@ const Artist = () => {
                                         preset="fade-in-blur"
                                         as="span"
                                         className="text-secondary text-base md:text-lg font-medium"
-                                        delay={2}
+                                        delay={0}
                                         speedReveal={2}
                                         useInViewTrigger
                                     >
@@ -102,7 +103,7 @@ const Artist = () => {
                     preset="fade-in-blur"
                     as="h2"
                     className="text-3xl md:text-6xl lg:text-7xl font-medium mb-0 md:mb-6 leading-tight"
-                    delay={0.3}
+                    delay={0}
                     speedReveal={2}
                     useInViewTrigger
                 >
@@ -131,7 +132,7 @@ const Artist = () => {
                 )}
             </section>
 
-            <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
+            {/* <section className="w-full hidden md:grid md:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
                 {artist.images && (
                     artist.images.slice(0, 3).map((image, index) => (
                         <Image
@@ -145,7 +146,8 @@ const Artist = () => {
                         />
                     ))
                 )}
-            </section>
+            </section> */}
+            <ImageGallery images={artist.images} />
 
             <section className="w-full md:hidden">
                 <Carousel

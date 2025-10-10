@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-		"name": "Concert 1",
-		"date": "9 November 2024",
+		"name": "Concert #1",
+		"date": "9 Novembre 2024",
 		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?",
 		"image": "/images/group.webp",
         "alt": "Group photo"
     },
     {
         "id": 2,
-		"name": "Concert 2",
+		"name": "Concert #2",
 		"date": "8 Mars 2025",
 		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?",
 		"image": "/images/group2.webp",

@@ -1,21 +1,22 @@
 "use client";
 
-import Image from "next/image";
-import { Carousel } from "@/components/ui/carousel"
+// import { Carousel } from "@/components/ui/carousel"
 import homeData from "@/data/home.json";
 import { TextEffect } from "@/components/ui/text-effect";
+import ImageReveal from "@/components/ui/image-reveal";
+import ImageGallery from "@/components/ui/image-gallery";
 
 
 export default function Home() {
 	return (
 		<main className="min-h-screen pt-[72px]">
-			<section className="px-4 md:px-8 py-6 md:py-12">
+			{/* <section className="px-4 md:px-8 py-6 md:py-12">
 				<TextEffect
 					per="char"
 					preset="fade-in-blur"
 					as="h1"
 					className="text-3xl md:text-6xl xl:text-[80px] font-medium leading-tight"
-					delay={2}
+					delay={0}
 					speedReveal={2}
 					useInViewTrigger
 				>
@@ -24,15 +25,14 @@ export default function Home() {
 			</section>
 
 			<section className="flex flex-col md:flex-row px-4 md:px-8 lg:px-16 py-8">
-				<div className="md:w-3/4 relative rounded-lg aspect-[16/12]">
-					<Image 
-						src={homeData.hero.image.src} 
-						alt={homeData.hero.image.alt} 
-						fill
-						className="object-cover"
-						priority
-					/>
-				</div>
+				<ImageReveal
+					src={homeData.hero.image.src}
+					alt={homeData.hero.image.alt}
+					className="md:w-3/4 aspect-[16/12]"
+					duration={1}
+					delay={0}
+					ease=""
+				/>
 				<div className="md:w-1/2 md:pl-8 py-6">
 					<TextEffect
                         per="word"
@@ -46,18 +46,65 @@ export default function Home() {
                         {homeData.hero.description}
                     </TextEffect>
 				</div>
+			</section> */}
+			<section className="min-h-auto lg:min-h-screen flex flex-col">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-8 items-end px-4 md:px-8 py-6 md:py-12 lg:pt-[30vh]">
+					<TextEffect
+						per="char"
+						preset="fade-in-blur"
+						as="h1"
+						className="text-3xl xs:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
+						delay={0}
+						speedReveal={1.2}
+						useInViewTrigger
+					>
+						{homeData.hero.title}
+					</TextEffect>
+					<TextEffect
+						per="word"
+						preset="slide"
+						as="p"
+						className="h-auto font-medium text-base leading-loose"
+						delay={0.6}
+						speedReveal={6}
+						useInViewTrigger
+					>
+						{homeData.hero.description}
+					</TextEffect>
+				</div>
+
+				<ImageReveal
+					src={homeData.hero.image.src}
+					alt={homeData.hero.image.alt}
+					className="w-full aspect-[3/2] md:aspect-[16/9]"
+					animationType="fade-translate-parallax"
+					duration={0.6}
+					delay={1.5}
+					ease={"easeInOut"}
+				/>
+				{/* <div className="absolute h-full inset-0 -z-10">
+					<ImageReveal
+						src={homeData.hero.image.src}
+						alt={homeData.hero.image.alt}
+						className="w-full h-full object-cover"
+						duration={1}
+						delay={0}
+						ease=""
+					/>
+					<div className="absolute inset-0 bg-background/90 backdrop-blur-md" />
+				</div> */}
 			</section>
 			
 			<section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 py-8">
 				{homeData.about.paragraphs.map((paragraph, index) => (
 					<div key={index} className="col-span-1">
 						<TextEffect
-							per="word"
+							per="line"
 							preset="slide"
 							as="p"
 							className="font-medium text-base leading-loose mb-6"
-							delay={2}
-							speedReveal={6}
+							delay={0.3}
+							speedReveal={0.2}
 							useInViewTrigger
 						>
 							{paragraph}
@@ -148,12 +195,13 @@ export default function Home() {
 				</div>
 			</section>
 
-			<Carousel
+			{/* <Carousel
 				images={homeData.carousel.images}
 				autoplayDelay={2000}
 				showPagination={true}
 				showNavigation={true}
-			/>
+			/> */}
+			<ImageGallery images={homeData.gallery.images} />
 		</main>
 	);
 }
