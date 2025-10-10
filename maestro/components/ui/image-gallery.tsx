@@ -11,6 +11,7 @@ interface ImageGalleryProps {
 
 export default function ImageGallery({ images }: ImageGalleryProps) {
     const [animationsComplete, setAnimationsComplete] = useState(false);
+    const [expandedImage, setExpandedImage] = useState<number | null>(null);
 
     // Calculer quand toutes les animations sont terminées
     useEffect(() => {
@@ -25,6 +26,11 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
         return () => clearTimeout(timer);
     }, [images.length]);
 
+    const handleImageClick = (index: number) => {
+        if (!animationsComplete) return;
+        setExpandedImage(expandedImage === index ? null : index);
+    };
+
     return (
         <>
             <section className="w-full flex flex-col items-center justify-start py-12">
@@ -32,9 +38,12 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className={`relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 hover:h-full sm:hover:w-full ${
-                                animationsComplete ? '' : 'pointer-events-none'
-                            }`}
+                            className={`relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 cursor-pointer
+                                ${animationsComplete ? '' : 'pointer-events-none'}
+                                ${expandedImage === index ? 'h-full sm:w-full' : ''}
+                                ${animationsComplete ? 'hover:h-full sm:hover:w-full' : ''}
+                            `}
+                            onClick={() => handleImageClick(index)}
                         >
                             <ImageReveal
                                 src={image.src}
