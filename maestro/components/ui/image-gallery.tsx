@@ -12,11 +12,11 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     return (
         <>
             <section className="w-full flex flex-col items-center justify-start py-12">
-                <div className="flex items-center gap-2 h-[600px] w-full">
+                <div className="flex flex-col md:flex-row items-center gap-2 h-[600px] sm:h-[900px] md:h-[600px] w-full">
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className="relative group flex-grow transition-all w-56 overflow-hidden h-[600px] duration-500 hover:w-full"
+                            className="relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 hover:h-full sm:hover:w-full"
                         >
                             <ImageReveal
                                 src={image.src}
