@@ -12,6 +12,18 @@ interface ImageGalleryProps {
 export default function ImageGallery({ images }: ImageGalleryProps) {
     const [animationsComplete, setAnimationsComplete] = useState(false);
     const [expandedImage, setExpandedImage] = useState<number | null>(null);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+    // Détecter si c'est un appareil tactile
+    useEffect(() => {
+        const checkTouchDevice = () => {
+            setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        };
+        
+        checkTouchDevice();
+        window.addEventListener('resize', checkTouchDevice);
+        return () => window.removeEventListener('resize', checkTouchDevice);
+    }, []);
 
     // Calculer quand toutes les animations sont terminées
     useEffect(() => {
@@ -27,7 +39,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     }, [images.length]);
 
     const handleImageClick = (index: number) => {
-        if (!animationsComplete) return;
+        if (!animationsComplete || !isTouchDevice) return;
         setExpandedImage(expandedImage === index ? null : index);
     };
 
@@ -38,10 +50,11 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className={`relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 cursor-pointer
+                            className={`relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500
                                 ${animationsComplete ? '' : 'pointer-events-none'}
                                 ${expandedImage === index ? 'h-full sm:w-full' : ''}
                                 ${animationsComplete ? 'hover:h-full sm:hover:w-full' : ''}
+                                ${isTouchDevice ? 'cursor-pointer' : 'cursor-default'}
                             `}
                             onClick={() => handleImageClick(index)}
                         >
