@@ -162,7 +162,7 @@ const AlbumSection = () => {
                 <div className={`flex flex-col gap-0 ${
                     !isVinylOpen ? 'col-span-2' : ''
                 }`}>
-                    <div className="w-full flex flex-row items-center">
+                    <div className="w-full flex flex-row items-center text-secondary">
                         <div className="w-full h-[58px] flex items-center">
                             <p>Morceau</p>
                         </div>
