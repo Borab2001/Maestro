@@ -23,7 +23,7 @@ const Artists = () => {
                     per="char"
                     preset="fade-in-blur"
                     as="h1"
-                    className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
+                    className="text-3xl xs:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
                     delay={0}
                     speedReveal={1.2}
                     useInViewTrigger
@@ -31,7 +31,7 @@ const Artists = () => {
                     Les Artistes
                 </TextEffect>
             </section>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
                 {artists.map((artist, index) => (
                     // <Link 
                     //     className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden rounded-md'
@@ -97,7 +97,7 @@ const Artists = () => {
                         <ImageReveal
                             src={artist.portrait}
                             alt={`${artist.name} portrait`}
-                            className="group-hover:grayscale-100 w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden transition-all duration-300 ease-in-out"
+                            className="group-hover:grayscale-100 w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
                             duration={1.8}
                             delay={index * 0.1}
                             animationType="clip-path"

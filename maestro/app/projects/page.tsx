@@ -15,7 +15,7 @@ const Projects = () => {
                         per="char"
                         preset="fade-in-blur"
                         as="h1"
-                        className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
+                        className="text-3xl xs:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
                         delay={0}
                         speedReveal={1.2}
                         useInViewTrigger
