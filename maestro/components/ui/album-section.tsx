@@ -69,8 +69,14 @@ const AlbumSection = () => {
     const [isVinylOpen, setIsVinylOpen] = useState(false);
     
     const audioRef = useRef<HTMLAudioElement>(null);
+    const isPlayingRef = useRef(isPlaying);
 
-    // Audio control simple
+    // Mettre à jour la ref quand isPlaying change
+    useEffect(() => {
+        isPlayingRef.current = isPlaying;
+    }, [isPlaying]);
+
+    // Audio control simple - play/pause seulement
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
@@ -82,7 +88,7 @@ const AlbumSection = () => {
         }
     }, [isPlaying]);
 
-    // Changement de track
+    // Changement de track uniquement
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
@@ -90,10 +96,11 @@ const AlbumSection = () => {
         audio.src = tracks[currentTrack].audioUrl;
         audio.load();
         
-        if (isPlaying) {
+        // Relancer seulement si on était en train de jouer
+        if (isPlayingRef.current) {
             audio.play().catch(console.error);
         }
-    }, [currentTrack, isPlaying]);
+    }, [currentTrack]);
 
     const handleTrackSelect = (index: number) => {
         setCurrentTrack(index);
