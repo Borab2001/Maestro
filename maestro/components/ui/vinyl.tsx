@@ -10,7 +10,12 @@ const VinylAlbum = ({
   isSpinning = false
 }) => {
 
-  const sizeClasses = size === "small" 
+  const parentSizeClasses = size === "small" 
+    ? (isOpen ? "w-[290px] h-[200px]" : "w-[200px] h-[200px]")
+    // : "w-[300px] h-[300px]";
+    : (isOpen ? "w-[440px] h-[300px]" : "w-[300px] h-[300px]");
+    
+  const coverSizeClasses = size === "small" 
     ? "w-[200px] h-[200px]" 
     : "w-[300px] h-[300px]";
   
@@ -23,26 +28,29 @@ const VinylAlbum = ({
 //     : "mx-[100px]";
 
   const coverTransform = size === "small"
-    ? (isOpen ? "-translate-x-[7.5px]" : "")
-    : (isOpen ? "-translate-x-[10px]" : "");
+    // ? (isOpen ? "-translate-x-[7.5px]" : "")
+    // : (isOpen ? "-translate-x-[10px]" : "");
+    ? (isOpen ? "" : "")
+    : (isOpen ? "" : "");
 
   const vinylTransform = size === "small"
-    ? (isOpen ? "translate-x-1/2" : "translate-x-0")
-    : (isOpen ? "translate-x-1/2" : "translate-x-0");
+    ? (isOpen ? "translate-x-[110px]" : "translate-x-0")
+    : (isOpen ? "translate-x-[160px]" : "translate-x-0");
 
   const vinylCoverSize = size === "small"
     ? "w-[66px] h-[66px]"
     : "w-[100px] h-[100px]";
 
   return (
-    <div className={`relative ${sizeClasses} my-4`}>
+    <div className={`relative ${parentSizeClasses} transition-all duration-1000 ease-in-out`}>
       {/* Album Cover */}
       <div 
         className={`
-          relative w-full h-full rounded-[3px] overflow-hidden z-20
+          relative rounded-[3px] overflow-hidden z-20
           shadow-[0_8px_16px_rgba(0,0,0,0.3)]
           transition-transform duration-500 ease-in-out
           ${coverTransform}
+          ${coverSizeClasses}
         `}
       >
         <Image
@@ -88,7 +96,7 @@ const VinylAlbum = ({
       {/* Vinyl Record */}
       <div 
         className={`
-          absolute top-[10px] right-0 ${vinylSize} rounded-full z-10
+          absolute top-[10px] ${vinylSize} rounded-full z-10
           flex justify-center items-center
           shadow-[0_0_15px_rgba(0,0,0,0.5)]
           transition-transform duration-1000 ease-in-out

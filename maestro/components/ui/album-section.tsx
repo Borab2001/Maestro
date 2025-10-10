@@ -130,7 +130,7 @@ const AlbumSection = () => {
             />
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col gap-4 md:gap-8">
+                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col md:flex-row lg:flex-col items-center md:items-start gap-4 md:gap-8">
                     {/* <div className="aspect-square flex items-center justify-center"> */}
                         <VinylAlbum
                             coverUrl="/images/group2.webp"
