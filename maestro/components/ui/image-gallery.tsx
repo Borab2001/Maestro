@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import { useState, useEffect } from "react";
 import ImageReveal from "./image-reveal";
 
 interface ImageGalleryProps {
@@ -9,6 +10,21 @@ interface ImageGalleryProps {
 }
 
 export default function ImageGallery({ images }: ImageGalleryProps) {
+    const [animationsComplete, setAnimationsComplete] = useState(false);
+
+    // Calculer quand toutes les animations sont terminées
+    useEffect(() => {
+        const lastImageDelay = (images.length - 1) * 0.1;
+        const animationDuration = 1.8;
+        const totalTime = (lastImageDelay + animationDuration) * 1000;
+
+        const timer = setTimeout(() => {
+            setAnimationsComplete(true);
+        }, totalTime);
+
+        return () => clearTimeout(timer);
+    }, [images.length]);
+
     return (
         <>
             <section className="w-full flex flex-col items-center justify-start py-12">
@@ -16,7 +32,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className="relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 hover:h-full sm:hover:w-full"
+                            className={`relative group flex-grow transition-all w-full md:w-56 overflow-hidden h-56 md:h-[600px] duration-500 hover:h-full sm:hover:w-full ${
+                                animationsComplete ? '' : 'pointer-events-none'
+                            }`}
                         >
                             <ImageReveal
                                 src={image.src}
