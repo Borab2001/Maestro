@@ -7,7 +7,7 @@ import artists from "@/data/artists.json";
 
 import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+// import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
 
@@ -33,8 +33,58 @@ const Artists = () => {
             </section>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
                 {artists.map((artist, index) => (
+                    // <Link 
+                    //     className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden rounded-md'
+                    //     key={artist.id}
+                    //     href={`/artists/${artist.id}`}
+                    //     onClick={(e) => {
+                    //         e.preventDefault();
+                    //         router.push(`artists/${artist.id}`, {
+                    //             onTransitionReady: slideInOut
+                    //         });
+                    //     }}
+                    // >
+                    //     <ImageReveal
+                    //         src={artist.portrait}
+                    //         alt={`${artist.name} portrait`}
+                    //         className="group-hover:grayscale-100 w-full aspect-[2/3] object-center object-cover transition-all duration-300 ease-in-out"
+                    //         duration={1.8}
+                    //         delay={index * 0.1}
+                    //         animationType="clip-path"
+                    //     />
+                    //     <ProgressiveBlur
+                    //         className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full'
+                    //         blurIntensity={6}
+                    //     />
+                    //     <div className='absolute bottom-0 left-0'>
+                    //         <div className='flex flex-col items-start gap-0 p-4'>
+                    //             <TextEffect
+                    //                 per="char"
+                    //                 preset="fade-in-blur"
+                    //                 as="h2"
+                    //                 className="text-2xl font-medium text-white leading-tight"
+                    //                 delay={0.3}
+                    //                 speedReveal={2}
+                    //                 useInViewTrigger
+                    //             >
+                    //                 {artist.name}
+                    //             </TextEffect>
+                    //             <TextEffect
+                    //                 per="line"
+                    //                 preset="fade-in-blur"
+                    //                 as="span"
+                    //                 className="text-base font-medium text-zinc-400 capitalize leading-loose"
+                    //                 delay={0.3}
+                    //                 speedReveal={0.2}
+                    //                 useInViewTrigger
+                    //             >
+                    //                 {artist.role}
+                    //             </TextEffect>
+                    //         </div>
+                    //     </div>
+                    // </Link>
                     <Link 
-                        className='group relative w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden rounded-md'
+                        className='group flex flex-col items-start'
                         key={artist.id}
                         href={`/artists/${artist.id}`}
                         onClick={(e) => {
@@ -47,40 +97,34 @@ const Artists = () => {
                         <ImageReveal
                             src={artist.portrait}
                             alt={`${artist.name} portrait`}
-                            className="group-hover:grayscale-100 w-full aspect-[2/3] object-center object-cover transition-all duration-300 ease-in-out"
+                            className="group-hover:grayscale-100 w-full aspect-[3/4] md:aspect-[3/4] lg:aspect-[2/3] overflow-hidden transition-all duration-300 ease-in-out"
                             duration={1.8}
                             delay={index * 0.1}
                             animationType="clip-path"
                         />
-                        <ProgressiveBlur
-                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full'
-                            blurIntensity={6}
-                        />
-                        <div className='absolute bottom-0 left-0'>
-                            <div className='flex flex-col items-start gap-0 p-4'>
-                                <TextEffect
-                                    per="char"
-                                    preset="fade-in-blur"
-                                    as="h2"
-                                    className="text-2xl font-medium text-white leading-tight"
-                                    delay={0.3}
-                                    speedReveal={2}
-                                    useInViewTrigger
-                                >
-                                    {artist.name}
-                                </TextEffect>
-                                <TextEffect
-                                    per="line"
-                                    preset="fade-in-blur"
-                                    as="span"
-                                    className="text-base font-medium text-zinc-400 capitalize leading-loose"
-                                    delay={0.3}
-                                    speedReveal={0.2}
-                                    useInViewTrigger
-                                >
-                                    {artist.role}
-                                </TextEffect>
-                            </div>
+                        <div className='flex flex-col items-start gap-0 py-4'>
+                            <TextEffect
+                                per="char"
+                                preset="fade-in-blur"
+                                as="h2"
+                                className="text-2xl font-medium text-white leading-tight"
+                                delay={0.3}
+                                speedReveal={2}
+                                useInViewTrigger
+                            >
+                                {artist.name}
+                            </TextEffect>
+                            <TextEffect
+                                per="line"
+                                preset="fade-in-blur"
+                                as="span"
+                                className="italic text-base font-medium text-zinc-400 capitalize leading-loose"
+                                delay={0.3}
+                                speedReveal={0.2}
+                                useInViewTrigger
+                            >
+                                {artist.role}
+                            </TextEffect>
                         </div>
                     </Link>
                 ))}
