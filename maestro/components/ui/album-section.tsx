@@ -128,9 +128,16 @@ const AlbumSection = () => {
                 loop
                 preload="metadata"
             />
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
-                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col md:flex-row lg:flex-col items-center md:items-start gap-4 md:gap-8">
+            <div 
+                className={`grid grid-cols-1 transition-all duration-1000 ease-in-out ${
+                    isVinylOpen 
+                        ? 'lg:grid-cols-[minmax(calc((100%+2rem)/3),472px)_1fr]'  // Vinyl ouvert: 1/3 moins le gap (2rem/2 = 1rem)
+                        : 'lg:grid-cols-3 gap-4 lg:gap-8'                                       // Vinyl fermé: grille équilibrée 1/3 - 2/3
+                }`}
+            >
+                <div className={`flex flex-col md:flex-row lg:flex-col items-center md:items-start pt-[58px] gap-4 md:gap-8 ${
+                    !isVinylOpen ? 'col-span-1' : ''
+                }`}>
                     {/* <div className="aspect-square flex items-center justify-center"> */}
                         <VinylAlbum
                             coverUrl="/images/group2.webp"
@@ -152,7 +159,9 @@ const AlbumSection = () => {
                     </div>
                 </div>
 
-                <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
+                <div className={`flex flex-col gap-0 ${
+                    !isVinylOpen ? 'col-span-2' : ''
+                }`}>
                     <div className="w-full flex flex-row items-center">
                         <div className="w-full h-[58px] flex items-center">
                             <p>Morceau</p>
