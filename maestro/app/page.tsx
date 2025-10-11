@@ -201,7 +201,11 @@ export default function Home() {
 				showPagination={true}
 				showNavigation={true}
 			/> */}
-			<ImageGallery images={homeData.gallery.images} />
+			<ImageGallery 
+				images={homeData.gallery.images}
+				containerHeight="h-[600px] sm:h-[900px] md:h-[600px]" 
+				imageSize="w-full md:w-56 h-56 sm:h-[600px]"
+			/>
 		</main>
 	);
 }

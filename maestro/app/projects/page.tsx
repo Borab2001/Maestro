@@ -80,16 +80,46 @@ const Projects = () => {
                                         delay={0}
                                         ease={"easeInOut"}
                                     />
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis dolores quo perferendis quod repellat tenetur perspiciatis excepturi itaque, deserunt cumque, cum labore nulla doloribus dicta! Quidem assumenda hic tempore!</p>
+                                    <TextEffect
+                                        per="line"
+                                        preset="fade-in-blur"
+                                        as="p"
+                                        className=""
+                                        delay={0.3}
+                                        speedReveal={1.2}
+                                        useInViewTrigger
+                                    >
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis dolores quo perferendis quod repellat tenetur perspiciatis excepturi itaque, deserunt cumque, cum labore nulla doloribus dicta! Quidem assumenda hic tempore!
+                                    </TextEffect>
                                 </div>
 
                                 <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
                                     <div className="w-full flex flex-row items-center text-secondary">
                                         <div className="w-full h-[58px] flex items-center">
-                                            <p>Morceau</p>
+                                            <TextEffect
+                                                per="word"
+                                                preset="slide"
+                                                as="p"
+                                                className=""
+                                                delay={0.6}
+                                                speedReveal={2}
+                                                useInViewTrigger
+                                            >
+                                                Morceau
+                                            </TextEffect>
                                         </div>
                                         <div className="w-full h-[58px] flex items-center">
-                                            <p>Artistes</p>
+                                            <TextEffect
+                                                per="word"
+                                                preset="slide"
+                                                as="p"
+                                                className=""
+                                                delay={0.6}
+                                                speedReveal={2}
+                                                useInViewTrigger
+                                            >
+                                                Artistes
+                                            </TextEffect>
                                         </div>
                                     </div>
                                     <AnimatedLine delay={0.2} />
@@ -98,10 +128,30 @@ const Projects = () => {
                                         <div key={tracklist.id}>
                                             <div className="w-full flex flex-row items-center">
                                                 <div className="w-full min-h-[58px] flex items-center">
-                                                    <p>{tracklist.name}</p>
+                                                    <TextEffect
+                                                        per="word"
+                                                        preset="slide"
+                                                        as="p"
+                                                        className=""
+                                                        delay={0.6}
+                                                        speedReveal={2}
+                                                        useInViewTrigger
+                                                    >
+                                                        {tracklist.name}
+                                                    </TextEffect>
                                                 </div>
                                                 <div className="w-full min-h-[58px] flex items-center">
-                                                    <p>{tracklist.artists}</p>
+                                                    <TextEffect
+                                                        per="word"
+                                                        preset="slide"
+                                                        as="p"
+                                                        className=""
+                                                        delay={0.6}
+                                                        speedReveal={2}
+                                                        useInViewTrigger
+                                                    >
+                                                        {tracklist.artists}
+                                                    </TextEffect>
                                                 </div>
                                             </div>
                                             <AnimatedLine delay={index * 0.03} />

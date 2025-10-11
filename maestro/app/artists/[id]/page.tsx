@@ -8,7 +8,7 @@ import artists from "@/data/artists.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import { Timeline } from "@/components/ui/timeline";
-import { Carousel } from "@/components/ui/carousel";
+// import { Carousel } from "@/components/ui/carousel";
 import ImageGallery from "@/components/ui/image-gallery";
 
 
@@ -147,16 +147,22 @@ const Artist = () => {
                     ))
                 )}
             </section> */}
-            <ImageGallery images={artist.images} />
+            <ImageGallery 
+                images={artist.images}
+                containerHeight="h-[600px] sm:h-[900px] md:h-[600px]" 
+				imageSize="w-full md:w-56 h-56 sm:h-[600px]"
+                // containerHeight="h-[900px] sm:h-[600px]" 
+                // imageSize="w-full md:w-[500px] lg:w-[600px] xl:w-[1300px] h-56 sm:h-[600px]"
+            />
 
-            <section className="w-full md:hidden">
+            {/* <section className="w-full md:hidden">
                 <Carousel
                     images={artist.images}
                     autoplayDelay={2000}
                     showPagination={true}
                     showNavigation={true}
                     />
-            </section>
+            </section> */}
             
             {/* <section className='relative w-full px-4 block md:hidden pb-[5.5rem]'>
             </section> */}
