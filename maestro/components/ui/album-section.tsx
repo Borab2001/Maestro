@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import AnimatedLine from "./animated-line";
 import VinylAlbum from "./vinyl";
 import PlayButton from "./play-button";
+import { TextEffect } from "./text-effect";
 
 interface Track {
     id: number;
@@ -148,8 +149,28 @@ const AlbumSection = () => {
                     {/* </div> */}
                     <div className="flex flex-col gap-4 items-start">
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-medium">Album</h3>
-                            <p className="text-secondary">2026</p>
+                            <TextEffect
+                                per="char"
+                                preset="fade-in-blur"
+                                as="h2"
+                                className="text-xl font-medium"
+                                delay={0.3}
+                                speedReveal={2}
+                                useInViewTrigger
+                            >
+                                Album
+                            </TextEffect>
+                            <TextEffect
+                                per="line"
+                                preset="fade-in-blur"
+                                as="p"
+                                className="text-secondary"
+                                delay={0.3}
+                                speedReveal={1.2}
+                                useInViewTrigger
+                            >
+                                2026
+                            </TextEffect>
                         </div>
                             
                         <PlayButton 
@@ -164,10 +185,30 @@ const AlbumSection = () => {
                 }`}>
                     <div className="w-full flex flex-row items-center text-secondary">
                         <div className="w-full h-[58px] flex items-center">
-                            <p>Morceau</p>
+                            <TextEffect
+                                per="word"
+                                preset="slide"
+                                as="p"
+                                className=""
+                                delay={0.6}
+                                speedReveal={2}
+                                useInViewTrigger
+                            >
+                                Morceau
+                            </TextEffect>
                         </div>
                         <div className="w-full h-[58px] flex items-center">
-                            <p>Artistes</p>
+                            <TextEffect
+                                per="word"
+                                preset="slide"
+                                as="p"
+                                className=""
+                                delay={0.6}
+                                speedReveal={2}
+                                useInViewTrigger
+                            >
+                                Artistes
+                            </TextEffect>
                         </div>
                     </div>
                     <AnimatedLine delay={0.2} />
@@ -181,14 +222,30 @@ const AlbumSection = () => {
                                 onClick={() => handleTrackSelect(index)}
                             >
                                 <div className="w-full min-h-[58px] flex items-center">
-                                    <p className={index === currentTrack ? 'text-white font-medium' : 'text-current'}>
+                                    <TextEffect
+                                        per="word"
+                                        preset="slide"
+                                        as="p"
+                                        className=""
+                                        delay={0.6}
+                                        speedReveal={2}
+                                        useInViewTrigger
+                                    >
                                         {track.title}
-                                    </p>
+                                    </TextEffect>
                                 </div>
                                 <div className="w-full min-h-[58px] flex items-center">
-                                    <p className={index === currentTrack ? 'text-white font-medium' : 'text-current'}>
+                                    <TextEffect
+                                        per="word"
+                                        preset="slide"
+                                        as="p"
+                                        className=""
+                                        delay={0.6}
+                                        speedReveal={2}
+                                        useInViewTrigger
+                                    >
                                         {track.artists}
-                                    </p>
+                                    </TextEffect>
                                 </div>
                             </div>
                             <AnimatedLine delay={0.3 + (index * 0.05)} />
