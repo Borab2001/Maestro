@@ -24,7 +24,7 @@ const Artists = () => {
                     preset="fade-in-blur"
                     as="h1"
                     className="text-3xl xs:text-5xl md:text-6xl lg:text-8xl font-medium leading-tight"
-                    delay={0}
+                    delay={0.3}
                     speedReveal={1.2}
                     useInViewTrigger
                 >
