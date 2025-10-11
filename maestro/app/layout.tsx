@@ -60,7 +60,7 @@ export default function RootLayout({
 				<ScrollProvider>
 					<body
 						// className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-						className={`${satoshi.className} antialiased`}
+						className={`${satoshi.className} antialiased max-w-screen-limit mx-auto`}
 					>
 						{/* <PianoTiles
 							animationDelay={1.5}
