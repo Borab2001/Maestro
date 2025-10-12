@@ -28,21 +28,18 @@ const ImageReveal = ({
     const isInView = useInView(ref, { once: true });
     const isInViewDesktop = useInView(refDesktop, { once: true });
     
-    // Parallax effect pour la variante fade-translate-parallax
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end start"]
     });
     const parallaxY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
-    // Parallax effect pour desktop
     const { scrollYProgress: scrollYProgressDesktop } = useScroll({
         target: refDesktop,
         offset: ["start end", "end start"]
     });
     const parallaxYDesktop = useTransform(scrollYProgressDesktop, [0, 1], ["-20%", "20%"]);
 
-    // Animation variants basées sur le type d'animation (pour fade-in et fade-translate-parallax)
     const getAnimationProps = (inView: boolean) => {
         if (animationType === "fade-in") {
             return {
@@ -60,7 +57,6 @@ const ImageReveal = ({
 
     return (
         <>
-            {/* Version mobile/tablet - animation depuis la droite */}
             <motion.div 
                 ref={ref}
                 className={`relative md:hidden ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
@@ -89,7 +85,6 @@ const ImageReveal = ({
                 </motion.div>
             </motion.div>
 
-            {/* Version desktop - animation depuis le bas */}
             <motion.div 
                 ref={refDesktop}
                 className={`relative hidden md:block ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
