@@ -217,7 +217,7 @@ const AlbumSection = () => {
                         <div key={track.id}>
                             <div 
                                 className={`w-full flex flex-row items-center cursor-pointer hover:bg-white/5 transition-colors duration-200 ${
-                                    index === currentTrack ? 'bg-white/10' : ''
+                                    index === currentTrack && isVinylOpen ? 'bg-white/10' : ''
                                 }`}
                                 onClick={() => handleTrackSelect(index)}
                             >
