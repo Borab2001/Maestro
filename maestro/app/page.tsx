@@ -203,8 +203,8 @@ export default function Home() {
 			/> */}
 			<ImageGallery 
 				images={homeData.gallery.images}
-				containerHeight="h-[600px] sm:h-[900px] md:h-[600px]" 
-				imageSize="w-full md:w-56 h-56 sm:h-[600px]"
+				containerHeight="h-[700px] xs:h-[1000px] sm:h-[1200px] md:h-[280px] lg:h-[400px] xl:h-[600px] 2xl:h-[700px]" 
+				imageSize="w-full md:w-56 h-56 xs:h-[450px] sm:h-[500px] md:h-[280px] lg:h-[400px] xl:h-[600px] 2xl:h-[700px]"
 			/>
 		</main>
 	);
