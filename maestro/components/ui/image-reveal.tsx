@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+
 interface ImageRevealProps {
     src: string;
     alt: string;
