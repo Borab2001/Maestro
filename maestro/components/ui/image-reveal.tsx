@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 interface ImageRevealProps {
     src: string;
@@ -26,6 +26,25 @@ const ImageReveal = ({
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     
+    // Hook pour détecter la taille d'écran
+    const useMediaQuery = (query: string) => {
+        const [matches, setMatches] = useState(false);
+
+        useEffect(() => {
+            const media = window.matchMedia(query);
+            if (media.matches !== matches) {
+                setMatches(media.matches);
+            }
+            const listener = () => setMatches(media.matches);
+            media.addEventListener('change', listener);
+            return () => media.removeEventListener('change', listener);
+        }, [matches, query]);
+
+        return matches;
+    };
+
+    const isMdScreen = useMediaQuery('(min-width: 768px)');
+    
     // Parallax effect pour la variante fade-translate-parallax
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -46,9 +65,13 @@ const ImageReveal = ({
                 animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             };
         } else {
+            // Animation clipPath responsive
+            const clipPathInitial = isMdScreen ? "inset(100% 0% 0% 0%)" : "inset(0% 100% 0% 0%)";
+            const clipPathAnimate = "inset(0% 0% 0% 0%)";
+            
             return {
-                initial: { clipPath: "inset(100% 0% 0% 0%)" },
-                animate: isInView ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(100% 0% 0% 0%)" }
+                initial: { clipPath: clipPathInitial },
+                animate: isInView ? { clipPath: clipPathAnimate } : { clipPath: clipPathInitial }
             };
         }
     };
