@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 interface ImageRevealProps {
     src: string;
@@ -24,26 +24,9 @@ const ImageReveal = ({
     animationType = "clip-path"
     }: ImageRevealProps) => {
     const ref = useRef(null);
+    const refDesktop = useRef(null);
     const isInView = useInView(ref, { once: true });
-    
-    // Hook pour détecter la taille d'écran
-    const useMediaQuery = (query: string) => {
-        const [matches, setMatches] = useState(false);
-
-        useEffect(() => {
-            const media = window.matchMedia(query);
-            if (media.matches !== matches) {
-                setMatches(media.matches);
-            }
-            const listener = () => setMatches(media.matches);
-            media.addEventListener('change', listener);
-            return () => media.removeEventListener('change', listener);
-        }, [matches, query]);
-
-        return matches;
-    };
-
-    const isMdScreen = useMediaQuery('(min-width: 768px)');
+    const isInViewDesktop = useInView(refDesktop, { once: true });
     
     // Parallax effect pour la variante fade-translate-parallax
     const { scrollYProgress } = useScroll({
@@ -52,57 +35,89 @@ const ImageReveal = ({
     });
     const parallaxY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
 
-    // Animation variants basées sur le type d'animation
-    const getAnimationProps = () => {
+    // Parallax effect pour desktop
+    const { scrollYProgress: scrollYProgressDesktop } = useScroll({
+        target: refDesktop,
+        offset: ["start end", "end start"]
+    });
+    const parallaxYDesktop = useTransform(scrollYProgressDesktop, [0, 1], ["-20%", "20%"]);
+
+    // Animation variants basées sur le type d'animation (pour fade-in et fade-translate-parallax)
+    const getAnimationProps = (inView: boolean) => {
         if (animationType === "fade-in") {
             return {
                 initial: { opacity: 0 },
-                animate: isInView ? { opacity: 1 } : { opacity: 0 }
+                animate: inView ? { opacity: 1 } : { opacity: 0 }
             };
         } else if (animationType === "fade-translate-parallax") {
             return {
                 initial: { opacity: 0, y: 40 },
-                animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
-            };
-        } else {
-            // Animation clipPath responsive
-            const clipPathInitial = isMdScreen ? "inset(100% 0% 0% 0%)" : "inset(0% 100% 0% 0%)";
-            const clipPathAnimate = "inset(0% 0% 0% 0%)";
-            
-            return {
-                initial: { clipPath: clipPathInitial },
-                animate: isInView ? { clipPath: clipPathAnimate } : { clipPath: clipPathInitial }
+                animate: inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             };
         }
+        return { initial: {}, animate: {} };
     };
 
-    const animationProps = getAnimationProps();
-
     return (
-        <motion.div 
-            ref={ref}
-            className={`relative ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
-            initial={animationProps.initial}
-            animate={animationProps.animate}
-            transition={{ 
-                duration, 
-                ease,
-                delay
-            }}
-        >
-            <motion.div
-                style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
-                className="w-full h-full"
+        <>
+            {/* Version mobile/tablet - animation depuis la droite */}
+            <motion.div 
+                ref={ref}
+                className={`relative md:hidden ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
+                initial={animationType === "clip-path" ? { clipPath: "inset(0% 100% 0% 0%)" } : getAnimationProps(isInView).initial}
+                animate={animationType === "clip-path" ? 
+                    (isInView ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(0% 100% 0% 0%)" }) : 
+                    getAnimationProps(isInView).animate
+                }
+                transition={{ 
+                    duration, 
+                    ease,
+                    delay
+                }}
             >
-                <Image 
-                    src={src} 
-                    alt={alt} 
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <motion.div
+                    style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
+                    className="w-full h-full"
+                >
+                    <Image 
+                        src={src} 
+                        alt={alt} 
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </motion.div>
             </motion.div>
-        </motion.div>
+
+            {/* Version desktop - animation depuis le bas */}
+            <motion.div 
+                ref={refDesktop}
+                className={`relative hidden md:block ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
+                initial={animationType === "clip-path" ? { clipPath: "inset(100% 0% 0% 0%)" } : getAnimationProps(isInViewDesktop).initial}
+                animate={animationType === "clip-path" ? 
+                    (isInViewDesktop ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(100% 0% 0% 0%)" }) : 
+                    getAnimationProps(isInViewDesktop).animate
+                }
+                transition={{ 
+                    duration, 
+                    ease,
+                    delay
+                }}
+            >
+                <motion.div
+                    style={animationType === "fade-translate-parallax" ? { y: parallaxYDesktop } : {}}
+                    className="w-full h-full"
+                >
+                    <Image 
+                        src={src} 
+                        alt={alt} 
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </motion.div>
+            </motion.div>
+        </>
     );
 };
 
