@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 
@@ -10,6 +9,7 @@ import { TextEffect } from "@/components/ui/text-effect";
 import { Timeline } from "@/components/ui/timeline";
 // import { Carousel } from "@/components/ui/carousel";
 import ImageGallery from "@/components/ui/image-gallery";
+import ImageReveal from "@/components/ui/image-reveal";
 
 
 const Artist = () => {
@@ -30,12 +30,14 @@ const Artist = () => {
         <div className="min-h-screen pt-[72px]">
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 px-4 md:px-8">
                 <div className="relative w-full aspect-[3/4] sm:aspect-[5/4] md:aspect-auto md:h-[calc(100vh-104px)]">
-                    <Image
+                    <ImageReveal
                         src={artist.portrait}
                         alt={`${artist.name} portrait`}
-                        fill
-                        className="rounded-lg object-cover object-center"
-                        priority
+                        className="relative rounded-lg overflow-hidden w-full aspect-[3/4] sm:aspect-[5/4] md:aspect-auto md:h-[calc(100vh-104px)] "
+                        animationType="fade-translate-parallax"
+                        duration={0.6}
+                        delay={0.6}
+                        ease={"easeInOut"}
                     />
                 </div>
                 <div className="md:pt-18 flex flex-col gap-6 md:gap-24 items-start justify-end">
