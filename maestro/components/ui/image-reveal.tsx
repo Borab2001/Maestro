@@ -30,7 +30,8 @@ const ImageReveal = ({
         target: containerRef,
         offset: ["start end", "end start"]
     });
-    const parallaxY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+    
+    const parallaxY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
     const getAnimationProps = (inView: boolean) => {
         if (animationType === "fade-in") {
@@ -49,7 +50,6 @@ const ImageReveal = ({
 
     return (
         <div ref={containerRef} className={`relative ${className}`}>
-            {/* Version mobile/tablet - animation depuis la droite */}
             <motion.div 
                 className={`relative w-full h-full md:hidden ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
                 initial={animationType === "clip-path" ? { clipPath: "inset(0% 100% 0% 0%)" } : getAnimationProps(isInView).initial}
@@ -64,8 +64,11 @@ const ImageReveal = ({
                 }}
             >
                 <motion.div
-                    style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
-                    className="w-full h-full"
+                    style={animationType === "fade-translate-parallax" ? { 
+                        y: parallaxY,
+                        willChange: "transform"
+                    } : {}}
+                    className={animationType === "fade-translate-parallax" ? "w-full h-[120%] -mt-[10%]" : "w-full h-full"}
                 >
                     <Image 
                         src={src} 
@@ -77,7 +80,6 @@ const ImageReveal = ({
                 </motion.div>
             </motion.div>
 
-            {/* Version desktop - animation depuis le bas */}
             <motion.div 
                 className={`relative w-full h-full hidden md:block ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
                 initial={animationType === "clip-path" ? { clipPath: "inset(100% 0% 0% 0%)" } : getAnimationProps(isInView).initial}
@@ -92,8 +94,11 @@ const ImageReveal = ({
                 }}
             >
                 <motion.div
-                    style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
-                    className="w-full h-full"
+                    style={animationType === "fade-translate-parallax" ? { 
+                        y: parallaxY,
+                        willChange: "transform"
+                    } : {}}
+                    className={animationType === "fade-translate-parallax" ? "w-full h-[120%] -mt-[10%]" : "w-full h-full"}
                 >
                     <Image 
                         src={src} 
