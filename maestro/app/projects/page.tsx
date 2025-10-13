@@ -77,7 +77,7 @@ const Projects = () => {
                                         className="aspect-[3/2] lg:aspect-[16/14] object-cover w-full"
                                         animationType="clip-path"
                                         duration={1.2}
-                                        delay={0}
+                                        delay={0.3}
                                         ease={"easeInOut"}
                                     />
                                     <TextEffect
