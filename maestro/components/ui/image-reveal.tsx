@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-
 interface ImageRevealProps {
     src: string;
     alt: string;
@@ -24,22 +23,14 @@ const ImageReveal = ({
     ease = [0.87, 0, 0.13, 1],
     animationType = "clip-path"
     }: ImageRevealProps) => {
-    const ref = useRef(null);
-    const refDesktop = useRef(null);
-    const isInView = useInView(ref, { once: true });
-    const isInViewDesktop = useInView(refDesktop, { once: true });
+    const containerRef = useRef(null);
+    const isInView = useInView(containerRef, { once: true });
     
     const { scrollYProgress } = useScroll({
-        target: ref,
+        target: containerRef,
         offset: ["start end", "end start"]
     });
     const parallaxY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
-
-    const { scrollYProgress: scrollYProgressDesktop } = useScroll({
-        target: refDesktop,
-        offset: ["start end", "end start"]
-    });
-    const parallaxYDesktop = useTransform(scrollYProgressDesktop, [0, 1], ["-20%", "20%"]);
 
     const getAnimationProps = (inView: boolean) => {
         if (animationType === "fade-in") {
@@ -57,10 +48,10 @@ const ImageReveal = ({
     };
 
     return (
-        <>
+        <div ref={containerRef} className={`relative ${className}`}>
+            {/* Version mobile/tablet - animation depuis la droite */}
             <motion.div 
-                ref={ref}
-                className={`relative md:hidden ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
+                className={`relative w-full h-full md:hidden ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
                 initial={animationType === "clip-path" ? { clipPath: "inset(0% 100% 0% 0%)" } : getAnimationProps(isInView).initial}
                 animate={animationType === "clip-path" ? 
                     (isInView ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(0% 100% 0% 0%)" }) : 
@@ -86,13 +77,13 @@ const ImageReveal = ({
                 </motion.div>
             </motion.div>
 
+            {/* Version desktop - animation depuis le bas */}
             <motion.div 
-                ref={refDesktop}
-                className={`relative hidden md:block ${className} ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
-                initial={animationType === "clip-path" ? { clipPath: "inset(100% 0% 0% 0%)" } : getAnimationProps(isInViewDesktop).initial}
+                className={`relative w-full h-full hidden md:block ${animationType === "fade-translate-parallax" ? "overflow-hidden" : ""}`}
+                initial={animationType === "clip-path" ? { clipPath: "inset(100% 0% 0% 0%)" } : getAnimationProps(isInView).initial}
                 animate={animationType === "clip-path" ? 
-                    (isInViewDesktop ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(100% 0% 0% 0%)" }) : 
-                    getAnimationProps(isInViewDesktop).animate
+                    (isInView ? { clipPath: "inset(0% 0% 0% 0%)" } : { clipPath: "inset(100% 0% 0% 0%)" }) : 
+                    getAnimationProps(isInView).animate
                 }
                 transition={{ 
                     duration, 
@@ -101,7 +92,7 @@ const ImageReveal = ({
                 }}
             >
                 <motion.div
-                    style={animationType === "fade-translate-parallax" ? { y: parallaxYDesktop } : {}}
+                    style={animationType === "fade-translate-parallax" ? { y: parallaxY } : {}}
                     className="w-full h-full"
                 >
                     <Image 
@@ -113,7 +104,7 @@ const ImageReveal = ({
                     />
                 </motion.div>
             </motion.div>
-        </>
+        </div>
     );
 };
 
