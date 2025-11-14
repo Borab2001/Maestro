@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
-// import { Geist, Geist_Mono } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -11,15 +11,10 @@ import Footer from "@/components/footer";
 // import PianoTiles from "@/components/piano-tiles";
 
 
-// const geistSans = Geist({
-// 	variable: "--font-geist-sans",
-// 	subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-// 	variable: "--font-geist-mono",
-// 	subsets: ["latin"],
-// });
+const leagueSpartan = League_Spartan({
+	variable: "--font-league-spartan",
+	subsets: ["latin"],
+});
 
 const satoshi = localFont({
     src: [
@@ -59,8 +54,7 @@ export default function RootLayout({
 			<html lang="fr">
 				<ScrollProvider>
 					<body
-						// className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-						className={`${satoshi.className} antialiased max-w-screen-limit mx-auto`}
+						className={`${satoshi.className} ${leagueSpartan.variable} antialiased max-w-screen-limit mx-auto`}
 					>
 						{/* <PianoTiles
 							animationDelay={1.5}
