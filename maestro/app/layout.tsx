@@ -39,8 +39,31 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "Maestro - Première troupe de pianistes de France",
-	description: "/",
+	title: {
+		template: 'Maestro - %s',
+		default: 'Maestro - Troupe de pianistes',
+	},
+	description:
+		"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+	keywords:
+		"maestro, pianistes, troupe de pianistes, musique, artistes, gares, réseaux sociaux, concerts, tiktok, instagram",
+	openGraph: {
+		title: "Maestro - Première troupe de pianistes de France",
+		description:
+			"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+		url: "https://www.maestroconcerts.com",
+		siteName: "Maestro Concerts",
+		locale: "fr_FR",
+		type: "website",
+		images: [
+			{
+			url: "https://www.maestroconcerts.com/og-image.jpg",
+			width: 1200,
+			height: 630,
+			alt: "Maestro Concerts Preview",
+			},
+		],
+	},
 };
 
 
