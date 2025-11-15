@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from "next";
 import Link from "next/link";
 // import Image from "next/image";
 
@@ -11,6 +12,29 @@ import { slideInOut } from "@/lib/slide-in-out";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
 
+export const metadata: Metadata = {
+    title: 'Artists - Maestro',
+    description: 'Découvrez les artistes talentueux de la troupe Maestro, la première troupe de pianistes de France. Plongez dans leurs parcours, leurs styles uniques et leur passion pour la musique.',
+    keywords:
+		"maestro, pianiste, musique, artiste, gare, piano, concert, tiktok, instagram",
+	openGraph: {
+		title: "Les artistes de Maestro",
+		description:
+			"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+		url: "https://www.maestroconcerts.com",
+		siteName: "Maestro Concerts",
+		locale: "fr_FR",
+		type: "website",
+		images: [
+			{
+			url: "https://www.maestroconcerts.com/og-image.jpg",
+			width: 1200,
+			height: 630,
+			alt: "Maestro Concerts Preview",
+			},
+		],
+	},
+};
 
 const Artists = () => {
 
