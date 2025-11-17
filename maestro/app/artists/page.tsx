@@ -138,7 +138,7 @@ const Artists = () => {
                             >
                                 {artist.name}
                             </TextEffect>
-                            <TextEffect
+                            {/* <TextEffect
                                 per="line"
                                 preset="fade-in-blur"
                                 as="span"
@@ -148,7 +148,7 @@ const Artists = () => {
                                 useInViewTrigger
                             >
                                 {artist.role}
-                            </TextEffect>
+                            </TextEffect> */}
                         </div>
                     </Link>
                 ))}
