@@ -42,7 +42,7 @@ const Artists = () => {
 
     return (
         <main className="min-h-screen px-4 md:px-8 pt-[72px]">
-            <section className="py-6 md:py-12">
+            <section className="py-6 md:py-12 lg:pt-24">
                 <TextEffect
                     per="char"
                     preset="fade-in-blur"

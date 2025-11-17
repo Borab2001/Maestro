@@ -9,7 +9,7 @@ import AlbumSection from "@/components/ui/album-section";
 const Projects = () => {
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
-            <section className="py-6 md:py-12">
+            <section className="py-6 md:py-12 lg:pt-24">
                 <div className="w-full md:w-[70%] max-w-5xl flex flex-col gap-4 md:gap-8">
                     <TextEffect
                         per="char"

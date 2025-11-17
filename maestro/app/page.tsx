@@ -48,7 +48,7 @@ export default function Home() {
 				</div>
 			</section> */}
 			<section className="min-h-auto lg:min-h-screen flex flex-col">
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-8 items-end px-4 md:px-8 py-6 md:py-12 lg:pt-[30vh]">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-8 items-end px-4 md:px-8 py-6 md:py-12 lg:pt-24">
 					<TextEffect
 						per="char"
 						preset="fade-in-blur"
