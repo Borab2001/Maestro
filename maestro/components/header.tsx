@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="fixed top-0 z-50 w-full h-[72px] bg-gradient-to-b from-background to-transparent px-4 md:p-8 text-base flex flex-row justify-between items-center">
+        <header className="fixed top-0 z-50 w-full h-[72px] bg-gradient-to-b from-background to-transparent p-4 md:px-8 text-base flex flex-row justify-between items-center">
             <Link
                 href="/"
                 onClick={(e) => {
@@ -28,7 +29,8 @@ const Header = () => {
                 }}
                 className={`capitalize font-medium ${pathname === "/" ? "pointer-events-none" : ""}`}
             >
-                Maestro
+                {/* Maestro */}
+                <Image src="/images/logo.svg" alt="Maestro Logo" height={100} width={100} className="aspect-square" />
             </Link>
             <nav className="flex flex-row space-x-8">
                 {links.map((link, index) => (
