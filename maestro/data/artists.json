@@ -540,21 +540,21 @@
 		]
 	},
 	{
-		"id": "sacha",
-		"name": "Sacha",
+		"id": "alexandre",
+		"name": "Alexandre",
 		"role": "pianist",
-		"bio": "Sacha is a pianist, originally from ...",
+		"bio": "Alexandre is a pianist, originally from ...",
 		"portrait": "/",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@sacha.lhuillier",
-				"url": "https://www.instagram.com/sacha.lhuillier/"
+				"username": "@awalbrok",
+				"url": "https://www.instagram.com/awalbrok/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@lhuillier_p",
-				"url": "https://www.tiktok.com/@lhuillier_p"
+				"username": "@awalbrok",
+				"url": "https://www.tiktok.com/@awalbrok"
 			}
 		],
 		"images": [
@@ -606,21 +606,21 @@
 		]
     },
 	{
-		"id": "theo",
-		"name": "Théo",
+		"id": "manon",
+		"name": "Manon",
 		"role": "pianist",
-		"bio": "Théo is a pianist, originally from ...",
+		"bio": "Manon is a pianist, originally from ...",
 		"portrait": "/",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@theo.foy",
-				"url": "https://www.instagram.com/theo.foy/"
+				"username": "@manon_lamysthal",
+				"url": "https://www.instagram.com/manon_lamysthal/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@theo.tfy",
-				"url": "https://www.tiktok.com/@theo.tfy"
+				"username": "@manon_lamysthal",
+				"url": "https://www.tiktok.com/@manon_lamysthal"
 			}
 		],
 		"images": [

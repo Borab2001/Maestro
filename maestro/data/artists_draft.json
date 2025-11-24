@@ -1,0 +1,68 @@
+[
+    {
+		"id": "sacha",
+		"name": "Sacha",
+		"role": "pianist",
+		"bio": "Sacha is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "Instagram",
+				"username": "@sacha.lhuillier",
+				"url": "https://www.instagram.com/sacha.lhuillier/"
+			},
+			{
+				"platform": "Tiktok",
+				"username": "@lhuillier_p",
+				"url": "https://www.tiktok.com/@lhuillier_p"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+    {
+		"id": "theo",
+		"name": "Théo",
+		"role": "pianist",
+		"bio": "Théo is a pianist, originally from ...",
+		"portrait": "/",
+		"socials": [
+			{
+				"platform": "Instagram",
+				"username": "@theo.foy",
+				"url": "https://www.instagram.com/theo.foy/"
+			},
+			{
+				"platform": "Tiktok",
+				"username": "@theo.tfy",
+				"url": "https://www.tiktok.com/@theo.tfy"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    }
+]
