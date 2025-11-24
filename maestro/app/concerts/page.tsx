@@ -6,10 +6,9 @@ import projects from "@/data/projects.json";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
 import AnimatedLine from "@/components/ui/animated-line";
-import AlbumSection from "@/components/ui/album-section";
 
 
-const Projects = () => {
+const Concerts = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -47,7 +46,7 @@ const Projects = () => {
                         speedReveal={1.2}
                         useInViewTrigger
                     >
-                        Les Projets
+                        Les Concerts
                     </TextEffect>
                     {/* <TextEffect
 						per="word"
@@ -190,7 +189,6 @@ const Projects = () => {
                     </div>
                 ))}
             </section>
-            <AlbumSection />
             
             <section className="py-8 md:py-16">
                 <video 
@@ -208,4 +206,4 @@ const Projects = () => {
     );
 }
  
-export default Projects;
+export default Concerts;
