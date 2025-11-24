@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import projects from "@/data/projects.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
@@ -7,6 +10,30 @@ import AlbumSection from "@/components/ui/album-section";
 
 
 const Projects = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        observer.observe(video);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <div className="min-h-screen px-4 md:px-8 pt-[72px]">
             <section className="py-6 md:py-12 lg:pt-24">
@@ -164,6 +191,19 @@ const Projects = () => {
                 ))}
             </section>
             <AlbumSection />
+            
+            <section className="py-8 md:py-16">
+                <video 
+                    ref={videoRef}
+                    className="w-full aspect-video rounded-lg"
+                    loop
+                    playsInline
+                    preload="metadata"
+                >
+                    <source src="/videos/concert1.webm" type="video/webm" />
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </section>
         </div>
     );
 }
