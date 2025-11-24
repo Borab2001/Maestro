@@ -5,7 +5,7 @@ import projects from "@/data/projects.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
-import AnimatedLine from "@/components/ui/animated-line";
+// import AnimatedLine from "@/components/ui/animated-line";
 
 
 const Concerts = () => {
@@ -46,7 +46,7 @@ const Concerts = () => {
                         speedReveal={1.2}
                         useInViewTrigger
                     >
-                        Les Concerts
+                        Les Projets
                     </TextEffect>
                     {/* <TextEffect
 						per="word"
@@ -119,7 +119,7 @@ const Concerts = () => {
                                     </TextEffect>
                                 </div>
 
-                                <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
+                                {/* <div className="col-span-1 lg:col-span-2 flex flex-col gap-0">
                                     <div className="w-full flex flex-row items-center text-secondary">
                                         <div className="w-full h-[58px] flex items-center">
                                             <TextEffect
@@ -183,14 +183,11 @@ const Concerts = () => {
                                             <AnimatedLine delay={index * 0.03} />
                                         </div>
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
                 ))}
-            </section>
-            
-            <section className="py-8 md:py-16">
                 <video 
                     ref={videoRef}
                     className="w-full aspect-video rounded-lg"
