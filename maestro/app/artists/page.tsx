@@ -121,7 +121,7 @@ const Artists = () => {
                         <ImageReveal
                             src={artist.portrait}
                             alt={`${artist.name} portrait`}
-                            className="group-hover:grayscale-100 rounded-lg w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
+                            className="grayscale-100 group-hover:grayscale-0 rounded-lg w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
                             duration={1.8}
                             delay={index * 0.1}
                             animationType="clip-path"
