@@ -9,7 +9,7 @@
 			"Aujourd’hui, elle se consacre à une vie artistique complète à travers le piano : compositions pour piano et voix, création de contenu, direction de projets et pédagogie. Forte de plus d’une centaine d’élèves formés, elle défend une vision vivante du piano, à la croisée de la musique classique et de la pop, loin des codes figés du récital traditionnel.",
 			"Avec Maestro, elle s’engage aussi pour une meilleure reconnaissance des instrumentistes, une représentation plus juste des femmes dans la musique et la libération de la parole autour de la santé mentale dans le milieu artistique."
 		],
-		"portrait": "/images/axelle.webp",
+		"portrait": "/images/axelle/axelle_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -115,7 +115,7 @@
 		"name": "Alia",
 		"role": "pianist",
 		"bio": "Alia is a pianist, originally from Paris",
-		"portrait": "/",
+		"portrait": "/images/alia/alia_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -214,7 +214,7 @@
 		"name": "David",
 		"role": "pianist",
 		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
-		"portrait": "/",
+		"portrait": "/images/david/david_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -313,7 +313,7 @@
 		"name": "Diane",
 		"role": "harpist / singer",
 		"bio": "Diane is a 22 year old harpist and singer, originally from Paris",
-		"portrait": "/images/diane.webp",
+		"portrait": "/images/diane/diane_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -346,7 +346,7 @@
 		"name": "Kenji",
 		"role": "pianist",
 		"bio": "Kenji is a pianist, originally from Paris",
-		"portrait": "/",
+		"portrait": "/images/kenji/kenji_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -379,7 +379,7 @@
 		"name": "Christina",
 		"role": "dancer",
 		"bio": "Christina is a dancer, originally from Paris",
-		"portrait": "/",
+		"portrait": "/images/christina/christina_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -412,7 +412,7 @@
 		"name": "Loris",
 		"role": "pianist",
 		"bio": "Loris is a pianist, originally from Montpellier",
-		"portrait": "/",
+		"portrait": "/images/loris/loris_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -445,7 +445,7 @@
 		"name": "Eloïse",
 		"role": "pianist",
 		"bio": "Eloïse is a pianist, originally from ...",
-		"portrait": "/",
+		"portrait": "/images/eloise/eloise_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
