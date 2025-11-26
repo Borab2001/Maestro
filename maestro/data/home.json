@@ -17,16 +17,16 @@
         "title": "Maestro, c'est...",
         "items": [
             {
-                "number": "2",
-                "label": "concerts"
-            },
-            {
-                "number": "500",
-                "label": "places vendues"
-            },
-            {
                 "number": "20",
                 "label": "artistes"
+            },
+            {
+                "number": "5M",
+                "label": "d'abonnés cumulés"
+            },
+            {
+                "number": "3",
+                "label": "pianos en simultané"
             }
         ]
     },
