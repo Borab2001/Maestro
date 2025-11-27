@@ -60,12 +60,19 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-			url: "https://www.maestroconcerts.com/og-image.jpg",
+			url: "/og-image.png",
 			width: 1200,
 			height: 630,
 			alt: "Maestro Concerts Preview",
 			},
 		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Maestro - Première troupe de pianistes de France",
+		description:
+			"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+		images: ["/og-image.png"],
 	},
 };
 
