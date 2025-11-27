@@ -46,7 +46,7 @@ const Concerts = () => {
                         speedReveal={1.2}
                         useInViewTrigger
                     >
-                        Les Projets
+                        Les Concerts
                     </TextEffect>
                     {/* <TextEffect
 						per="word"
