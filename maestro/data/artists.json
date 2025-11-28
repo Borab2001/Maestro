@@ -82,7 +82,7 @@
 		"name": "Billie",
 		"role": "pianist",
 		"bio": "Billie is a pianist, originally from Caen",
-		"portrait": "/images/billie/billie_profile.jpg",
+		"portrait": "/images/billie/billie_test.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -148,7 +148,7 @@
 		"name": "Clément",
 		"role": "pianist",
 		"bio": "Clément est un pianiste, originaire de ...",
-		"portrait": "/images/clement/clement_profile.jpg",
+		"portrait": "/images/clement/clement_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -181,7 +181,7 @@
 		"name": "Annalia",
 		"role": "guitarist / singer / photographer",
 		"bio": "Annalia is a guitarist and singer, originally from Paris",
-		"portrait": "/images/annalia/annalia_profile.png",
+		"portrait": "/images/annalia/annalia_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -247,7 +247,7 @@
 		"name": "Astrid",
 		"role": "pianist",
 		"bio": "Astrid is a pianist, originally from Paris",
-		"portrait": "/images/astrid/astrid_profile.jpg",
+		"portrait": "/images/astrid/astrid_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -280,7 +280,7 @@
 		"name": "Hugo",
 		"role": "pianist",
 		"bio": "Hugo is a pianist, originally from ...",
-		"portrait": "/images/hugo/hugo_profile.jpg",
+		"portrait": "/images/hugo/hugo_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -478,7 +478,7 @@
 		"name": "Pacôme",
 		"role": "pianist",
 		"bio": "Pacôme is a pianist, originally from ...",
-		"portrait": "/images/pacome/pacome_profile.jpg",
+		"portrait": "/images/pacome/pacome_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -511,7 +511,7 @@
 		"name": "Ilona",
 		"role": "pianist",
 		"bio": "Ilona is a pianist, originally from Paris",
-		"portrait": "/images/ilona/ilona_profile.jpg",
+		"portrait": "/images/ilona/ilona_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -544,7 +544,7 @@
 		"name": "Alexandre",
 		"role": "pianist",
 		"bio": "Alexandre is a pianist, originally from ...",
-		"portrait": "/images/alexandre/alexandre_profile.jpg",
+		"portrait": "/images/alexandre/alexandre_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -577,7 +577,7 @@
 		"name": "Jeanne",
 		"role": "pianist",
 		"bio": "Jeanne, alias Piavvio, est une pianiste originaire de Besançon ...",
-		"portrait": "/images/jeanne/jeanne_profile.jpg",
+		"portrait": "/images/jeanne/jeanne_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -610,7 +610,7 @@
 		"name": "Manon",
 		"role": "pianist",
 		"bio": "Manon is a pianist, originally from ...",
-		"portrait": "/images/manon/manon_profile.jpg",
+		"portrait": "/images/manon/manon_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -643,7 +643,7 @@
 		"name": "Pauline",
 		"role": "pianist",
 		"bio": "Pauline, alias Reeds Cover, originaire de Toulouse...",
-		"portrait": "/images/pauline/pauline_profile.jpg",
+		"portrait": "/images/pauline/pauline_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -676,7 +676,7 @@
 		"name": "Urban",
 		"role": "pianist",
 		"bio": "Urban is a pianist, originally from Paris",
-		"portrait": "/images/urban/urban_profile.png",
+		"portrait": "/images/urban/urban_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
