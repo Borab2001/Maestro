@@ -82,7 +82,7 @@
 		"name": "Billie",
 		"role": "pianist",
 		"bio": "Billie is a pianist, originally from Caen",
-		"portrait": "/images/billie/billie_profile.jpg",
+		"portrait": "/images/billie/billie_test.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -478,7 +478,7 @@
 		"name": "Pacôme",
 		"role": "pianist",
 		"bio": "Pacôme is a pianist, originally from ...",
-		"portrait": "/images/pacome/pacome_profile.jpg",
+		"portrait": "/images/pacome/pacome_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -544,7 +544,7 @@
 		"name": "Alexandre",
 		"role": "pianist",
 		"bio": "Alexandre is a pianist, originally from ...",
-		"portrait": "/images/alexandre/alexandre_profile.png",
+		"portrait": "/images/alexandre/alexandre_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -577,7 +577,7 @@
 		"name": "Jeanne",
 		"role": "pianist",
 		"bio": "Jeanne, alias Piavvio, est une pianiste originaire de Besançon ...",
-		"portrait": "/images/jeanne/jeanne_profile.jpg",
+		"portrait": "/images/jeanne/jeanne_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -643,7 +643,7 @@
 		"name": "Pauline",
 		"role": "pianist",
 		"bio": "Pauline, alias Reeds Cover, originaire de Toulouse...",
-		"portrait": "/images/pauline/pauline_profile.jpg",
+		"portrait": "/images/pauline/pauline_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
