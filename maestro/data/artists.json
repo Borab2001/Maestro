@@ -148,7 +148,7 @@
 		"name": "Clément",
 		"role": "pianist",
 		"bio": "Clément est un pianiste, originaire de ...",
-		"portrait": "/images/clement/clement_profile.jpg",
+		"portrait": "/images/clement/clement_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -181,7 +181,7 @@
 		"name": "Annalia",
 		"role": "guitarist / singer / photographer",
 		"bio": "Annalia is a guitarist and singer, originally from Paris",
-		"portrait": "/images/annalia/annalia_profile.png",
+		"portrait": "/images/annalia/annalia_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -247,7 +247,7 @@
 		"name": "Astrid",
 		"role": "pianist",
 		"bio": "Astrid is a pianist, originally from Paris",
-		"portrait": "/images/astrid/astrid_profile.jpg",
+		"portrait": "/images/astrid/astrid_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -280,7 +280,7 @@
 		"name": "Hugo",
 		"role": "pianist",
 		"bio": "Hugo is a pianist, originally from ...",
-		"portrait": "/images/hugo/hugo_profile.jpg",
+		"portrait": "/images/hugo/hugo_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -511,7 +511,7 @@
 		"name": "Ilona",
 		"role": "pianist",
 		"bio": "Ilona is a pianist, originally from Paris",
-		"portrait": "/images/ilona/ilona_profile.jpg",
+		"portrait": "/images/ilona/ilona_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
@@ -676,7 +676,7 @@
 		"name": "Urban",
 		"role": "pianist",
 		"bio": "Urban is a pianist, originally from Paris",
-		"portrait": "/images/urban/urban_profile.png",
+		"portrait": "/images/urban/urban_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
