@@ -11,6 +11,7 @@ import { slideInOut } from "@/lib/slide-in-out";
 // import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 // export const metadata: Metadata = {
 //     title: 'Artists - Maestro',
@@ -108,7 +109,7 @@ const Artists = () => {
                     //     </div>
                     // </Link>
                     <Link 
-                        className='group flex flex-col items-start'
+                        className='relative group flex flex-col items-start rounded-lg overflow-hidden'
                         key={artist.id}
                         href={`/artists/${artist.id}`}
                         onClick={(e) => {
@@ -126,7 +127,11 @@ const Artists = () => {
                             delay={index * 0.1}
                             animationType="clip-path"
                         />
-                        <div className='flex flex-col items-start gap-0 py-4'>
+                        <ProgressiveBlur
+                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full bg-gradient-to-t from-background/50 to-background/0'
+                            blurIntensity={6}
+                        />
+                        <div className='absolute bottom-0 right-0 left-0 flex flex-col items-start gap-0 p-4'>
                             <TextEffect
                                 per="char"
                                 preset="fade-in-blur"
@@ -138,17 +143,17 @@ const Artists = () => {
                             >
                                 {artist.name}
                             </TextEffect>
-                            {/* <TextEffect
+                            <TextEffect
                                 per="line"
                                 preset="fade-in-blur"
                                 as="span"
-                                className="italic text-base font-medium text-zinc-400 capitalize leading-loose"
+                                className="italic text-base font-medium text-zinc-400 leading-loose"
                                 delay={0.3}
                                 speedReveal={0.2}
                                 useInViewTrigger
                             >
-                                {artist.role}
-                            </TextEffect> */}
+                                {artist.socials[0].username}
+                            </TextEffect>
                         </div>
                     </Link>
                 ))}
