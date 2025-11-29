@@ -78,21 +78,21 @@
 		]
     },
 	{
-		"id": "billie",
-		"name": "Billie",
+		"id": "alexandre",
+		"name": "Alexandre",
 		"role": "pianist",
-		"bio": "Billie is a pianist, originally from Caen",
-		"portrait": "/images/billie/billie_test.webp",
+		"bio": "Alexandre is a pianist, originally from ...",
+		"portrait": "/images/alexandre/alexandre_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@pianobillie",
-				"url": "https://www.instagram.com/pianobillie/"
+				"username": "@awalbrok",
+				"url": "https://www.instagram.com/awalbrok/"
 			},
 			{
-				"platform": "TikTok",
-				"username": "@pianobillie",
-				"url": "https://www.tiktok.com/@pianobillie"
+				"platform": "Tiktok",
+				"username": "@awalbrok",
+				"url": "https://www.tiktok.com/@awalbrok"
 			}
 		],
 		"images": [
@@ -144,21 +144,21 @@
 		]
     },
 	{
-		"id": "clement",
-		"name": "Clément",
+		"id": "billie",
+		"name": "Billie",
 		"role": "pianist",
-		"bio": "Clément est un pianiste, originaire de ...",
-		"portrait": "/images/clement/clement_profile.webp",
+		"bio": "Billie is a pianist, originally from Caen",
+		"portrait": "/images/billie/billie_test.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@clementpianist__",
-				"url": "https://www.instagram.com/clementpianist__/"
+				"username": "@pianobillie",
+				"url": "https://www.instagram.com/pianobillie/"
 			},
 			{
-				"platform": "Tiktok",
-				"username": "@_clement_slr",
-				"url": "https://www.tiktok.com/@_clement_slr"
+				"platform": "TikTok",
+				"username": "@pianobillie",
+				"url": "https://www.tiktok.com/@pianobillie"
 			}
 		],
 		"images": [
@@ -210,21 +210,21 @@
 		]
     },
 	{
-		"id": "david",
-		"name": "David",
+		"id": "clement",
+		"name": "Clément",
 		"role": "pianist",
-		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
-		"portrait": "/images/david/david_profile.webp",
+		"bio": "Clément est un pianiste, originaire de ...",
+		"portrait": "/images/clement/clement_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@_symphonique_",
-				"url": "https://www.instagram.com/_symphonique_/"
+				"username": "@clementpianist__",
+				"url": "https://www.instagram.com/clementpianist__/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@_symphonique_",
-				"url": "https://www.tiktok.com/@_symphonique_"
+				"username": "@_clement_slr",
+				"url": "https://www.tiktok.com/@_clement_slr"
 			}
 		],
 		"images": [
@@ -276,6 +276,72 @@
 		]
     },
 	{
+		"id": "david",
+		"name": "David",
+		"role": "pianist",
+		"bio": "David, alias Symphonique, is a pianist, originally from Paris",
+		"portrait": "/images/david/david_profile.webp",
+		"socials": [
+			{
+				"platform": "Instagram",
+				"username": "@_symphonique_",
+				"url": "https://www.instagram.com/_symphonique_/"
+			},
+			{
+				"platform": "Tiktok",
+				"username": "@_symphonique_",
+				"url": "https://www.tiktok.com/@_symphonique_"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
+		"id": "chris",
+		"name": "Chris",
+		"role": "dancer",
+		"bio": "Chris is a dancer, originally from Paris",
+		"portrait": "/images/chris/chris_profile.webp",
+		"socials": [
+			{
+				"platform": "Instagram",
+				"username": "@chriskdanse",
+				"url": "https://www.instagram.com/chriskdanse/"
+			},
+			{
+				"platform": "Tiktok",
+				"username": "@chriskdanse",
+				"url": "https://www.tiktok.com/@chriskdanse"
+			}
+		],
+		"images": [
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			},
+			{
+				"src": "/",
+				"alt": ""
+			}
+		]
+    },
+	{
 		"id": "hugo",
 		"name": "Hugo",
 		"role": "pianist",
@@ -308,7 +374,7 @@
 			}
 		]
     },
-    {
+	{
 		"id": "diane",
 		"name": "Diane",
 		"role": "harpist / singer",
@@ -375,72 +441,6 @@
 		]
     },
 	{
-		"id": "chris",
-		"name": "Chris",
-		"role": "dancer",
-		"bio": "Chris is a dancer, originally from Paris",
-		"portrait": "/images/chris/chris_profile.webp",
-		"socials": [
-			{
-				"platform": "Instagram",
-				"username": "@chriskdanse",
-				"url": "https://www.instagram.com/chriskdanse/"
-			},
-			{
-				"platform": "Tiktok",
-				"username": "@chriskdanse",
-				"url": "https://www.tiktok.com/@chriskdanse"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-	{
-		"id": "loris",
-		"name": "Loris",
-		"role": "pianist",
-		"bio": "Loris is a pianist, originally from Montpellier",
-		"portrait": "/images/loris/loris_profile.webp",
-		"socials": [
-			{
-				"platform": "Instagram",
-				"username": "@lorisotto_officiel",
-				"url": "https://www.instagram.com/lorisotto_officiel/"
-			},
-			{
-				"platform": "Tiktok",
-				"username": "@lorisotto_officiel",
-				"url": "https://www.tiktok.com/@lorisotto_officiel"
-			}
-		],
-		"images": [
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			},
-			{
-				"src": "/",
-				"alt": ""
-			}
-		]
-    },
-    {
 		"id": "eloise",
 		"name": "Eloïse",
 		"role": "pianist",
@@ -474,21 +474,21 @@
 		]
     },
 	{
-		"id": "pacome",
-		"name": "Pacôme",
+		"id": "loris",
+		"name": "Loris",
 		"role": "pianist",
-		"bio": "Pacôme is a pianist, originally from ...",
-		"portrait": "/images/pacome/pacome_profile.webp",
+		"bio": "Loris is a pianist, originally from Montpellier",
+		"portrait": "/images/loris/loris_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@pac.schlt",
-				"url": "https://www.instagram.com/pac_schlt/"
+				"username": "@lorisotto_officiel",
+				"url": "https://www.instagram.com/lorisotto_officiel/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@pac_schlt",
-				"url": "https://www.tiktok.com/@pac_schlt"
+				"username": "@lorisotto_officiel",
+				"url": "https://www.tiktok.com/@lorisotto_officiel"
 			}
 		],
 		"images": [
@@ -540,21 +540,21 @@
 		]
 	},
 	{
-		"id": "alexandre",
-		"name": "Alexandre",
+		"id": "pacome",
+		"name": "Pacôme",
 		"role": "pianist",
-		"bio": "Alexandre is a pianist, originally from ...",
-		"portrait": "/images/alexandre/alexandre_profile.webp",
+		"bio": "Pacôme is a pianist, originally from ...",
+		"portrait": "/images/pacome/pacome_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@awalbrok",
-				"url": "https://www.instagram.com/awalbrok/"
+				"username": "@pac.schlt",
+				"url": "https://www.instagram.com/pac_schlt/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@awalbrok",
-				"url": "https://www.tiktok.com/@awalbrok"
+				"username": "@pac_schlt",
+				"url": "https://www.tiktok.com/@pac_schlt"
 			}
 		],
 		"images": [
@@ -606,21 +606,21 @@
 		]
     },
 	{
-		"id": "manon",
-		"name": "Manon",
+		"id": "urban",
+		"name": "Urban",
 		"role": "pianist",
-		"bio": "Manon is a pianist, originally from ...",
-		"portrait": "/images/manon/manon_profile.webp",
+		"bio": "Urban is a pianist, originally from Paris",
+		"portrait": "/images/urban/urban_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@manon_lamysthal",
-				"url": "https://www.instagram.com/manon_lamysthal/"
+				"username": "@fromurban",
+				"url": "https://www.instagram.com/fromurban/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@manon_lamysthal",
-				"url": "https://www.tiktok.com/@manon_lamysthal"
+				"username": "@fromurban",
+				"url": "https://www.tiktok.com/@fromurban"
 			}
 		],
 		"images": [
@@ -671,22 +671,22 @@
 			}
 		]
     },
-    {
-		"id": "urban",
-		"name": "Urban",
+	{
+		"id": "manon",
+		"name": "Manon",
 		"role": "pianist",
-		"bio": "Urban is a pianist, originally from Paris",
-		"portrait": "/images/urban/urban_profile.webp",
+		"bio": "Manon is a pianist, originally from ...",
+		"portrait": "/images/manon/manon_profile.webp",
 		"socials": [
 			{
 				"platform": "Instagram",
-				"username": "@fromurban",
-				"url": "https://www.instagram.com/fromurban/"
+				"username": "@manon_lamysthal",
+				"url": "https://www.instagram.com/manon_lamysthal/"
 			},
 			{
 				"platform": "Tiktok",
-				"username": "@fromurban",
-				"url": "https://www.tiktok.com/@fromurban"
+				"username": "@manon_lamysthal",
+				"url": "https://www.tiktok.com/@manon_lamysthal"
 			}
 		],
 		"images": [
