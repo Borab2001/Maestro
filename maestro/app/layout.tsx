@@ -39,9 +39,10 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://www.maestroconcerts.com'),
 	title: {
 		template: 'Maestro - %s',
-		default: 'Maestro - Troupe de pianistes',
+		default: 'Maestro - Première troupe de pianistes de France',
 	},
 	description:
 		"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
