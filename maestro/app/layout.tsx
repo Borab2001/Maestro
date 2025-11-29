@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 		default: 'Maestro - Première troupe de pianistes de France',
 	},
 	description:
-		"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+		"Maestro est la première troupe de pianistes de France, réunissant des artistes venants des gares et réseaux sociaux pour offrir des performances inoubliables.",
 	keywords:
 		"maestro, pianistes, troupe de pianistes, piano, musique, artistes, gares, réseaux sociaux, concerts, tiktok, instagram",
 	appleWebApp: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Maestro - Première troupe de pianistes de France",
 		description:
-			"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
+			"Maestro est la première troupe de pianistes de France, réunissant des artistes venants des gares et réseaux sociaux pour offrir des performances inoubliables.",
 		url: "https://www.maestroconcerts.com",
 		siteName: "Maestro Concerts",
 		locale: "fr_FR",
