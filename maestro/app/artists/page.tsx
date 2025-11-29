@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
+import { useState, useEffect } from "react";
 
 import artists from "@/data/artists.json";
 
@@ -38,6 +39,26 @@ import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 const Artists = () => {
 
     const router = useTransitionRouter();
+    const [columns, setColumns] = useState(1);
+
+    useEffect(() => {
+        const updateColumns = () => {
+            const width = window.innerWidth;
+            if (width >= 1280) setColumns(4); // xl
+            else if (width >= 1024) setColumns(3); // lg
+            else if (width >= 475) setColumns(2); // xs
+            else setColumns(1); // mobile
+        };
+
+        updateColumns();
+        window.addEventListener('resize', updateColumns);
+        return () => window.removeEventListener('resize', updateColumns);
+    }, []);
+
+    const getDelay = (index: number) => {
+        const positionInRow = index % columns;
+        return positionInRow * 0.1;
+    };
 
     return (
         <main className="min-h-screen px-4 md:px-8 pt-[72px]">
@@ -72,11 +93,11 @@ const Artists = () => {
                             alt={`${artist.name} portrait`}
                             className="grayscale-100 group-hover:grayscale-0 rounded-lg w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
                             duration={1.8}
-                            delay={index * 0.1}
+                            delay={getDelay(index)}
                             animationType="clip-path"
                         />
                         <ProgressiveBlur
-                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full bg-gradient-to-t from-background/50 to-background/0'
+                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full bg-gradient-to-t from-background/75 to-background/0'
                             blurIntensity={6}
                         />
                         <div className='absolute bottom-0 right-0 left-0 flex flex-col items-start gap-0 p-4'>
