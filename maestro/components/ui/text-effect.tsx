@@ -276,12 +276,12 @@ export const TextEffect = React.memo<TextEffectProps>(
         className={className}
         onAnimationComplete={onAnimationComplete}
         onAnimationStart={onAnimationStart}
+        aria-label={children}
         style={{
           ...(mountWhileHidden && !shouldAnimate ? { visibility: "hidden" } : {}),
           ...style,
         }}
       >
-        {per !== "line" ? <span className="sr-only">{children}</span> : null}
         {segments.map((segment, index) => (
           <AnimationComponent
             key={`${per}-${index}-${segment}`}
