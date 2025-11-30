@@ -127,7 +127,7 @@ const AnimationComponent: React.FC<{
 
     if (per === "word") {
       return (
-        <motion.span aria-hidden="true" variants={variants} className="inline-block whitespace-pre">
+        <motion.span variants={variants} className="inline-block whitespace-pre">
           {segment}
         </motion.span>
       )
@@ -139,7 +139,6 @@ const AnimationComponent: React.FC<{
         {segment.split("").map((char, charIndex) => (
           <motion.span
             key={`char-${index}-${charIndex}`}
-            aria-hidden="true"
             variants={variants}
             className="inline-block whitespace-pre"
           >
@@ -276,7 +275,6 @@ export const TextEffect = React.memo<TextEffectProps>(
         className={className}
         onAnimationComplete={onAnimationComplete}
         onAnimationStart={onAnimationStart}
-        aria-label={children}
         style={{
           ...(mountWhileHidden && !shouldAnimate ? { visibility: "hidden" } : {}),
           ...style,
