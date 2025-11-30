@@ -31,8 +31,7 @@ const Header = () => {
                 }}
                 className={`capitalize font-medium ${pathname === "/" ? "pointer-events-none" : ""}`}
             >
-                {/* Maestro */}
-                <Image src="/images/logo.svg" alt="Maestro Logo" height={100} width={100} className="aspect-square" />
+                <Image src="/images/logo.svg" alt="Maestro Logo" height={100} width={100} className="-ml-4 aspect-square" />
             </Link>
             <nav className="flex flex-row space-x-8">
                 {links.map((link, index) => (
