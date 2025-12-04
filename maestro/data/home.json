@@ -2,8 +2,8 @@
     "hero": {
         "title": "Le Piano Réinventé",
         "image": {
-            "src": "/images/group2.webp",
-            "alt": "Groupe de musiciens Maestro"
+            "src": "/images/home/hero.webp",
+            "alt": "Photo de groupe de Maestro"
         },
         "description": "Nous sommes la première troupe de pianistes en France et nous avons entre 18 et 28 ans. Le piano est souvent perçu comme un art solitaire, mais nous le transformons en expérience collective. Notre concept ? Mélanger nos parcours – conservatoire, gares ou autodidacte – et proposer un format inédit où la mise en scène et l'univers visuel sont aussi puissants que la musique. Le piano peut être un vrai spectacle vivant."
     },
@@ -36,21 +36,20 @@
     },
     "carousel": {
         "images": [
-            { "src": "/images/group.webp", "alt": "Performance Maestro 1" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 2" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 3" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 4" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 5" }
+            { "src": "/images/home/homegallery1", "alt": "Performance Maestro 1" },
+            { "src": "/images/home/homegallery2", "alt": "Performance Maestro 2" },
+            { "src": "/images/home/homegallery3", "alt": "Performance Maestro 3" },
+            { "src": "/images/home/homegallery4", "alt": "Performance Maestro 4" },
+            { "src": "/images/home/homegallery5", "alt": "Performance Maestro 5" }
         ]
     },
     "gallery": {
         "images": [
-            { "src": "/images/group.webp", "alt": "Performance Maestro 1" },
-            { "src": "/images/group2.webp", "alt": "Performance Maestro 2" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 3" },
-            { "src": "/images/group2.webp", "alt": "Performance Maestro 4" },
-            { "src": "/images/group.webp", "alt": "Performance Maestro 5" },
-            { "src": "/images/group2.webp", "alt": "Performance Maestro 6" }
+            { "src": "/images/home/homegallery1.webp", "alt": "Photo performance Maestro 1" },
+            { "src": "/images/home/homegallery2.webp", "alt": "Photo performance Maestro 2" },
+            { "src": "/images/home/homegallery3.webp", "alt": "Photo performance Maestro 3" },
+            { "src": "/images/home/homegallery4.webp", "alt": "Photo performance Maestro 4" },
+            { "src": "/images/home/homegallery5.webp", "alt": "Photo performance Maestro 5" }
         ]
     }
 }
