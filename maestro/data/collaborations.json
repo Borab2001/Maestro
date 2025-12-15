@@ -1,0 +1,18 @@
+{
+    "hero": {
+        "title": "Les Collaborations"
+    },
+    "collabs": [
+        {
+            "id": 1,
+            "name": "Maestro x SNCF x Art en Gare x Yamaha",
+            "date": "19 Novembre 2025",
+            "image": { "src": "/images/collaborations/sncf/sncf.webp", "alt": "Photo de troupe concert Art en Gare x SNCF x Yamaha" },
+            "paragraphs": [
+                "Maestro a eu l’honneur d’être contacté par la SNCF, dans le cadre de son programme Art en Gare, pour imaginer une performance musicale unique au cœur des gares françaises. Notre groupe de pianistes, connue pour son concept artistique inédit de 3 pianos joués en simultané, a ainsi présenté son tout premier showcase le 19 novembre 2025 à la Gare Saint-Lazare.",
+                "Pour cette collaboration, la SNCF a choisi de faire appel à son partenaire Yamaha, marque de référence mondiale, qui nous a fourni les pianos utilisés lors de la performance. Une promotion d’envergure a également été déployée : une affiche dédiée au showcase a été diffusée directement dans la gare et dans le métro Saint-Lazare, accompagnée d’un trailer exclusif disponible sur Instagram.",
+                "Nous sommes fiers d’avoir uni nos univers avec la SNCF et Yamaha pour offrir cette expérience artistique forte, d’autant plus symbolique que plusieurs de nos artistes ont fait leurs premiers pas musicaux dans les gares."
+            ]
+        }
+    ]
+}
