@@ -1,6 +1,8 @@
 "use client";
 
+import ImageReveal from "@/components/ui/image-reveal";
 import { TextEffect } from "@/components/ui/text-effect";
+import collaborationsData from "@/data/collaborations.json";
 
 
 const Collaborations = () => {
@@ -18,20 +20,72 @@ const Collaborations = () => {
                         speedReveal={1.2}
                         useInViewTrigger
                     >
-                        Les Collaborations
+                        {collaborationsData.hero.title}
                     </TextEffect>
-                    {/* <TextEffect
-						per="word"
-						preset="slide"
-						as="p"
-						className="font-medium text-base leading-loose mb-6"
-						delay={0.6}
-						speedReveal={6}
-						useInViewTrigger
-					>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat repellendus, harum dolorem tempore, eius aperiam recusandae voluptate omnis dolorum soluta provident voluptatibus error dignissimos saepe sequi similique ea voluptas nam?
-					</TextEffect> */}
                 </div>
+            </section>
+            <section className="flex flex-col w-full gap-16">
+                {collaborationsData.collabs.slice().map((collab) => (
+                    <div key={collab.name}>
+                        <div 
+                            className="flex flex-col" 
+                        >
+                            <div className="flex flex-col gap-4">
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="h2"
+                                    className="text-xl md:text-3xl xl:text-5xl font-medium leading-tight"
+                                    delay={0.3}
+                                    speedReveal={2}
+                                    useInViewTrigger
+                                >
+                                    {collab.name}
+                                </TextEffect>
+
+                                <TextEffect
+                                    per="char"
+                                    preset="fade-in-blur"
+                                    as="span"
+                                    className="text-secondary font-medium text-base md:text-xl"
+                                    delay={0.3}
+                                    speedReveal={2}
+                                    useInViewTrigger
+                                >
+                                    {collab.date}
+                                </TextEffect>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+                                <div className="col-span-1 pt-4 md:pt-8 lg:pt-[58px] flex flex-col gap-4 md:gap-8">
+                                    <ImageReveal
+                                        src={collab.image.src}
+                                        alt={collab.image.alt}
+                                        className="aspect-[3/2] lg:aspect-[16/14] object-cover w-full"
+                                        animationType="clip-path"
+                                        duration={1.2}
+                                        delay={0.3}
+                                        ease={"easeInOut"}
+                                    />
+                                    {(Array.isArray(collab.paragraphs) ? collab.paragraphs : [collab.paragraphs]).map((paragraph, index) => (
+                                        <TextEffect
+                                            key={index}
+                                            per="line"
+                                            preset="fade-in-blur"
+                                            as="p"
+                                            className=""
+                                            delay={0.3}
+                                            speedReveal={1.2}
+                                            useInViewTrigger
+                                        >
+                                            {paragraph}
+                                        </TextEffect>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </section>
         </div>
     );
