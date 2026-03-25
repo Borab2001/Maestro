@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Maestro - Première troupe de pianistes de France",
+		title: "Maestro | Première troupe de pianistes de France",
 		description:
 			"Maestro est la première troupe de pianistes de France, réunissant des artistes talentueux venants des gares et des réseaux sociaux pour offrir des performances musicales inoubliables.",
 		images: ["/og-image.png"],
