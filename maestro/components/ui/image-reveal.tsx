@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import type { Easing } from "framer-motion";
 import { useRef } from "react";
 
 interface ImageRevealProps {
@@ -10,7 +11,7 @@ interface ImageRevealProps {
     className?: string;
     duration?: number;
     delay?: number;
-    ease?: string | number[];
+    ease?: Easing;
     animationType: "clip-path" | "fade-in" | "fade-translate-parallax";
 }
 
