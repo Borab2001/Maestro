@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/slide-in-out";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import artists from "@/data/artists.json";
 
 import { TextEffect } from "@/components/ui/text-effect";
 import ImageReveal from "@/components/ui/image-reveal";
-import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 // export const metadata: Metadata = {
 //     title: 'Artists - Maestro',
@@ -75,7 +75,7 @@ const Artists = () => {
                     Les Artistes
                 </TextEffect>
             </section>
-            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8" style={{ contain: "layout style paint" }}>
                 {artists.map((artist, index) => (
                     <Link 
                         className='relative group flex flex-col items-start rounded-lg overflow-hidden'
@@ -88,42 +88,35 @@ const Artists = () => {
                             });
                         }}
                     >
-                        <ImageReveal
-                            src={artist.portrait}
-                            alt={`${artist.name} portrait`}
-                            className="grayscale-100 group-hover:grayscale-0 rounded-lg w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
-                            duration={1.8}
-                            delay={getDelay(index)}
-                            animationType="clip-path"
-                        />
-                        <ProgressiveBlur
-                            className='pointer-events-none absolute bottom-[-1px] left-0 h-[20%] w-full bg-gradient-to-t from-background/75 to-background/0'
-                            blurIntensity={6}
-                        />
-                        <div className='absolute bottom-0 right-0 left-0 flex flex-col items-start gap-0 p-4'>
-                            <TextEffect
-                                per="char"
-                                preset="fade-in-blur"
-                                as="h2"
-                                className="text-2xl font-medium text-white leading-tight"
-                                delay={0.3}
-                                speedReveal={2}
-                                useInViewTrigger
-                            >
-                                {artist.name}
-                            </TextEffect>
-                            <TextEffect
-                                per="line"
-                                preset="fade-in-blur"
-                                as="span"
-                                className="italic text-base font-medium text-zinc-400 leading-loose"
-                                delay={0.3}
-                                speedReveal={0.2}
-                                useInViewTrigger
-                            >
-                                {artist.socials[0].username}
-                            </TextEffect>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.8,
+                                delay: 0.6 + getDelay(index),
+                                ease: [0.25, 0.46, 0.45, 0.94]
+                            }}
+                            viewport={{ once: true, margin: "50px 0px" }}
+                            className='relative w-full'
+                        >
+                            <ImageReveal
+                                src={artist.portrait}
+                                alt={`${artist.name} portrait`}
+                                className="grayscale-100 group-hover:grayscale-0 rounded-lg w-full aspect-[5/6] md:aspect-[3/4] overflow-hidden transition-all duration-300 ease-in-out"
+                                duration={0.8}
+                                delay={0}
+                                animationType="none"
+                            />
+                            <div className='pointer-events-none absolute bottom-0 left-0 h-[30%] w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent' />
+                            <div className='absolute bottom-0 right-0 left-0 flex flex-col items-start gap-1 p-4'>
+                                <h2 className="text-2xl font-medium text-white leading-tight">
+                                    {artist.name}
+                                </h2>
+                                <span className="italic text-sm font-medium text-zinc-300 leading-loose">
+                                    {artist.socials[0].username}
+                                </span>
+                            </div>
+                        </motion.div>
                     </Link>
                 ))}
             </div>
