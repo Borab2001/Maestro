@@ -14,9 +14,9 @@ const Header = () => {
 
     const links = [
         { name: "Artistes", href: "/artists" },
-        { name: "Album", href: "/album" },
-        { name: "Concerts", href: "/concerts" },
-        { name: "Collaborations", href: "/collaborations" },
+        // { name: "Album", href: "/album" },
+        // { name: "Concerts", href: "/concerts" },
+        // { name: "Collaborations", href: "/collaborations" },
     ];
 
     return (
