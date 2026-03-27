@@ -27,7 +27,7 @@ const ImageReveal = ({
     animationType = "fade-in"
 }: ImageRevealProps) => {
     const containerRef = useRef(null);
-    const isInView = useInView(containerRef, { once: true, margin: "50px 0px" });
+    const isInView = useInView(containerRef, { once: true });
 
     // Parallax effect only for fade-translate-parallax
     const { scrollYProgress } = useScroll({

@@ -31,7 +31,6 @@ export default function ImageGallery({
         return () => window.removeEventListener('resize', checkTouchDevice);
     }, []);
 
-    // Calculer quand toutes les animations sont terminées
     useEffect(() => {
         const lastImageDelay = (images.length - 1) * 0.1;
         const animationDuration = 1.8;
@@ -68,9 +67,10 @@ export default function ImageGallery({
                                 src={image.src}
                                 alt={image.alt}
                                 className="h-full w-full object-cover object-center"
-                                duration={1.8}
-                                delay={index * 0.1}
-                                animationType="clip-path"
+                                duration={1.2}
+                                delay={0.6 + index * 0.1}
+                                ease={[0.25, 0.46, 0.45, 0.94]}
+                                animationType="fade-in"
                             />
                         </div>
                     ))}
