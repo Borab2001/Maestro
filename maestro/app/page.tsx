@@ -144,7 +144,7 @@ export default function Home() {
 								per="line"
 								preset="fade-in-blur"
 								as="p"
-								className="text-2xl md:text-3xl mt-2 font-medium text-secondary text-pretty"
+								className="max-w-52 mx-auto text-2xl md:text-3xl mt-2 font-medium text-secondary text-pretty"
 								delay={0.3}
 								speedReveal={0.2}
 								useInViewTrigger
