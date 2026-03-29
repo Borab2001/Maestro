@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import artists from "@/data/artists.json";
 
-export function generateMetadata({
+export async function generateMetadata({
 	params,
 }: {
-	params: { id: string };
-}): Metadata {
-	const artist = artists.find((a) => a.id === params.id);
+	params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+	const { id } = await params;
+	const artist = artists.find((a) => a.id === id);
 
 	if (!artist) {
 		return {
