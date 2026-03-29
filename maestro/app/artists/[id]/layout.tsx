@@ -16,7 +16,7 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: artist.name,
+		title: `${artist.name} | Maestro | Première troupe de pianistes de France`,
 		description: artist.bio,
 		openGraph: {
 			title: `${artist.name} | Maestro | Première troupe de pianistes de France`,
