@@ -85,9 +85,6 @@ const Footer = () => {
                 </div>
             </div>
             <div className="relative overflow-hidden h-[27vw] w-full">
-                {/* <span className="text-foreground text-[30vw] absolute -left-[4vw] w-auto">
-                    Maestro
-                </span> */}
                 <TextEffect
                     per="char"
                     preset="slide"
